@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmsplash_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmsplash_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmsplash_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmsplash_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,8 +22,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -33,8 +37,7 @@
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmLogIn.cs [Projeto]",
               "RelativeToolTip": "Minha_Parte_Biblio\\FrmLogIn.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T16:41:18.15Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-07-29T16:41:18.15Z"
             },
             {
               "$type": "Document",
@@ -44,7 +47,7 @@
               "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmSplash_Screen.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmSplash_Screen.cs",
               "RelativeToolTip": "Minha_Parte_Biblio\\FrmSplash_Screen.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwCMAAAAmAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T15:36:35.689Z",
               "EditorCaption": ""

@@ -3,7 +3,6 @@ C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Part
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\bin\Debug\net8.0-windows\Minha_Parte_Biblio.runtimeconfig.json
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\bin\Debug\net8.0-windows\Minha_Parte_Biblio.dll
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\bin\Debug\net8.0-windows\Minha_Parte_Biblio.pdb
-C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.Form1.resources
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.Properties.Resources.resources
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.csproj.GenerateResource.cache
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,5 @@ C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Part
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.pdb
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.genruntimeconfig.cache
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\ref\Minha_Parte_Biblio.dll
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FRMLogIn.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmSplash_Screen.resources

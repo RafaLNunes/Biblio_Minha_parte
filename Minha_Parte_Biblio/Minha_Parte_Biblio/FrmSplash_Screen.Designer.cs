@@ -32,9 +32,7 @@
             PnBarCharge = new Panel();
             PnCharge = new Panel();
             Bar_Charge = new System.Windows.Forms.Timer(components);
-            Label_Charge_Up = new System.Windows.Forms.Timer(components);
             LbCharge = new Label();
-            Label_Charge_Down = new System.Windows.Forms.Timer(components);
             PnBarCharge.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,14 +59,8 @@
             // Bar_Charge
             // 
             Bar_Charge.Enabled = true;
-            Bar_Charge.Interval = 200;
+            Bar_Charge.Interval = 50;
             Bar_Charge.Tick += Bar_Charge_Tick;
-            // 
-            // Label_Charge_Up
-            // 
-            Label_Charge_Up.Enabled = true;
-            Label_Charge_Up.Interval = 10;
-            Label_Charge_Up.Tick += Label_Charge_Tick;
             // 
             // LbCharge
             // 
@@ -82,13 +74,7 @@
             LbCharge.TabIndex = 2;
             LbCharge.Text = "Carregando Arquivos";
             // 
-            // Label_Charge_Down
-            // 
-            Label_Charge_Down.Enabled = true;
-            Label_Charge_Down.Interval = 10;
-            Label_Charge_Down.Tick += Label_Charge_Down_Tick;
-            // 
-            // Form1
+            // FrmSplash_Screen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -97,7 +83,7 @@
             Controls.Add(LbCharge);
             Controls.Add(PnBarCharge);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "FrmSplash_Screen";
             StartPosition = FormStartPosition.CenterScreen;
             Load += Form1_Load;
             PnBarCharge.ResumeLayout(false);
@@ -110,8 +96,6 @@
         private Panel PnBarCharge;
         private Panel PnCharge;
         private System.Windows.Forms.Timer Bar_Charge;
-        private System.Windows.Forms.Timer Label_Charge_Up;
         private Label LbCharge;
-        private System.Windows.Forms.Timer Label_Charge_Down;
     }
 }
