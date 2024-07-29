@@ -11,7 +11,7 @@ namespace Minha_Parte_Biblio
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new FrmSplash_Screen());
         }
     }
 }
