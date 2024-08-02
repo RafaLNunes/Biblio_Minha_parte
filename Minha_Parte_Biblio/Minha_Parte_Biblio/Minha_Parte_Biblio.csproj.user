@@ -4,6 +4,9 @@
     <Compile Update="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmSplash_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
