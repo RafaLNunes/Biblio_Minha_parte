@@ -16,5 +16,15 @@ namespace Minha_Parte_Biblio.Modelo
         public int Index_Cargo; // 1, 2, 3, 4, 5
         public int Index_Ano; // 1° EF, 2° EF, 3° EF, 4° EF, 5° EF, 6° EF, 7° EF, 8° EF, 9° EF, 1° EM, 2° EM, 3° EM, Diretoria
 
+        public ClUserModelo()
+        {
+            ID_Aluno = "";
+            NomeComp = "";
+            UserName = "";
+            Password = "";
+            Caminho_FT = "";
+            Index_Cargo = 0;
+            Index_Ano = 0;
+        }
     }
 }
