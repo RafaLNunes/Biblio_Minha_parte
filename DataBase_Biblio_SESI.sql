@@ -41,10 +41,8 @@ CREATE TABLE Table_User (
     IMG_User Varchar(45),
     CFK_Ano int,
 	CFK_Cargo int,
-    CFK_Unidade int,
     CONSTRAINT FK_Ano FOREIGN KEY (CFK_Ano) REFERENCES Table_Ano_Escolar(CD_Ano_Escolar),
-    CONSTRAINT FK_Cargo FOREIGN KEY (CFK_Cargo) REFERENCES Table_Cargo(CD_Cargo),
-    CONSTRAINT FK_Unidades FOREIGN KEY (CFK_Unidade) REFERENCES Table_Unidade(CD_Unidade)
+    CONSTRAINT FK_Cargo FOREIGN KEY (CFK_Cargo) REFERENCES Table_Cargo(CD_Cargo)
 );
 
 CREATE TABLE Table_Historico (

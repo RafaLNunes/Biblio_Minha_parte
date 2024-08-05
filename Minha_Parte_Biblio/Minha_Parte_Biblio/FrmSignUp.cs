@@ -24,6 +24,7 @@ namespace Minha_Parte_Biblio
 
         String Cam_FT = "";
         String Cam_origin = "";
+        String Nome_Ft = "";
 
         public FrmSignUp()
         {
@@ -127,6 +128,7 @@ namespace Minha_Parte_Biblio
                     Cam_FT = ft.FileName.Replace("\\", "\\\\");
                     Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Cam_FT));
                     File.Copy(Cam_FT, Cam_origin, true);
+                    Nome_Ft = ft.SafeFileName;
                 }
             }
             catch (Exception ex)
@@ -143,15 +145,29 @@ namespace Minha_Parte_Biblio
             try
             {
 
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+                if (!String.IsNullOrEmpty(txtID.Text) || !String.IsNullOrEmpty(txtNomeComp.Text) || !String.IsNullOrEmpty(txtUser.Text) || !String.IsNullOrEmpty(txtPassWord.Text))
+                {
+                    Modelo_User.Index_Cargo = CbCargo.SelectedIndex+1;
+                    Modelo_User.Index_Ano = CbAno.SelectedIndex+1;
+                    Modelo_User.NomeComp = txtNomeComp.Text;
+                    Modelo_User.ID_Aluno = txtID.Text;
+                    Modelo_User.UserName = txtUser.Text;
+                    Modelo_User.Password = txtPassWord.Text;
+                    Modelo_User.Caminho_FT = Nome_Ft;
+                    MessageBox.Show(Modelo_User.Index_Cargo.ToString());
+                    if(controle_User.SignUp(Modelo_User) == true)
+                    {
+                        FrmBoasVindas boVindam = new FrmBoasVindas(txtNomeComp.Text);
+                        this.Hide();
+                        boVindam.ShowDialog();
+                    }
+                }
 
-            FrmBoasVindas boVindam = new FrmBoasVindas(txtNomeComp.Text);
-            this.Hide();
-            boVindam.ShowDialog();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
+
+
         }
     }
 }

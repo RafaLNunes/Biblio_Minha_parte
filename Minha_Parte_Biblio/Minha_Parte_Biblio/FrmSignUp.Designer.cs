@@ -127,7 +127,6 @@
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Location = new Point(149, 655);
             txtUser.Name = "txtUser";
-            txtUser.PasswordChar = '•';
             txtUser.Size = new Size(301, 20);
             txtUser.TabIndex = 17;
             txtUser.Enter += txtUser_Enter;
@@ -150,7 +149,6 @@
             txtID.BorderStyle = BorderStyle.None;
             txtID.Location = new Point(149, 519);
             txtID.Name = "txtID";
-            txtID.PasswordChar = '•';
             txtID.Size = new Size(301, 20);
             txtID.TabIndex = 19;
             txtID.Enter += txtID_Enter;
@@ -173,7 +171,6 @@
             txtNomeComp.BorderStyle = BorderStyle.None;
             txtNomeComp.Location = new Point(149, 387);
             txtNomeComp.Name = "txtNomeComp";
-            txtNomeComp.PasswordChar = '•';
             txtNomeComp.Size = new Size(301, 20);
             txtNomeComp.TabIndex = 21;
             txtNomeComp.Enter += txtNomeComp_Enter;
