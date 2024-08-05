@@ -28,24 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSignUp));
             LbLogIn = new LinkLabel();
             Lbtext = new Label();
             Image_Visivel = new PictureBox();
             txtPassWord = new TextBox();
-            Image_PassWord = new PictureBox();
-            textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
-            textBox2 = new TextBox();
-            pictureBox2 = new PictureBox();
-            textBox3 = new TextBox();
-            pictureBox3 = new PictureBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            PbPassWord = new PictureBox();
+            txtUser = new TextBox();
+            PbUser = new PictureBox();
+            txtID = new TextBox();
+            PbID = new PictureBox();
+            txtNomeComp = new TextBox();
+            PbNomeComp = new PictureBox();
+            CbCargo = new ComboBox();
+            CbAno = new ComboBox();
+            CbVisivel_Senha = new ImageList(components);
+            Cbimage_PassWord = new ImageList(components);
+            Cbimage_User = new ImageList(components);
+            CbImage_NomeComp = new ImageList(components);
+            CbImage_ID = new ImageList(components);
+            PnBntSignUp = new Panel();
+            BntSignUp = new Button();
+            LbNomeComp = new Label();
+            PbImage_Perfil = new Aprendendo_MVC.PictureBoxCircle();
             ((System.ComponentModel.ISupportInitialize)Image_Visivel).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Image_PassWord).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PbPassWord).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PbUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PbID).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PbNomeComp).BeginInit();
+            PnBntSignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PbImage_Perfil).BeginInit();
             SuspendLayout();
             // 
             // LbLogIn
@@ -60,6 +73,7 @@
             LbLogIn.TabIndex = 9;
             LbLogIn.TabStop = true;
             LbLogIn.Text = "Clique aqui: Log In";
+            LbLogIn.LinkClicked += LbLogIn_LinkClicked;
             // 
             // Lbtext
             // 
@@ -75,13 +89,14 @@
             // Image_Visivel
             // 
             Image_Visivel.BackColor = Color.Transparent;
-            Image_Visivel.Image = Properties.Resources.olho_visivel;
+            Image_Visivel.Image = (Image)resources.GetObject("Image_Visivel.Image");
             Image_Visivel.Location = new Point(456, 766);
             Image_Visivel.Name = "Image_Visivel";
             Image_Visivel.Size = new Size(54, 50);
             Image_Visivel.SizeMode = PictureBoxSizeMode.Zoom;
             Image_Visivel.TabIndex = 15;
             Image_Visivel.TabStop = false;
+            Image_Visivel.Click += Image_Visivel_Click;
             // 
             // txtPassWord
             // 
@@ -92,96 +107,190 @@
             txtPassWord.PasswordChar = '•';
             txtPassWord.Size = new Size(301, 20);
             txtPassWord.TabIndex = 14;
+            txtPassWord.Enter += txtPassWord_Enter;
+            txtPassWord.Leave += txtPassWord_Leave;
             // 
-            // Image_PassWord
+            // PbPassWord
             // 
-            Image_PassWord.BackColor = Color.Transparent;
-            Image_PassWord.Image = Properties.Resources.senha_unClick;
-            Image_PassWord.Location = new Point(89, 766);
-            Image_PassWord.Name = "Image_PassWord";
-            Image_PassWord.Size = new Size(54, 50);
-            Image_PassWord.SizeMode = PictureBoxSizeMode.Zoom;
-            Image_PassWord.TabIndex = 13;
-            Image_PassWord.TabStop = false;
+            PbPassWord.BackColor = Color.Transparent;
+            PbPassWord.Image = (Image)resources.GetObject("PbPassWord.Image");
+            PbPassWord.Location = new Point(89, 766);
+            PbPassWord.Name = "PbPassWord";
+            PbPassWord.Size = new Size(54, 50);
+            PbPassWord.SizeMode = PictureBoxSizeMode.Zoom;
+            PbPassWord.TabIndex = 13;
+            PbPassWord.TabStop = false;
             // 
-            // textBox1
+            // txtUser
             // 
-            textBox1.BackColor = Color.FromArgb(242, 203, 17);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(149, 655);
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '•';
-            textBox1.Size = new Size(301, 20);
-            textBox1.TabIndex = 17;
+            txtUser.BackColor = Color.FromArgb(242, 203, 17);
+            txtUser.BorderStyle = BorderStyle.None;
+            txtUser.Location = new Point(149, 655);
+            txtUser.Name = "txtUser";
+            txtUser.PasswordChar = '•';
+            txtUser.Size = new Size(301, 20);
+            txtUser.TabIndex = 17;
+            txtUser.Enter += txtUser_Enter;
+            txtUser.Leave += txtUser_Leave;
             // 
-            // pictureBox1
+            // PbUser
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.senha_unClick;
-            pictureBox1.Location = new Point(89, 638);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 16;
-            pictureBox1.TabStop = false;
+            PbUser.BackColor = Color.Transparent;
+            PbUser.Image = (Image)resources.GetObject("PbUser.Image");
+            PbUser.Location = new Point(89, 638);
+            PbUser.Name = "PbUser";
+            PbUser.Size = new Size(54, 50);
+            PbUser.SizeMode = PictureBoxSizeMode.Zoom;
+            PbUser.TabIndex = 16;
+            PbUser.TabStop = false;
             // 
-            // textBox2
+            // txtID
             // 
-            textBox2.BackColor = Color.FromArgb(242, 203, 17);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(149, 519);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '•';
-            textBox2.Size = new Size(301, 20);
-            textBox2.TabIndex = 19;
+            txtID.BackColor = Color.FromArgb(242, 203, 17);
+            txtID.BorderStyle = BorderStyle.None;
+            txtID.Location = new Point(149, 519);
+            txtID.Name = "txtID";
+            txtID.PasswordChar = '•';
+            txtID.Size = new Size(301, 20);
+            txtID.TabIndex = 19;
+            txtID.Enter += txtID_Enter;
+            txtID.Leave += txtID_Leave;
             // 
-            // pictureBox2
+            // PbID
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = Properties.Resources.senha_unClick;
-            pictureBox2.Location = new Point(89, 502);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(54, 50);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 18;
-            pictureBox2.TabStop = false;
+            PbID.BackColor = Color.Transparent;
+            PbID.Image = (Image)resources.GetObject("PbID.Image");
+            PbID.Location = new Point(89, 502);
+            PbID.Name = "PbID";
+            PbID.Size = new Size(54, 50);
+            PbID.SizeMode = PictureBoxSizeMode.Zoom;
+            PbID.TabIndex = 18;
+            PbID.TabStop = false;
             // 
-            // textBox3
+            // txtNomeComp
             // 
-            textBox3.BackColor = Color.FromArgb(242, 203, 17);
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(149, 387);
-            textBox3.Name = "textBox3";
-            textBox3.PasswordChar = '•';
-            textBox3.Size = new Size(301, 20);
-            textBox3.TabIndex = 21;
+            txtNomeComp.BackColor = Color.FromArgb(242, 203, 17);
+            txtNomeComp.BorderStyle = BorderStyle.None;
+            txtNomeComp.Location = new Point(149, 387);
+            txtNomeComp.Name = "txtNomeComp";
+            txtNomeComp.PasswordChar = '•';
+            txtNomeComp.Size = new Size(301, 20);
+            txtNomeComp.TabIndex = 21;
+            txtNomeComp.Enter += txtNomeComp_Enter;
+            txtNomeComp.Leave += txtNomeComp_Leave;
             // 
-            // pictureBox3
+            // PbNomeComp
             // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = Properties.Resources.senha_unClick;
-            pictureBox3.Location = new Point(89, 370);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(54, 50);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 20;
-            pictureBox3.TabStop = false;
+            PbNomeComp.BackColor = Color.Transparent;
+            PbNomeComp.Image = (Image)resources.GetObject("PbNomeComp.Image");
+            PbNomeComp.Location = new Point(89, 370);
+            PbNomeComp.Name = "PbNomeComp";
+            PbNomeComp.Size = new Size(54, 50);
+            PbNomeComp.SizeMode = PictureBoxSizeMode.Zoom;
+            PbNomeComp.TabIndex = 20;
+            PbNomeComp.TabStop = false;
             // 
-            // comboBox1
+            // CbCargo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(93, 237);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 28);
-            comboBox1.TabIndex = 22;
+            CbCargo.BackColor = Color.FromArgb(242, 203, 17);
+            CbCargo.FormattingEnabled = true;
+            CbCargo.Location = new Point(93, 237);
+            CbCargo.Name = "CbCargo";
+            CbCargo.Size = new Size(195, 28);
+            CbCargo.TabIndex = 22;
             // 
-            // comboBox2
+            // CbAno
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(93, 305);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(195, 28);
-            comboBox2.TabIndex = 23;
+            CbAno.BackColor = Color.FromArgb(242, 203, 17);
+            CbAno.FormattingEnabled = true;
+            CbAno.Location = new Point(93, 305);
+            CbAno.Name = "CbAno";
+            CbAno.Size = new Size(195, 28);
+            CbAno.TabIndex = 23;
+            // 
+            // CbVisivel_Senha
+            // 
+            CbVisivel_Senha.ColorDepth = ColorDepth.Depth32Bit;
+            CbVisivel_Senha.ImageStream = (ImageListStreamer)resources.GetObject("CbVisivel_Senha.ImageStream");
+            CbVisivel_Senha.TransparentColor = Color.Transparent;
+            CbVisivel_Senha.Images.SetKeyName(0, "Olho_Visivel.png");
+            CbVisivel_Senha.Images.SetKeyName(1, "Olhp_Invisivel.png");
+            // 
+            // Cbimage_PassWord
+            // 
+            Cbimage_PassWord.ColorDepth = ColorDepth.Depth32Bit;
+            Cbimage_PassWord.ImageStream = (ImageListStreamer)resources.GetObject("Cbimage_PassWord.ImageStream");
+            Cbimage_PassWord.TransparentColor = Color.Transparent;
+            Cbimage_PassWord.Images.SetKeyName(0, "PassWord_Click.png");
+            Cbimage_PassWord.Images.SetKeyName(1, "PassWord_UnClick.png");
+            // 
+            // Cbimage_User
+            // 
+            Cbimage_User.ColorDepth = ColorDepth.Depth32Bit;
+            Cbimage_User.ImageStream = (ImageListStreamer)resources.GetObject("Cbimage_User.ImageStream");
+            Cbimage_User.TransparentColor = Color.Transparent;
+            Cbimage_User.Images.SetKeyName(0, "User_Click.png");
+            Cbimage_User.Images.SetKeyName(1, "User_UnClick.png");
+            // 
+            // CbImage_NomeComp
+            // 
+            CbImage_NomeComp.ColorDepth = ColorDepth.Depth32Bit;
+            CbImage_NomeComp.ImageStream = (ImageListStreamer)resources.GetObject("CbImage_NomeComp.ImageStream");
+            CbImage_NomeComp.TransparentColor = Color.Transparent;
+            CbImage_NomeComp.Images.SetKeyName(0, "NomeComp_Click.png");
+            CbImage_NomeComp.Images.SetKeyName(1, "NomeComp_UnClick.png");
+            // 
+            // CbImage_ID
+            // 
+            CbImage_ID.ColorDepth = ColorDepth.Depth32Bit;
+            CbImage_ID.ImageStream = (ImageListStreamer)resources.GetObject("CbImage_ID.ImageStream");
+            CbImage_ID.TransparentColor = Color.Transparent;
+            CbImage_ID.Images.SetKeyName(0, "ID_Click.png");
+            CbImage_ID.Images.SetKeyName(1, "ID_UnClick.png");
+            // 
+            // PnBntSignUp
+            // 
+            PnBntSignUp.BackColor = Color.Transparent;
+            PnBntSignUp.Controls.Add(BntSignUp);
+            PnBntSignUp.Location = new Point(108, 900);
+            PnBntSignUp.Name = "PnBntSignUp";
+            PnBntSignUp.Size = new Size(386, 78);
+            PnBntSignUp.TabIndex = 24;
+            // 
+            // BntSignUp
+            // 
+            BntSignUp.BackColor = Color.Transparent;
+            BntSignUp.FlatStyle = FlatStyle.Popup;
+            BntSignUp.Location = new Point(-15, -15);
+            BntSignUp.Name = "BntSignUp";
+            BntSignUp.Size = new Size(478, 116);
+            BntSignUp.TabIndex = 6;
+            BntSignUp.Text = "   ";
+            BntSignUp.UseVisualStyleBackColor = false;
+            // 
+            // LbNomeComp
+            // 
+            LbNomeComp.AutoSize = true;
+            LbNomeComp.BackColor = Color.Transparent;
+            LbNomeComp.Font = new Font("Segoe UI", 15.2F, FontStyle.Bold);
+            LbNomeComp.ForeColor = Color.FromArgb(255, 207, 0);
+            LbNomeComp.Location = new Point(314, 202);
+            LbNomeComp.Name = "LbNomeComp";
+            LbNomeComp.Size = new Size(197, 108);
+            LbNomeComp.TabIndex = 25;
+            LbNomeComp.Text = "  Clique aqui\r\n para escolher\r\na foto de perfil";
+            // 
+            // PbImage_Perfil
+            // 
+            PbImage_Perfil.BackColor = Color.Transparent;
+            PbImage_Perfil.BorderStyle = BorderStyle.Fixed3D;
+            PbImage_Perfil.Location = new Point(303, 147);
+            PbImage_Perfil.Name = "PbImage_Perfil";
+            PbImage_Perfil.Size = new Size(220, 220);
+            PbImage_Perfil.SizeMode = PictureBoxSizeMode.CenterImage;
+            PbImage_Perfil.TabIndex = 26;
+            PbImage_Perfil.TabStop = false;
+            PbImage_Perfil.Click += pictureBoxCircle1_Click;
             // 
             // FrmSignUp
             // 
@@ -189,28 +298,34 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.SignUp_Duplicada__1_;
             ClientSize = new Size(600, 1000);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox3);
-            Controls.Add(pictureBox3);
-            Controls.Add(textBox2);
-            Controls.Add(pictureBox2);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(LbNomeComp);
+            Controls.Add(PnBntSignUp);
+            Controls.Add(CbAno);
+            Controls.Add(CbCargo);
+            Controls.Add(txtNomeComp);
+            Controls.Add(PbNomeComp);
+            Controls.Add(txtID);
+            Controls.Add(PbID);
+            Controls.Add(txtUser);
+            Controls.Add(PbUser);
             Controls.Add(Image_Visivel);
             Controls.Add(txtPassWord);
-            Controls.Add(Image_PassWord);
+            Controls.Add(PbPassWord);
             Controls.Add(LbLogIn);
             Controls.Add(Lbtext);
+            Controls.Add(PbImage_Perfil);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmSignUp";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmSignUp";
+            Load += FrmSignUp_Load;
             ((System.ComponentModel.ISupportInitialize)Image_Visivel).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Image_PassWord).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PbPassWord).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PbUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PbID).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PbNomeComp).EndInit();
+            PnBntSignUp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)PbImage_Perfil).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -221,14 +336,23 @@
         private Label Lbtext;
         private PictureBox Image_Visivel;
         private TextBox txtPassWord;
-        private PictureBox Image_PassWord;
-        private TextBox textBox1;
-        private PictureBox pictureBox1;
-        private TextBox textBox2;
-        private PictureBox pictureBox2;
-        private TextBox textBox3;
-        private PictureBox pictureBox3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private PictureBox PbPassWord;
+        private TextBox txtUser;
+        private PictureBox PbUser;
+        private TextBox txtID;
+        private PictureBox PbID;
+        private TextBox txtNomeComp;
+        private PictureBox PbNomeComp;
+        private ComboBox CbCargo;
+        private ComboBox CbAno;
+        private ImageList CbVisivel_Senha;
+        private ImageList Cbimage_PassWord;
+        private ImageList Cbimage_User;
+        private ImageList CbImage_NomeComp;
+        private ImageList CbImage_ID;
+        private Panel PnBntSignUp;
+        private Button BntSignUp;
+        private Label LbNomeComp;
+        private Aprendendo_MVC.PictureBoxCircle PbImage_Perfil;
     }
 }

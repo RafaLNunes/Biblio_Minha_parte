@@ -124,17 +124,17 @@
   <data name="User_UnClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User_UnClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SignUp Duplicada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SignUp Duplicada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="olho_Invisivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\olho_Invisivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="senha_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\senha_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="olho_visivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\olho_visivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SPLASH SCREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SPLASH SCREEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="olho_visivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\olho_visivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Duplicada Sign Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duplicada Sign Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,10 +148,13 @@
   <data name="duplicada LogIn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duplicada LogIn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="olho_Invisivel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\olho_Invisivel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SignUp Duplicada (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SignUp Duplicada (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SignUp Duplicada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SignUp Duplicada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boas Vindas Duplicada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boas Vindas Duplicada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -63,6 +63,16 @@ namespace Minha_Parte_Biblio.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boas_Vindas_Duplicada {
+            get {
+                object obj = ResourceManager.GetObject("Boas Vindas Duplicada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap duplicada_LogIn {
             get {
                 object obj = ResourceManager.GetObject("duplicada LogIn", resourceCulture);

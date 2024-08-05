@@ -51,7 +51,7 @@
             // Image_User
             // 
             Image_User.BackColor = Color.Transparent;
-            Image_User.Image = Properties.Resources.User_UnClick;
+            Image_User.Image = (Image)resources.GetObject("Image_User.Image");
             Image_User.Location = new Point(63, 432);
             Image_User.Name = "Image_User";
             Image_User.Size = new Size(54, 50);
@@ -62,7 +62,7 @@
             // Image_PassWord
             // 
             Image_PassWord.BackColor = Color.Transparent;
-            Image_PassWord.Image = Properties.Resources.senha_unClick;
+            Image_PassWord.Image = (Image)resources.GetObject("Image_PassWord.Image");
             Image_PassWord.Location = new Point(63, 583);
             Image_PassWord.Name = "Image_PassWord";
             Image_PassWord.Size = new Size(54, 50);
@@ -96,7 +96,7 @@
             // Image_Visivel
             // 
             Image_Visivel.BackColor = Color.Transparent;
-            Image_Visivel.Image = Properties.Resources.olho_visivel;
+            Image_Visivel.Image = (Image)resources.GetObject("Image_Visivel.Image");
             Image_Visivel.Location = new Point(487, 583);
             Image_Visivel.Name = "Image_Visivel";
             Image_Visivel.Size = new Size(54, 50);
@@ -155,16 +155,16 @@
             CbVisivel_Senha.ColorDepth = ColorDepth.Depth32Bit;
             CbVisivel_Senha.ImageStream = (ImageListStreamer)resources.GetObject("CbVisivel_Senha.ImageStream");
             CbVisivel_Senha.TransparentColor = Color.Transparent;
-            CbVisivel_Senha.Images.SetKeyName(0, "olho_visivel.png");
-            CbVisivel_Senha.Images.SetKeyName(1, "olho_Invisivel.png");
+            CbVisivel_Senha.Images.SetKeyName(0, "Olho_Visivel.png");
+            CbVisivel_Senha.Images.SetKeyName(1, "Olhp_Invisivel.png");
             // 
             // Cbimage_PassWord
             // 
             Cbimage_PassWord.ColorDepth = ColorDepth.Depth32Bit;
             Cbimage_PassWord.ImageStream = (ImageListStreamer)resources.GetObject("Cbimage_PassWord.ImageStream");
             Cbimage_PassWord.TransparentColor = Color.Transparent;
-            Cbimage_PassWord.Images.SetKeyName(0, "senha_Click.png");
-            Cbimage_PassWord.Images.SetKeyName(1, "senha_unClick.png");
+            Cbimage_PassWord.Images.SetKeyName(0, "PassWord_Click.png");
+            Cbimage_PassWord.Images.SetKeyName(1, "PassWord_UnClick.png");
             // 
             // Cbimage_User
             // 
