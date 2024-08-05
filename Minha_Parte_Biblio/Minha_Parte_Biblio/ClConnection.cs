@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,6 +73,20 @@ namespace Aprendendo_MVC
 
         }
 
+        public DataTable obterdados(string sql)
+        {
+            //crio uma tabela de dados
+            DataTable dt = new DataTable();
+            Conect = GetConectection();//obtenho a conexao
+            Conect.Open();//abro o banco
+            MySqlCommand cmd = new MySqlCommand(sql, Conect);
+            //monto a estrutura das informações obtidas
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            //adiciona a datatable os valores 
+            adapter.Fill(dt);
+
+            return dt;
+        }
 
 
     }

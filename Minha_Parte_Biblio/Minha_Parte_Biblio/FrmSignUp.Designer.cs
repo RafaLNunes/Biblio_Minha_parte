@@ -50,7 +50,7 @@
             CbImage_ID = new ImageList(components);
             PnBntSignUp = new Panel();
             BntSignUp = new Button();
-            LbNomeComp = new Label();
+            LbFTPerfil = new Label();
             PbImage_Perfil = new Aprendendo_MVC.PictureBoxCircle();
             ((System.ComponentModel.ISupportInitialize)Image_Visivel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbPassWord).BeginInit();
@@ -267,18 +267,20 @@
             BntSignUp.TabIndex = 6;
             BntSignUp.Text = "   ";
             BntSignUp.UseVisualStyleBackColor = false;
+            BntSignUp.Click += BntSignUp_Click;
             // 
-            // LbNomeComp
+            // LbFTPerfil
             // 
-            LbNomeComp.AutoSize = true;
-            LbNomeComp.BackColor = Color.Transparent;
-            LbNomeComp.Font = new Font("Segoe UI", 15.2F, FontStyle.Bold);
-            LbNomeComp.ForeColor = Color.FromArgb(255, 207, 0);
-            LbNomeComp.Location = new Point(314, 202);
-            LbNomeComp.Name = "LbNomeComp";
-            LbNomeComp.Size = new Size(197, 108);
-            LbNomeComp.TabIndex = 25;
-            LbNomeComp.Text = "  Clique aqui\r\n para escolher\r\na foto de perfil";
+            LbFTPerfil.AutoSize = true;
+            LbFTPerfil.BackColor = Color.Transparent;
+            LbFTPerfil.Font = new Font("Segoe UI", 15.2F, FontStyle.Bold);
+            LbFTPerfil.ForeColor = Color.FromArgb(255, 207, 0);
+            LbFTPerfil.Location = new Point(314, 202);
+            LbFTPerfil.Name = "LbFTPerfil";
+            LbFTPerfil.Size = new Size(197, 108);
+            LbFTPerfil.TabIndex = 25;
+            LbFTPerfil.Text = "  Clique aqui\r\n para escolher\r\na foto de perfil";
+            LbFTPerfil.Click += LbNomeComp_Click;
             // 
             // PbImage_Perfil
             // 
@@ -298,7 +300,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.SignUp_Duplicada__1_;
             ClientSize = new Size(600, 1000);
-            Controls.Add(LbNomeComp);
+            Controls.Add(LbFTPerfil);
             Controls.Add(PnBntSignUp);
             Controls.Add(CbAno);
             Controls.Add(CbCargo);
@@ -352,7 +354,7 @@
         private ImageList CbImage_ID;
         private Panel PnBntSignUp;
         private Button BntSignUp;
-        private Label LbNomeComp;
+        private Label LbFTPerfil;
         private Aprendendo_MVC.PictureBoxCircle PbImage_Perfil;
     }
 }
