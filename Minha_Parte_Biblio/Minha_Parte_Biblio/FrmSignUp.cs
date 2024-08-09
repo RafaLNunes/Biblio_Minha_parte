@@ -33,6 +33,8 @@ namespace Minha_Parte_Biblio
 
         private void FrmSignUp_Load(object sender, EventArgs e)
         {
+
+            
             PbImage_Perfil.Visible = false;
 
             CbCargo.DataSource = conexao.obterdados("select * from Table_Cargo");
@@ -126,8 +128,6 @@ namespace Minha_Parte_Biblio
                 {
                     PbImage_Perfil.Image = Image.FromFile(ft.FileName);
                     Cam_FT = ft.FileName.Replace("\\", "\\\\");
-                    Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Cam_FT));
-                    File.Copy(Cam_FT, Cam_origin, true);
                     Nome_Ft = ft.SafeFileName;
                 }
             }
@@ -154,9 +154,13 @@ namespace Minha_Parte_Biblio
                     Modelo_User.UserName = txtUser.Text;
                     Modelo_User.Password = txtPassWord.Text;
                     Modelo_User.Caminho_FT = Nome_Ft;
-                    MessageBox.Show(Modelo_User.Index_Cargo.ToString());
                     if(controle_User.SignUp(Modelo_User) == true)
                        {
+                       
+                        Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Cam_FT));
+                        File.Copy(Cam_FT, Cam_origin, true);
+                        MessageBox.Show(Cam_FT);
+                        MessageBox.Show(Cam_origin);
                         FrmBoasVindas boVindam = new FrmBoasVindas(txtNomeComp.Text);
                         this.Hide();
                         boVindam.ShowDialog();
