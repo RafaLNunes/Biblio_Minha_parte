@@ -43,6 +43,8 @@ CREATE TABLE Table_User (
 	CFK_Cargo int,
     CONSTRAINT FK_Ano FOREIGN KEY (CFK_Ano) REFERENCES Table_Ano_Escolar(CD_Ano_Escolar),
     CONSTRAINT FK_Cargo FOREIGN KEY (CFK_Cargo) REFERENCES Table_Cargo(CD_Cargo)
+    ON DELETE CASCADE
+	ON UPDATE CASCADE
 );
 
 CREATE TABLE Table_Historico (

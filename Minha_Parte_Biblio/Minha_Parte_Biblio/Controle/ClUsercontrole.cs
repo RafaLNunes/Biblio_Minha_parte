@@ -25,7 +25,7 @@ namespace Minha_Parte_Biblio.Controle
 
                 string[] campos = {"@ID_Aluno", "@Nome_Completo", "@UserName", "@Password", "@IMG_User", "@CFK_Ano", "@CFK_Cargo"};
                 //monto o vetor com os valores do formulario
-                string[] valores = { Perfil.ID_Aluno.ToString(), Perfil.NomeComp.ToString(), Perfil.UserName.ToString(), Perfil.Password.ToString(), Perfil.Caminho_FT.ToString(), Perfil.Index_Cargo.ToString(), Perfil.Index_Ano.ToString()};
+                string[] valores = { Perfil.ID_Aluno.ToString(), Perfil.NomeComp.ToString(), Perfil.UserName.ToString(), Perfil.Password.ToString(), Perfil.Caminho_FT.ToString(), Perfil.Index_Ano.ToString(), Perfil.Index_Cargo.ToString() };
 
                 //testar o insert no banco de dados
                 if (conexao.cadastrar(0, campos, valores, SQL_Insert, "@ID_Aluno") >= 1)

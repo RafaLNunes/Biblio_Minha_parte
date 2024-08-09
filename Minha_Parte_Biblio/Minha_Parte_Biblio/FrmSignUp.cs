@@ -156,7 +156,7 @@ namespace Minha_Parte_Biblio
                     Modelo_User.Caminho_FT = Nome_Ft;
                     MessageBox.Show(Modelo_User.Index_Cargo.ToString());
                     if(controle_User.SignUp(Modelo_User) == true)
-                    {
+                       {
                         FrmBoasVindas boVindam = new FrmBoasVindas(txtNomeComp.Text);
                         this.Hide();
                         boVindam.ShowDialog();

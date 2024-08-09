@@ -52,10 +52,10 @@ namespace Aprendendo_MVC
                     cmd.Parameters.AddWithValue(campos[i], valores[i]);
                 }
 
-                if (registro > 0)
+                if (codigo > 0)
                 {
                     //se o codigo existir no registro, sera substituido aqui para execução
-                    cmd.Parameters.AddWithValue(PK_Table, codigo);
+                    cmd.Parameters.AddWithValue(PK_Table , codigo);
                 }
 
                 //executa o script sql
