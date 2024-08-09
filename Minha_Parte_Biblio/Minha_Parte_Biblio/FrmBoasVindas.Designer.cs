@@ -45,6 +45,7 @@
             PbImage_User.Size = new Size(414, 515);
             PbImage_User.TabIndex = 0;
             PbImage_User.TabStop = false;
+            PbImage_User.Click += PbImage_User_Click;
             // 
             // LbNomeComp
             // 
@@ -77,6 +78,7 @@
             BntViajar.TabIndex = 6;
             BntViajar.Text = "   ";
             BntViajar.UseVisualStyleBackColor = false;
+            BntViajar.Click += BntViajar_Click;
             // 
             // FrmBoasVindas
             // 

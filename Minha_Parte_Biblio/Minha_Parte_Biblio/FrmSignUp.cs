@@ -159,9 +159,9 @@ namespace Minha_Parte_Biblio
                        
                         Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Cam_FT));
                         File.Copy(Cam_FT, Cam_origin, true);
-                        MessageBox.Show(Cam_FT);
                         MessageBox.Show(Cam_origin);
-                        FrmBoasVindas boVindam = new FrmBoasVindas(txtNomeComp.Text);
+                        MessageBox.Show(Cam_origin);
+                        FrmBoasVindas boVindam = new FrmBoasVindas(Modelo_User);
                         this.Hide();
                         boVindam.ShowDialog();
                     }

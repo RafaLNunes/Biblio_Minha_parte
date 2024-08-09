@@ -27,4 +27,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Imagens_DB\" />
+  </ItemGroup>
+
 </Project>
