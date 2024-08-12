@@ -124,6 +124,7 @@
             BntLogIn.TabIndex = 6;
             BntLogIn.Text = "   ";
             BntLogIn.UseVisualStyleBackColor = false;
+            BntLogIn.Click += BntLogIn_Click;
             // 
             // Lbtext
             // 

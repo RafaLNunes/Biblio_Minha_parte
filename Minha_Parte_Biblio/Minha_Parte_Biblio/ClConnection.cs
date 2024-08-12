@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Minha_Parte_Biblio.Modelo;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -88,6 +89,40 @@ namespace Aprendendo_MVC
             return dt;
         }
 
+
+        public DataTable LogIn(ClUserModelo Modelo_User)
+        {
+            DataTable reg = new DataTable();
+
+            try
+            {
+                //User Name
+                String nameuser = Modelo_User.UserName;
+                //password
+                String password = Modelo_User.Password;
+
+                String sql = "select * from Table_User where NameUser=@nameuser and Senha=@password";
+
+                MySqlConnection com = GetConectection();
+
+                MySqlCommand cmd = new MySqlCommand(sql, Conect);
+
+                cmd.Parameters.AddWithValue("@nameuser", nameuser);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(reg);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
+
+
+            return reg;
+        }
 
     }
 }

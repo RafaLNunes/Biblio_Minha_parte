@@ -43,6 +43,7 @@
             PbImage_User.Location = new Point(965, 263);
             PbImage_User.Name = "PbImage_User";
             PbImage_User.Size = new Size(414, 515);
+            PbImage_User.SizeMode = PictureBoxSizeMode.Zoom;
             PbImage_User.TabIndex = 0;
             PbImage_User.TabStop = false;
             PbImage_User.Click += PbImage_User_Click;

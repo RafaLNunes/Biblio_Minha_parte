@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Aprendendo_MVC;
+using Minha_Parte_Biblio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +15,9 @@ namespace Minha_Parte_Biblio
 {
     public partial class FRMLogIn : Form
     {
+
+        ClConectection conexao = new ClConectection();
+        ClUserModelo Modelo_User = new ClUserModelo();
         public FRMLogIn()
         {
             InitializeComponent();
@@ -61,6 +67,27 @@ namespace Minha_Parte_Biblio
             FrmSignUp signUpForm = new FrmSignUp();
             this.Hide();
             signUpForm.ShowDialog();
+        }
+
+        private void BntLogIn_Click(object sender, EventArgs e)
+        {
+
+            Modelo_User.UserName = txtUser.Text;
+            Modelo_User.Password = txtPassWord.Text;
+
+            DataTable DT_logIn = conexao.LogIn(Modelo_User);
+
+            Modelo_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
+
+            MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
+
+            if (Convert.ToInt32(DT_logIn.Rows[0][0]) > 0)
+            {
+                this.Hide();
+                FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Modelo_User);
+                MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");
+                Boa_Vinda.ShowDialog();
+            }
         }
     }
 }

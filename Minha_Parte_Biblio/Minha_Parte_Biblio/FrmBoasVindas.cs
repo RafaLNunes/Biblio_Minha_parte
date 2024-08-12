@@ -1,4 +1,5 @@
-﻿using Minha_Parte_Biblio.Modelo;
+﻿using Aprendendo_MVC;
+using Minha_Parte_Biblio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace Minha_Parte_Biblio
     public partial class FrmBoasVindas : Form
     {
         ClUserModelo Modelo_User = new ClUserModelo();
+        DataTable DT_User = new DataTable();
+        ClConectection conexao = new ClConectection();
         public FrmBoasVindas(ClUserModelo Usuario)
         {
             Modelo_User = Usuario;
@@ -23,7 +26,8 @@ namespace Minha_Parte_Biblio
         private void FrmBoasVindas_Load(object sender, EventArgs e)
         {
             String Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Modelo_User.Caminho_FT));
-            PbImage_User.Image = Image.FromFile(Cam_origin);
+            DT_User = conexao.obterdados($"select * from Table_User where ID_Aluno = {Modelo_User.ID_Aluno}");
+            PbImage_User.Image = Image.FromFile(DT_User.Rows[0]["IMG_User"].ToString());
             LbNomeComp.Text = Modelo_User.NomeComp.ToString();
         }
 

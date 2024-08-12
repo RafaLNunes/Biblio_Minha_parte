@@ -41,8 +41,10 @@ CREATE TABLE Table_User (
     IMG_User Varchar(45),
     CFK_Ano int,
 	CFK_Cargo int,
+    CFK_Unidade int,
     CONSTRAINT FK_Ano FOREIGN KEY (CFK_Ano) REFERENCES Table_Ano_Escolar(CD_Ano_Escolar),
-    CONSTRAINT FK_Cargo FOREIGN KEY (CFK_Cargo) REFERENCES Table_Cargo(CD_Cargo)
+    CONSTRAINT FK_Cargo FOREIGN KEY (CFK_Cargo) REFERENCES Table_Cargo(CD_Cargo),
+    CONSTRAINT FK_Unit FOREIGN KEY (CFK_Unidade) REFERENCES Table_Unidade(CD_Unidade)
     ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
@@ -127,3 +129,15 @@ Select * From Table_User;
 Select * From Table_Historico;
 Select * From Table_reservas;
 
+select Table_User.ID_Aluno,
+    Table_User.NameUser,
+    Table_User.Nome_Completo,
+    Table_User.Senha,	
+    Table_User.IMG_User,
+    Table_Ano_Escolar.Ano_Escolar,
+	Table_Cargo.Cargo,
+    Table_Unidade.Nome_Unidade 
+    from Table_User 
+    inner join Table_Ano_Escolar on Table_User.CFK_Ano = Table_Ano_Escolar.CD_Ano_Escolar
+    inner join Table_Cargo on Table_User.CFK_Cargo = Table_Cargo.CD_Cargo
+    inner join Table_Unidade on Table_User.CFK_Unidade = Table_Unidade.CD_Unidade;

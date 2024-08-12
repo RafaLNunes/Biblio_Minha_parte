@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSplash_Screen));
             PnBarCharge = new Panel();
             PnCharge = new Panel();
             Bar_Charge = new System.Windows.Forms.Timer(components);
-            LbCharge = new Label();
+            LbPorcento = new Label();
             PnBarCharge.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,16 +42,16 @@
             PnBarCharge.BackColor = Color.Transparent;
             PnBarCharge.BorderStyle = BorderStyle.Fixed3D;
             PnBarCharge.Controls.Add(PnCharge);
-            PnBarCharge.Location = new Point(300, 681);
+            PnBarCharge.Location = new Point(81, 701);
             PnBarCharge.Name = "PnBarCharge";
-            PnBarCharge.Size = new Size(900, 25);
+            PnBarCharge.Size = new Size(1300, 13);
             PnBarCharge.TabIndex = 0;
             // 
             // PnCharge
             // 
-            PnCharge.BackColor = Color.FromArgb(204, 167, 141);
+            PnCharge.BackColor = Color.White;
             PnCharge.Location = new Point(-6, -15);
-            PnCharge.MaximumSize = new Size(910, 50);
+            PnCharge.MaximumSize = new Size(1311, 50);
             PnCharge.MinimumSize = new Size(10, 50);
             PnCharge.Name = "PnCharge";
             PnCharge.Size = new Size(10, 50);
@@ -62,25 +63,24 @@
             Bar_Charge.Interval = 50;
             Bar_Charge.Tick += Bar_Charge_Tick;
             // 
-            // LbCharge
+            // LbPorcento
             // 
-            LbCharge.AutoSize = true;
-            LbCharge.BackColor = Color.Transparent;
-            LbCharge.Font = new Font("Showcard Gothic", 36F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            LbCharge.ForeColor = Color.Black;
-            LbCharge.Location = new Point(393, 600);
-            LbCharge.Name = "LbCharge";
-            LbCharge.Size = new Size(724, 74);
-            LbCharge.TabIndex = 2;
-            LbCharge.Text = "Carregando Arquivos";
+            LbPorcento.AutoSize = true;
+            LbPorcento.BackColor = Color.Transparent;
+            LbPorcento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LbPorcento.Location = new Point(1331, 737);
+            LbPorcento.Name = "LbPorcento";
+            LbPorcento.Size = new Size(65, 28);
+            LbPorcento.TabIndex = 1;
+            LbPorcento.Text = "label1";
             // 
             // FrmSplash_Screen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.SPLASH_SCREEN;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1497, 898);
-            Controls.Add(LbCharge);
+            Controls.Add(LbPorcento);
             Controls.Add(PnBarCharge);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmSplash_Screen";
@@ -96,6 +96,6 @@
         private Panel PnBarCharge;
         private Panel PnCharge;
         private System.Windows.Forms.Timer Bar_Charge;
-        private Label LbCharge;
+        private Label LbPorcento;
     }
 }
