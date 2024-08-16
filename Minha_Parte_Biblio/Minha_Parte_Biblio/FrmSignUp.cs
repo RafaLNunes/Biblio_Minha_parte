@@ -34,8 +34,8 @@ namespace Minha_Parte_Biblio
         private void FrmSignUp_Load(object sender, EventArgs e)
         {
 
+
             
-            PbImage_Perfil.Visible = false;
 
             CbCargo.DataSource = conexao.obterdados("select * from Table_Cargo");
             CbCargo.DisplayMember = "Cargo";
@@ -46,6 +46,11 @@ namespace Minha_Parte_Biblio
             CbAno.DisplayMember = "Ano_Escolar";
             CbAno.ValueMember = "CD_Ano_Escolar";
             CbAno.Text = String.Empty;
+
+            CbUnidade.DataSource = conexao.obterdados("select * from Table_Unidade");
+            CbUnidade.DisplayMember = "Nome_Unidade";
+            CbUnidade.ValueMember = "CD_Unidade";
+            CbUnidade.Text = String.Empty;
 
         }
 
@@ -120,21 +125,7 @@ namespace Minha_Parte_Biblio
             LbFTPerfil.Visible = false;
             PbImage_Perfil.Visible = true;
 
-            try
-            {
-                OpenFileDialog ft = new OpenFileDialog();
-                ft.Filter = "image file(*.jpg;*.png;*.gif;*.jpeg;*.webp)|*.jpg;*.png;*.gif;*.jpeg;*.webp";
-                if (ft.ShowDialog() == DialogResult.OK)
-                {
-                    PbImage_Perfil.Image = Image.FromFile(ft.FileName);
-                    Cam_FT = ft.FileName.Replace("\\", "\\\\");
-                    Nome_Ft = ft.SafeFileName;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
 
 
         }
@@ -147,16 +138,16 @@ namespace Minha_Parte_Biblio
 
                 if (!String.IsNullOrEmpty(txtID.Text) || !String.IsNullOrEmpty(txtNomeComp.Text) || !String.IsNullOrEmpty(txtUser.Text) || !String.IsNullOrEmpty(txtPassWord.Text))
                 {
-                    Modelo_User.Index_Cargo = CbCargo.SelectedIndex+1;
-                    Modelo_User.Index_Ano = CbAno.SelectedIndex+1;
+                    Modelo_User.Index_Cargo = CbCargo.SelectedIndex + 1;
+                    Modelo_User.Index_Ano = CbAno.SelectedIndex + 1;
                     Modelo_User.NomeComp = txtNomeComp.Text;
                     Modelo_User.ID_Aluno = txtID.Text;
                     Modelo_User.UserName = txtUser.Text;
                     Modelo_User.Password = txtPassWord.Text;
                     Modelo_User.Caminho_FT = Nome_Ft;
-                    if(controle_User.SignUp(Modelo_User) == true)
-                       {
-                       
+                    if (controle_User.SignUp(Modelo_User) == true)
+                    {
+
                         Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Cam_FT));
                         File.Copy(Cam_FT, Cam_origin, true);
                         MessageBox.Show(Cam_origin);
@@ -172,6 +163,30 @@ namespace Minha_Parte_Biblio
 
 
 
+        }
+
+        private void CbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BntEscolher_Image_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog ft = new OpenFileDialog();
+                ft.Filter = "image file(*.jpg;*.png;*.gif;*.jpeg;*.webp)|*.jpg;*.png;*.gif;*.jpeg;*.webp";
+                if (ft.ShowDialog() == DialogResult.OK)
+                {
+                    PbImage_Perfil.Image = Image.FromFile(ft.FileName);
+                    Cam_FT = ft.FileName.Replace("\\", "\\\\");
+                    Nome_Ft = ft.SafeFileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

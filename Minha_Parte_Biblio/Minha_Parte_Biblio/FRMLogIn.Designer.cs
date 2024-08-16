@@ -42,17 +42,27 @@
             CbVisivel_Senha = new ImageList(components);
             Cbimage_PassWord = new ImageList(components);
             Cbimage_User = new ImageList(components);
+            FpUser = new FlowLayoutPanel();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            PnBarUser = new Panel();
+            FpPass = new FlowLayoutPanel();
+            flowLayoutPanel4 = new FlowLayoutPanel();
+            PnBarPass = new Panel();
             ((System.ComponentModel.ISupportInitialize)Image_User).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Image_PassWord).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Image_Visivel).BeginInit();
             PnBntLogIn.SuspendLayout();
+            FpUser.SuspendLayout();
+            flowLayoutPanel2.SuspendLayout();
+            FpPass.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // Image_User
             // 
             Image_User.BackColor = Color.Transparent;
             Image_User.Image = (Image)resources.GetObject("Image_User.Image");
-            Image_User.Location = new Point(63, 432);
+            Image_User.Location = new Point(3, 3);
             Image_User.Name = "Image_User";
             Image_User.Size = new Size(54, 50);
             Image_User.SizeMode = PictureBoxSizeMode.Zoom;
@@ -63,7 +73,7 @@
             // 
             Image_PassWord.BackColor = Color.Transparent;
             Image_PassWord.Image = (Image)resources.GetObject("Image_PassWord.Image");
-            Image_PassWord.Location = new Point(63, 583);
+            Image_PassWord.Location = new Point(3, 3);
             Image_PassWord.Name = "Image_PassWord";
             Image_PassWord.Size = new Size(54, 50);
             Image_PassWord.SizeMode = PictureBoxSizeMode.Zoom;
@@ -74,7 +84,7 @@
             // 
             txtUser.BackColor = Color.FromArgb(242, 203, 17);
             txtUser.BorderStyle = BorderStyle.None;
-            txtUser.Location = new Point(123, 450);
+            txtUser.Location = new Point(3, 27);
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(358, 20);
             txtUser.TabIndex = 2;
@@ -85,7 +95,7 @@
             // 
             txtPassWord.BackColor = Color.FromArgb(242, 203, 17);
             txtPassWord.BorderStyle = BorderStyle.None;
-            txtPassWord.Location = new Point(123, 600);
+            txtPassWord.Location = new Point(3, 27);
             txtPassWord.Name = "txtPassWord";
             txtPassWord.PasswordChar = '•';
             txtPassWord.Size = new Size(358, 20);
@@ -97,7 +107,7 @@
             // 
             Image_Visivel.BackColor = Color.Transparent;
             Image_Visivel.Image = (Image)resources.GetObject("Image_Visivel.Image");
-            Image_Visivel.Location = new Point(487, 583);
+            Image_Visivel.Location = new Point(429, 3);
             Image_Visivel.Name = "Image_Visivel";
             Image_Visivel.Size = new Size(54, 50);
             Image_Visivel.SizeMode = PictureBoxSizeMode.Zoom;
@@ -109,7 +119,7 @@
             // 
             PnBntLogIn.BackColor = Color.Transparent;
             PnBntLogIn.Controls.Add(BntLogIn);
-            PnBntLogIn.Location = new Point(78, 766);
+            PnBntLogIn.Location = new Point(885, 600);
             PnBntLogIn.Name = "PnBntLogIn";
             PnBntLogIn.Size = new Size(442, 90);
             PnBntLogIn.TabIndex = 5;
@@ -131,7 +141,7 @@
             Lbtext.AutoSize = true;
             Lbtext.BackColor = Color.Transparent;
             Lbtext.Font = new Font("Arial", 16F);
-            Lbtext.Location = new Point(50, 691);
+            Lbtext.Location = new Point(829, 562);
             Lbtext.Name = "Lbtext";
             Lbtext.Size = new Size(199, 32);
             Lbtext.TabIndex = 6;
@@ -143,7 +153,7 @@
             LbSignUp.BackColor = Color.Transparent;
             LbSignUp.Font = new Font("Arial Black", 16F, FontStyle.Bold | FontStyle.Italic);
             LbSignUp.LinkColor = Color.Black;
-            LbSignUp.Location = new Point(234, 688);
+            LbSignUp.Location = new Point(1013, 559);
             LbSignUp.Name = "LbSignUp";
             LbSignUp.Size = new Size(314, 38);
             LbSignUp.TabIndex = 7;
@@ -175,20 +185,72 @@
             Cbimage_User.Images.SetKeyName(0, "User_Click.png");
             Cbimage_User.Images.SetKeyName(1, "User_UnClick.png");
             // 
+            // FpUser
+            // 
+            FpUser.BackColor = Color.Transparent;
+            FpUser.Controls.Add(Image_User);
+            FpUser.Controls.Add(flowLayoutPanel2);
+            FpUser.Controls.Add(PnBarUser);
+            FpUser.Location = new Point(842, 162);
+            FpUser.Name = "FpUser";
+            FpUser.Size = new Size(426, 70);
+            FpUser.TabIndex = 8;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Controls.Add(txtUser);
+            flowLayoutPanel2.FlowDirection = FlowDirection.BottomUp;
+            flowLayoutPanel2.Location = new Point(63, 3);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(360, 50);
+            flowLayoutPanel2.TabIndex = 2;
+            // 
+            // PnBarUser
+            // 
+            PnBarUser.Location = new Point(3, 59);
+            PnBarUser.Name = "PnBarUser";
+            PnBarUser.Size = new Size(420, 28);
+            PnBarUser.TabIndex = 1;
+            // 
+            // FpPass
+            // 
+            FpPass.BackColor = Color.Transparent;
+            FpPass.Controls.Add(Image_PassWord);
+            FpPass.Controls.Add(flowLayoutPanel4);
+            FpPass.Controls.Add(Image_Visivel);
+            FpPass.Controls.Add(PnBarPass);
+            FpPass.Location = new Point(839, 359);
+            FpPass.Name = "FpPass";
+            FpPass.Size = new Size(488, 70);
+            FpPass.TabIndex = 9;
+            // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.Controls.Add(txtPassWord);
+            flowLayoutPanel4.FlowDirection = FlowDirection.BottomUp;
+            flowLayoutPanel4.Location = new Point(63, 3);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(360, 50);
+            flowLayoutPanel4.TabIndex = 2;
+            // 
+            // PnBarPass
+            // 
+            PnBarPass.Location = new Point(3, 59);
+            PnBarPass.Name = "PnBarPass";
+            PnBarPass.Size = new Size(480, 28);
+            PnBarPass.TabIndex = 1;
+            // 
             // FRMLogIn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.duplicada_LogIn;
-            ClientSize = new Size(600, 900);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1500, 758);
+            Controls.Add(FpPass);
+            Controls.Add(FpUser);
             Controls.Add(LbSignUp);
             Controls.Add(Lbtext);
             Controls.Add(PnBntLogIn);
-            Controls.Add(Image_Visivel);
-            Controls.Add(txtPassWord);
-            Controls.Add(txtUser);
-            Controls.Add(Image_PassWord);
-            Controls.Add(Image_User);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FRMLogIn";
             StartPosition = FormStartPosition.CenterScreen;
@@ -198,6 +260,12 @@
             ((System.ComponentModel.ISupportInitialize)Image_PassWord).EndInit();
             ((System.ComponentModel.ISupportInitialize)Image_Visivel).EndInit();
             PnBntLogIn.ResumeLayout(false);
+            FpUser.ResumeLayout(false);
+            flowLayoutPanel2.ResumeLayout(false);
+            flowLayoutPanel2.PerformLayout();
+            FpPass.ResumeLayout(false);
+            flowLayoutPanel4.ResumeLayout(false);
+            flowLayoutPanel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -216,5 +284,11 @@
         private ImageList CbVisivel_Senha;
         private ImageList Cbimage_PassWord;
         private ImageList Cbimage_User;
+        private FlowLayoutPanel FpUser;
+        private Panel PnBarUser;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel FpPass;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private Panel PnBarPass;
     }
 }

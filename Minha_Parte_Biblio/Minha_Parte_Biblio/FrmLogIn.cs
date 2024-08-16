@@ -25,7 +25,12 @@ namespace Minha_Parte_Biblio
 
         private void FRMLogIn_Load(object sender, EventArgs e)
         {
-
+            PnBarUser.BackColor = Color.FromArgb(43, 59, 92);
+            PnBarPass.BackColor = Color.FromArgb(43, 59, 92);
+            txtUser.ForeColor = Color.FromArgb(164, 186, 178);
+            txtUser.Text = "Entre com o seu NameUser";
+            txtPassWord.ForeColor = Color.FromArgb(164, 186, 178);
+            txtPassWord.Text = "Entre com a sua Senha";
         }
 
         private void Image_Visivel_Click(object sender, EventArgs e)
@@ -45,21 +50,30 @@ namespace Minha_Parte_Biblio
         private void txtUser_Enter(object sender, EventArgs e)
         {
             Image_User.Image = Cbimage_User.Images[0];
+            PnBarUser.BackColor = Color.FromArgb(9, 90, 162);
+            txtUser.ForeColor = Color.Black;
+            txtUser.Text = "";
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
             Image_User.Image = Cbimage_User.Images[1];
+            PnBarUser.BackColor = Color.FromArgb(43, 59, 92);
         }
 
         private void txtPassWord_Enter(object sender, EventArgs e)
         {
             Image_PassWord.Image = Cbimage_PassWord.Images[0];
+            PnBarPass.BackColor = Color.FromArgb(9, 90, 162);
+            txtPassWord.ForeColor = Color.Black;
+            txtPassWord.Text = "";
+
         }
 
         private void txtPassWord_Leave(object sender, EventArgs e)
         {
             Image_PassWord.Image = Cbimage_PassWord.Images[1];
+            PnBarPass.BackColor = Color.FromArgb(43, 59, 92);
         }
 
         private void LbSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
