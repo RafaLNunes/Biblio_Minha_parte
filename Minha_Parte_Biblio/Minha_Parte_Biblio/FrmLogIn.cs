@@ -31,6 +31,8 @@ namespace Minha_Parte_Biblio
             txtUser.Text = "Entre com o seu NameUser";
             txtPassWord.ForeColor = Color.FromArgb(164, 186, 178);
             txtPassWord.Text = "Entre com a sua Senha";
+
+            txtPassWord.PasswordChar = '\0';
         }
 
         private void Image_Visivel_Click(object sender, EventArgs e)
@@ -67,6 +69,7 @@ namespace Minha_Parte_Biblio
             PnBarPass.BackColor = Color.FromArgb(9, 90, 162);
             txtPassWord.ForeColor = Color.Black;
             txtPassWord.Text = "";
+            txtPassWord.PasswordChar = '•';
 
         }
 
@@ -102,6 +105,11 @@ namespace Minha_Parte_Biblio
                 MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");
                 Boa_Vinda.ShowDialog();
             }
+        }
+
+        private void txtPassWord_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

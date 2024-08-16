@@ -82,7 +82,7 @@
             // 
             // txtUser
             // 
-            txtUser.BackColor = Color.FromArgb(242, 203, 17);
+            txtUser.BackColor = Color.White;
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Location = new Point(3, 27);
             txtUser.Name = "txtUser";
@@ -93,13 +93,14 @@
             // 
             // txtPassWord
             // 
-            txtPassWord.BackColor = Color.FromArgb(242, 203, 17);
+            txtPassWord.BackColor = Color.White;
             txtPassWord.BorderStyle = BorderStyle.None;
             txtPassWord.Location = new Point(3, 27);
             txtPassWord.Name = "txtPassWord";
             txtPassWord.PasswordChar = '•';
             txtPassWord.Size = new Size(358, 20);
             txtPassWord.TabIndex = 3;
+            txtPassWord.TextChanged += txtPassWord_TextChanged;
             txtPassWord.Enter += txtPassWord_Enter;
             txtPassWord.Leave += txtPassWord_Leave;
             // 

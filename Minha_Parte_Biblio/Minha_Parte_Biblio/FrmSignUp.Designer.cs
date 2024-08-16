@@ -123,7 +123,7 @@
             // 
             // txtPassWord
             // 
-            txtPassWord.BackColor = Color.FromArgb(242, 203, 17);
+            txtPassWord.BackColor = Color.White;
             txtPassWord.BorderStyle = BorderStyle.None;
             txtPassWord.Location = new Point(3, 27);
             txtPassWord.Name = "txtPassWord";
@@ -146,7 +146,7 @@
             // 
             // txtUser
             // 
-            txtUser.BackColor = Color.FromArgb(242, 203, 17);
+            txtUser.BackColor = Color.White;
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Location = new Point(3, 27);
             txtUser.Name = "txtUser";
@@ -168,7 +168,7 @@
             // 
             // txtID
             // 
-            txtID.BackColor = Color.FromArgb(242, 203, 17);
+            txtID.BackColor = Color.White;
             txtID.BorderStyle = BorderStyle.None;
             txtID.Location = new Point(3, 27);
             txtID.Name = "txtID";
@@ -190,7 +190,7 @@
             // 
             // txtNomeComp
             // 
-            txtNomeComp.BackColor = Color.FromArgb(242, 203, 17);
+            txtNomeComp.BackColor = Color.White;
             txtNomeComp.BorderStyle = BorderStyle.None;
             txtNomeComp.Location = new Point(3, 27);
             txtNomeComp.Name = "txtNomeComp";
