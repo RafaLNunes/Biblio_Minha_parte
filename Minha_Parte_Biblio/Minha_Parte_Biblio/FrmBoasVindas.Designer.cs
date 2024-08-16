@@ -86,10 +86,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Boas_Vindas_Duplicada;
-            ClientSize = new Size(1497, 898);
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(1467, 868);
             Controls.Add(PnBntViajar);
             Controls.Add(LbNomeComp);
             Controls.Add(PbImage_User);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmBoasVindas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmBoasVindas";
