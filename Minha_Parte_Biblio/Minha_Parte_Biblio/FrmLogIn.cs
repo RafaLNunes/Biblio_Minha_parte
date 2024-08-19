@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -15,9 +16,9 @@ namespace Minha_Parte_Biblio
 {
     public partial class FRMLogIn : Form
     {
-
-        ClConectection conexao = new ClConectection();
-        ClUserModelo Modelo_User = new ClUserModelo();
+        //conecta as class
+        ClConectection conexao = new ClConectection(); // exclusiva para a conexao com a dt
+        ClUserModelo Modelo_User = new ClUserModelo(); // exclusiva para infos do user
         public FRMLogIn()
         {
             InitializeComponent();
@@ -25,85 +26,102 @@ namespace Minha_Parte_Biblio
 
         private void FRMLogIn_Load(object sender, EventArgs e)
         {
-            PnBarUser.BackColor = Color.FromArgb(43, 59, 92);
-            PnBarPass.BackColor = Color.FromArgb(43, 59, 92);
-            txtUser.ForeColor = Color.FromArgb(164, 186, 178);
-            txtUser.Text = "Entre com o seu NameUser";
-            txtPassWord.ForeColor = Color.FromArgb(164, 186, 178);
-            txtPassWord.Text = "Entre com a sua Senha";
+            //define aparencias dos itens no design
+            PnBarUser.BackColor = Color.FromArgb(43, 59, 92); //controla a cor abaixo das textbox
+            PnBarPass.BackColor = Color.FromArgb(43, 59, 92);//controla a cor abaixo das textbox
+            txtUser.ForeColor = Color.FromArgb(164, 186, 178);//controla a cor abaixo das textbox
+            txtUser.Text = "Entre com o seu NameUser"; //cria um place holder para o user
+            txtPassWord.ForeColor = Color.FromArgb(164, 186, 178); //controla a cor abaixo das textbox
+            txtPassWord.Text = "Entre com a sua Senha"; //cria um place holder para a senha
 
-            txtPassWord.PasswordChar = '\0';
+            txtPassWord.PasswordChar = '\0'; //define como inativo a função de esconder senha
         }
 
         private void Image_Visivel_Click(object sender, EventArgs e)
         {
-            if (txtPassWord.PasswordChar == '•')
+
+            //ativa e desativa a função de senha, assim que o user clicar no button
+            if (txtPassWord.PasswordChar == '•') // checa se está ou não ativado
             {
-                txtPassWord.PasswordChar = '\0';
-                Image_Visivel.Image = CbVisivel_Senha.Images[1];
+                txtPassWord.PasswordChar = '\0'; // se estiver vira inativo
+                Image_Visivel.Image = CbVisivel_Senha.Images[1]; //e a imagem do Bnt fica como a 1 do ComboBox image
             }
-            else if (txtPassWord.PasswordChar == '\0')
+            else if (txtPassWord.PasswordChar == '\0') //checa de novo
             {
-                txtPassWord.PasswordChar = '•';
-                Image_Visivel.Image = CbVisivel_Senha.Images[0];
+                txtPassWord.PasswordChar = '•'; // se n estiver ativa
+                Image_Visivel.Image = CbVisivel_Senha.Images[0]; // a imagem vira a 0 do comboimage
             }
         }
 
         private void txtUser_Enter(object sender, EventArgs e)
         {
-            Image_User.Image = Cbimage_User.Images[0];
-            PnBarUser.BackColor = Color.FromArgb(9, 90, 162);
-            txtUser.ForeColor = Color.Black;
-            txtUser.Text = "";
+
+            //define as infos ao interagir com a textbox user
+            Image_User.Image = Cbimage_User.Images[0]; // muda a image na lateral da text
+            PnBarUser.BackColor = Color.FromArgb(9, 90, 162); //controla a cor abaixo das textbox
+            txtUser.ForeColor = Color.Black; // redefine a cor da letra
+            txtUser.Text = ""; // limpa a por via das duvidas (Pode dar erro)
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
-            Image_User.Image = Cbimage_User.Images[1];
-            PnBarUser.BackColor = Color.FromArgb(43, 59, 92);
+            //define as infos ao interagir com a textbox user
+            Image_User.Image = Cbimage_User.Images[1]; // muda a image na lateral da text
+            PnBarUser.BackColor = Color.FromArgb(43, 59, 92); //controla a cor abaixo das textbox
         }
 
         private void txtPassWord_Enter(object sender, EventArgs e)
         {
-            Image_PassWord.Image = Cbimage_PassWord.Images[0];
-            PnBarPass.BackColor = Color.FromArgb(9, 90, 162);
-            txtPassWord.ForeColor = Color.Black;
-            txtPassWord.Text = "";
-            txtPassWord.PasswordChar = '•';
+            //define as infos ao interagir com a textbox password
+            Image_PassWord.Image = Cbimage_PassWord.Images[0]; //muda a image na lateral da text
+            PnBarPass.BackColor = Color.FromArgb(9, 90, 162); //controla a cor abaixo das textbox
+            txtPassWord.ForeColor = Color.Black; //define a cor da letra
+            txtPassWord.Text = ""; //por via das duvidas limpa o text (pode dar erro)
+            txtPassWord.PasswordChar = '•'; // reativa a função esconder texto (por via das duvidas)
 
         }
 
         private void txtPassWord_Leave(object sender, EventArgs e)
         {
-            Image_PassWord.Image = Cbimage_PassWord.Images[1];
-            PnBarPass.BackColor = Color.FromArgb(43, 59, 92);
+            //define as infos ao interagir com a textbox password
+            Image_PassWord.Image = Cbimage_PassWord.Images[1]; //redefine a image na lateral do text
+            PnBarPass.BackColor = Color.FromArgb(43, 59, 92); //controla a cor abaixo das textbox
         }
 
         private void LbSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmSignUp signUpForm = new FrmSignUp();
-            this.Hide();
-            signUpForm.ShowDialog();
+
+            //controla a interação com uma label link
+            // caso seja clicada 
+            FrmSignUp signUpForm = new FrmSignUp(); //gera um forms chamado de signUpForm
+            this.Hide(); // esconde o atual
+            signUpForm.ShowDialog(); // abre o novo forms
         }
 
         private void BntLogIn_Click(object sender, EventArgs e)
         {
+            //controla as reações para logar
+            //ao clicar no bnt
+            Modelo_User.UserName = txtUser.Text; // o modelo vai popular a variavel UserName com o que estiver escrito em textuser
+            Modelo_User.Password = txtPassWord.Text; // o modelo vai popular a variavel Password com o que estiver escrito em textpassword
 
-            Modelo_User.UserName = txtUser.Text;
-            Modelo_User.Password = txtPassWord.Text;
-
+            //cria uma table para ser populada com a conexao ao clconnection
             DataTable DT_logIn = conexao.LogIn(Modelo_User);
 
+            //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
             Modelo_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
 
+            //gera unma menssage de confirmação de login
             MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
 
+            //checa se foi populado da maneira correta
             if (Convert.ToInt32(DT_logIn.Rows[0][0]) > 0)
             {
-                this.Hide();
-                FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Modelo_User);
-                MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");
-                Boa_Vinda.ShowDialog();
+                //se sim
+                this.Hide();//esconde o frm atual
+                FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Modelo_User); //gera o novo
+                MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");// gera uma menssage de bem vindo
+                Boa_Vinda.ShowDialog();// abre o novo
             }
         }
 
