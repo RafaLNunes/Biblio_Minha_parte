@@ -21,8 +21,8 @@ CREATE TABLE Table_Unidade(
 );
 
 CREATE TABLE Table_Livro (
-	CD_Livro varchar(80) not null primary key,
-    Order_Livro int auto_increment,
+	Order_Livro int primary key auto_increment,
+	CD_Livro varchar(80) not null,
     Nome_Livro Varchar(80),
     Autor_Livro Varchar(80),
     QTD_estoque int,
@@ -54,20 +54,22 @@ CREATE TABLE Table_Historico (
 	CD_Hist int primary key auto_increment not null,
     DT_reserva datetime,
     DT_devolucao datetime,
-    CFK_Livro Varchar(45),
+    CFK_Livro int,
     CFK_User Varchar(45),
-    CONSTRAINT FK_Livro FOREIGN KEY (CFK_Livro) REFERENCES Table_Livro(CD_Livro),
+    CONSTRAINT FK_Livro FOREIGN KEY (CFK_Livro) REFERENCES Table_Livro(Order_Livro),
     CONSTRAINT FK_User FOREIGN KEY (CFK_User) REFERENCES Table_User(ID_Aluno)
 );
 
 CREATE TABLE Table_reservas(
-	CD_Reservas int primary key auto_increment not null,
+    CD_Reservas int primary key auto_increment not null,
     DT_reserva datetime,
-    DT_previsão_devolucao datetime,
+    DT_previsao_devolucao datetime,
     CFK_User varchar(45),
-    CFK_Livro varchar(45),
+    CFK_Livro int,
     CONSTRAINT FK_Users foreign key (CFK_User) references Table_User(ID_Aluno), 
-    CONSTRAINT FK_Livros foreign key (CFK_Livro) references Table_Livro(CD_Livro)
+    CONSTRAINT FK_Livros foreign key (CFK_Livro) references Table_Livro(Order_Livro)
+    ON delete cascade
+    ON update cascade
 );
 
 insert into Table_Cargo(Cargo) values("Gerente"), ("Aluno"), ("Professor"), ("Externo");
@@ -129,6 +131,14 @@ Select * From Table_Livro;
 Select * From Table_User;
 Select * From Table_Historico;
 Select * From Table_reservas;
+
+
+
+INSERT INTO Table_User (ID_Aluno, Nome_Completo) values ('1ghjg1jg12', 'Gabriel de Oliveira');
+select Table_Livro.Nome_Livro, Table_Unidade.Nome_Unidade, Table_Livro.Descricao_Livro from Table_Livro Inner Join Table_Unidade on Table_Unidade.CD_Unidade = Table_Livro.CFK_Unidade where Table_Livro.CD_Livro = "320R888C2019";	
+
+select Table_Livro.Nome_Livro, Table_Livro.CD_Livro, Table_Unidade.Nome_Unidade, Table_Livro.Descricao_Livro, Table_Unidade.CD_Unidade from Table_Livro Inner Join Table_Unidade on Table_Unidade.CD_Unidade = Table_Livro.CFK_Unidade;
+
 
 select Table_User.ID_Aluno,
     Table_User.NameUser,
