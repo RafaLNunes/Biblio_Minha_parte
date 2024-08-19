@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMean));
             panel1 = new Panel();
-            PbClose = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             PnPag_User = new Panel();
-            LbUser = new Label();
             PnBarPag_User = new Panel();
+            LbUser = new Label();
+            PnPagUser_catalogo = new Panel();
             PnCatalogo = new Panel();
             PnBarCatalogo = new Panel();
             LbCatalogo = new Label();
-            PnPagUser_catalogo = new Panel();
             Pncatalogo_HistLivro = new Panel();
             PnHist_Livro = new Panel();
             PnBarHistLivro = new Panel();
@@ -51,14 +50,20 @@
             PnPerguntas = new Panel();
             PnBarPerguntas = new Panel();
             LbPerguntas = new Label();
+            PbClose = new PictureBox();
+            PnPerguntas_Nos = new Panel();
+            PnNos = new Panel();
+            PnBarNos = new Panel();
+            LbNos = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PbClose).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             PnPag_User.SuspendLayout();
             PnCatalogo.SuspendLayout();
             PnHist_Livro.SuspendLayout();
             PnReserv.SuspendLayout();
             PnPerguntas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PbClose).BeginInit();
+            PnNos.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -72,17 +77,6 @@
             panel1.Size = new Size(1515, 187);
             panel1.TabIndex = 0;
             // 
-            // PbClose
-            // 
-            PbClose.Image = (Image)resources.GetObject("PbClose.Image");
-            PbClose.Location = new Point(1433, 12);
-            PbClose.Name = "PbClose";
-            PbClose.Size = new Size(70, 70);
-            PbClose.SizeMode = PictureBoxSizeMode.Zoom;
-            PbClose.TabIndex = 1;
-            PbClose.TabStop = false;
-            PbClose.Click += pictureBox1_Click;
-            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(PnPag_User);
@@ -94,10 +88,13 @@
             flowLayoutPanel1.Controls.Add(PnReserv);
             flowLayoutPanel1.Controls.Add(PnReserv_Perguntas);
             flowLayoutPanel1.Controls.Add(PnPerguntas);
-            flowLayoutPanel1.Location = new Point(167, 12);
+            flowLayoutPanel1.Controls.Add(PnPerguntas_Nos);
+            flowLayoutPanel1.Controls.Add(PnNos);
+            flowLayoutPanel1.Location = new Point(87, 107);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1260, 149);
+            flowLayoutPanel1.Size = new Size(1403, 48);
             flowLayoutPanel1.TabIndex = 2;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // PnPag_User
             // 
@@ -107,6 +104,13 @@
             PnPag_User.Name = "PnPag_User";
             PnPag_User.Size = new Size(210, 48);
             PnPag_User.TabIndex = 1;
+            // 
+            // PnBarPag_User
+            // 
+            PnBarPag_User.Location = new Point(-15, 35);
+            PnBarPag_User.Name = "PnBarPag_User";
+            PnBarPag_User.Size = new Size(250, 98);
+            PnBarPag_User.TabIndex = 2;
             // 
             // LbUser
             // 
@@ -118,12 +122,12 @@
             LbUser.TabIndex = 0;
             LbUser.Text = "Pagina do Usuário";
             // 
-            // PnBarPag_User
+            // PnPagUser_catalogo
             // 
-            PnBarPag_User.Location = new Point(-15, 35);
-            PnBarPag_User.Name = "PnBarPag_User";
-            PnBarPag_User.Size = new Size(250, 98);
-            PnBarPag_User.TabIndex = 2;
+            PnPagUser_catalogo.Location = new Point(219, 3);
+            PnPagUser_catalogo.Name = "PnPagUser_catalogo";
+            PnPagUser_catalogo.Size = new Size(20, 125);
+            PnPagUser_catalogo.TabIndex = 3;
             // 
             // PnCatalogo
             // 
@@ -150,13 +154,6 @@
             LbCatalogo.Size = new Size(109, 33);
             LbCatalogo.TabIndex = 0;
             LbCatalogo.Text = "Catálogo";
-            // 
-            // PnPagUser_catalogo
-            // 
-            PnPagUser_catalogo.Location = new Point(219, 3);
-            PnPagUser_catalogo.Name = "PnPagUser_catalogo";
-            PnPagUser_catalogo.Size = new Size(20, 125);
-            PnPagUser_catalogo.TabIndex = 3;
             // 
             // Pncatalogo_HistLivro
             // 
@@ -257,6 +254,50 @@
             LbPerguntas.TabIndex = 0;
             LbPerguntas.Text = "Perguntas Frequentes";
             // 
+            // PbClose
+            // 
+            PbClose.Image = (Image)resources.GetObject("PbClose.Image");
+            PbClose.Location = new Point(1433, 12);
+            PbClose.Name = "PbClose";
+            PbClose.Size = new Size(70, 70);
+            PbClose.SizeMode = PictureBoxSizeMode.Zoom;
+            PbClose.TabIndex = 1;
+            PbClose.TabStop = false;
+            PbClose.Click += pictureBox1_Click;
+            // 
+            // PnPerguntas_Nos
+            // 
+            PnPerguntas_Nos.Location = new Point(1114, 3);
+            PnPerguntas_Nos.Name = "PnPerguntas_Nos";
+            PnPerguntas_Nos.Size = new Size(20, 125);
+            PnPerguntas_Nos.TabIndex = 7;
+            // 
+            // PnNos
+            // 
+            PnNos.Controls.Add(PnBarNos);
+            PnNos.Controls.Add(LbNos);
+            PnNos.Location = new Point(1140, 3);
+            PnNos.Name = "PnNos";
+            PnNos.Size = new Size(259, 48);
+            PnNos.TabIndex = 6;
+            // 
+            // PnBarNos
+            // 
+            PnBarNos.Location = new Point(-15, 35);
+            PnBarNos.Name = "PnBarNos";
+            PnBarNos.Size = new Size(298, 98);
+            PnBarNos.TabIndex = 2;
+            // 
+            // LbNos
+            // 
+            LbNos.AutoSize = true;
+            LbNos.Font = new Font("Sitka Text", 13.5F);
+            LbNos.Location = new Point(4, 0);
+            LbNos.Name = "LbNos";
+            LbNos.Size = new Size(252, 33);
+            LbNos.TabIndex = 0;
+            LbNos.Text = "Perguntas Frequentes";
+            // 
             // FrmMean
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -269,7 +310,6 @@
             Text = "FrmMean";
             Load += FrmMean_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)PbClose).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             PnPag_User.ResumeLayout(false);
             PnPag_User.PerformLayout();
@@ -281,6 +321,9 @@
             PnReserv.PerformLayout();
             PnPerguntas.ResumeLayout(false);
             PnPerguntas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PbClose).EndInit();
+            PnNos.ResumeLayout(false);
+            PnNos.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -308,5 +351,9 @@
         private Panel PnPerguntas;
         private Panel PnBarPerguntas;
         private Label LbPerguntas;
+        private Panel PnPerguntas_Nos;
+        private Panel PnNos;
+        private Panel PnBarNos;
+        private Label LbNos;
     }
 }
