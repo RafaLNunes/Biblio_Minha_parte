@@ -22,7 +22,13 @@
     <Compile Update="FrmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Frmsobrenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmSplash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frmusuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PictureBoxCircle.cs">

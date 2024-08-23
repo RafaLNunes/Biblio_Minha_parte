@@ -55,7 +55,7 @@ namespace Minha_Parte_Biblio
 
         private void LbUser_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void LbCatalogo_Click(object sender, EventArgs e)
