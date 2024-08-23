@@ -134,7 +134,7 @@ Select * From Table_reservas;
 
 
 
-INSERT INTO Table_User (ID_Aluno, Nome_Completo) values ('1ghjg1jg12', 'Gabriel de Oliveira');
+INSERT INTO Table_User (ID_Aluno, NameUser, Nome_Completo, Senha, IMG_User, CFK_Ano, CFK_Cargo, CFK_Unidade) VALUES ('123456789', 'JoãoDoe', 'João Pedro Doe', 'minhasenha123', 'joao.jpg', 2022, 1, 1);
 select Table_Livro.Nome_Livro, Table_Unidade.Nome_Unidade, Table_Livro.Descricao_Livro from Table_Livro Inner Join Table_Unidade on Table_Unidade.CD_Unidade = Table_Livro.CFK_Unidade where Table_Livro.CD_Livro = "320R888C2019";	
 
 select Table_Livro.Nome_Livro, Table_Livro.CD_Livro, Table_Unidade.Nome_Unidade, Table_Livro.Descricao_Livro, Table_Unidade.CD_Unidade from Table_Livro Inner Join Table_Unidade on Table_Unidade.CD_Unidade = Table_Livro.CFK_Unidade;
