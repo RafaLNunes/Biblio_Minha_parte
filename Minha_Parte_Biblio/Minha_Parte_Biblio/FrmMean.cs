@@ -40,6 +40,7 @@ namespace Minha_Parte_Biblio
 
 
             PbUser.Image = Image.FromFile(Modelo_User.Caminho_FT);
+            LbName_User.Text = Modelo_User.UserName;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -80,6 +81,66 @@ namespace Minha_Parte_Biblio
         private void LbNos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LbUser_MouseEnter(object sender, EventArgs e)
+        {
+            PnBarPag_User.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void LbUser_MouseLeave(object sender, EventArgs e)
+        {
+            PnBarPag_User.BackColor = Color.Transparent;
+        }
+
+        private void LbCatalogo_MouseEnter(object sender, EventArgs e)
+        {
+            PnBarCatalogo.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void LbCatalogo_MouseLeave(object sender, EventArgs e)
+        {
+            PnBarCatalogo.BackColor = Color.Transparent;
+        }
+
+        private void LbHistorico_MouseEnter(object sender, EventArgs e)
+        {
+            PnBarHistLivro.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void LbHistorico_MouseLeave(object sender, EventArgs e)
+        {
+            PnBarHistLivro.BackColor = Color.Transparent;
+        }
+
+        private void LbReserv_MouseEnter(object sender, EventArgs e)
+        {
+            PnBarReserv.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void LbReserv_MouseLeave(object sender, EventArgs e)
+        {
+            PnBarReserv.BackColor = Color.Transparent;
+        }
+
+        private void LbPerguntas_MouseEnter(object sender, EventArgs e)
+        {
+            PnBarPerguntas.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void LbPerguntas_MouseLeave(object sender, EventArgs e)
+        {
+            PnBarPerguntas.BackColor = Color.Transparent;
+        }
+
+        private void LbNos_MouseEnter(object sender, EventArgs e)
+        {
+            PnBarNos.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void LbNos_MouseLeave(object sender, EventArgs e)
+        {
+            PnBarNos.BackColor = Color.Transparent;
         }
     }
 }

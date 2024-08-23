@@ -4,7 +4,13 @@
     <Compile Update="BntCircle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="FrmCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmBoasVindas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmhistLivros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmLogIn.cs">

@@ -36,3 +36,5 @@ C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Part
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.csproj.AssemblyReference.cache
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Pa.668F8C3F.Up2Date
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmMean.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\usuario.estantelivros.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\usuario.FrmhistLivros.resources
