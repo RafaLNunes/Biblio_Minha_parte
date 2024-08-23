@@ -160,12 +160,52 @@ namespace Minha_Parte_Biblio
         private void BntSignUp_Click(object sender, EventArgs e)
         {
 
-            try //tenta o try para caso haja problema
+
+
+
+
+        }
+
+        private void CbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BntEscolher_Image_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BntEscolher_Image_C_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //abre o dialog de image
+                OpenFileDialog ft = new OpenFileDialog();
+                //gera as infos necessarias para afunilar os arquivos que aparecem
+                ft.Filter = "image file(*.jpg;*.png;*.gif;*.jpeg;*.webp)|*.jpg;*.png;*.gif;*.jpeg;*.webp";
+                if (ft.ShowDialog() == DialogResult.OK)//abre o dialog de arq
+                {
+                    PbImage_Perfil.Image = Image.FromFile(ft.FileName); //define a picture box como ese arquivo selecionado
+                    Cam_FT = ft.FileName.Replace("\\", "\\\\"); // pega o nome e redefine/ troca os // por //// (assim ele n dá pane no sistema)
+                    Nome_Ft = ft.SafeFileName; // gera o nome
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BntSignUp_C_Click(object sender, EventArgs e)
+        {
+            try
+            { //tenta o try para caso haja problema
 
                 if (!String.IsNullOrEmpty(txtID.Text) || !String.IsNullOrEmpty(txtNomeComp.Text) || !String.IsNullOrEmpty(txtUser.Text) || !String.IsNullOrEmpty(txtPassWord.Text))
                 {
 
-                //popula o modelo se não estiver vasio as text
+                    //popula o modelo se não estiver vasio as text
                     Modelo_User.Index_Cargo = CbCargo.SelectedIndex + 1;
                     Modelo_User.Index_Ano = CbAno.SelectedIndex + 1;
                     Modelo_User.Index_Unidade = CbUnidade.SelectedIndex + 1;
@@ -189,35 +229,26 @@ namespace Minha_Parte_Biblio
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-
-
-
         }
 
-        private void CbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        private void BntEscolher_Image_C_MouseLeave(object sender, EventArgs e)
         {
-
+            BntEscolher_Image_C.BackColor = Color.FromArgb(9, 90, 162);
         }
 
-        private void BntEscolher_Image_Click(object sender, EventArgs e)
+        private void BntEscolher_Image_C_MouseEnter(object sender, EventArgs e)
         {
-            try
-            {
-                //abre o dialog de image
-                OpenFileDialog ft = new OpenFileDialog();
-                //gera as infos necessarias para afunilar os arquivos que aparecem
-                ft.Filter = "image file(*.jpg;*.png;*.gif;*.jpeg;*.webp)|*.jpg;*.png;*.gif;*.jpeg;*.webp";
-                if (ft.ShowDialog() == DialogResult.OK)//abre o dialog de arq
-                {
-                    PbImage_Perfil.Image = Image.FromFile(ft.FileName); //define a picture box como ese arquivo selecionado
-                    Cam_FT = ft.FileName.Replace("\\", "\\\\"); // pega o nome e redefine/ troca os // por //// (assim ele n dá pane no sistema)
-                    Nome_Ft = ft.SafeFileName; // gera o nome
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            BntEscolher_Image_C.BackColor = Color.FromArgb(10, 59, 103);
+        }
+
+        private void BntSignUp_C_MouseEnter(object sender, EventArgs e)
+        {
+            BntSignUp_C.BackColor = Color.FromArgb(10, 59, 103);
+        }
+
+        private void BntSignUp_C_MouseLeave(object sender, EventArgs e)
+        {
+            BntSignUp_C.BackColor = Color.FromArgb(9, 90, 162);
         }
     }
 }

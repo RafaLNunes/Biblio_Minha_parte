@@ -36,6 +36,7 @@
             txtPassWord = new TextBox();
             Image_Visivel = new PictureBox();
             PnBntLogIn = new Panel();
+            BntSignUp_C = new BntCircle();
             BntLogIn = new Button();
             Lbtext = new Label();
             LbSignUp = new LinkLabel();
@@ -119,11 +120,27 @@
             // PnBntLogIn
             // 
             PnBntLogIn.BackColor = Color.Transparent;
+            PnBntLogIn.Controls.Add(BntSignUp_C);
             PnBntLogIn.Controls.Add(BntLogIn);
             PnBntLogIn.Location = new Point(885, 600);
             PnBntLogIn.Name = "PnBntLogIn";
             PnBntLogIn.Size = new Size(442, 90);
             PnBntLogIn.TabIndex = 5;
+            // 
+            // BntSignUp_C
+            // 
+            BntSignUp_C.BackColor = Color.FromArgb(9, 90, 162);
+            BntSignUp_C.FlatAppearance.BorderSize = 0;
+            BntSignUp_C.FlatStyle = FlatStyle.Flat;
+            BntSignUp_C.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
+            BntSignUp_C.ForeColor = Color.FromArgb(242, 203, 17);
+            BntSignUp_C.Location = new Point(0, 7);
+            BntSignUp_C.Name = "BntSignUp_C";
+            BntSignUp_C.Size = new Size(411, 82);
+            BntSignUp_C.TabIndex = 35;
+            BntSignUp_C.Text = "Sign Up";
+            BntSignUp_C.UseVisualStyleBackColor = false;
+            BntSignUp_C.Click += BntSignUp_C_Click;
             // 
             // BntLogIn
             // 
@@ -291,5 +308,6 @@
         private FlowLayoutPanel FpPass;
         private FlowLayoutPanel flowLayoutPanel4;
         private Panel PnBarPass;
+        private BntCircle BntSignUp_C;
     }
 }

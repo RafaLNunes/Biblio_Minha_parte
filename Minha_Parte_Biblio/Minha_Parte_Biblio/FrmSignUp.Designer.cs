@@ -48,11 +48,7 @@
             Cbimage_User = new ImageList(components);
             CbImage_NomeComp = new ImageList(components);
             CbImage_ID = new ImageList(components);
-            PnBntSignUp = new Panel();
-            BntSignUp = new Button();
             PbImage_Perfil = new Aprendendo_MVC.PictureBoxCircle();
-            PnImage_Escolha = new Panel();
-            BntEscolher_Image = new Button();
             FpUser = new FlowLayoutPanel();
             flowLayoutPanel2 = new FlowLayoutPanel();
             PnBarUser = new Panel();
@@ -66,14 +62,14 @@
             flowLayoutPanel7 = new FlowLayoutPanel();
             PnBarId = new Panel();
             CbUnidade = new ComboBox();
+            BntEscolher_Image_C = new BntCircle();
+            BntSignUp_C = new BntCircle();
             ((System.ComponentModel.ISupportInitialize)Image_Visivel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbPassWord).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbID).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbNomeComp).BeginInit();
-            PnBntSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PbImage_Perfil).BeginInit();
-            PnImage_Escolha.SuspendLayout();
             FpUser.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             FpPass.SuspendLayout();
@@ -271,27 +267,6 @@
             CbImage_ID.Images.SetKeyName(0, "ID_Click.png");
             CbImage_ID.Images.SetKeyName(1, "ID_UnClick.png");
             // 
-            // PnBntSignUp
-            // 
-            PnBntSignUp.BackColor = Color.Transparent;
-            PnBntSignUp.Controls.Add(BntSignUp);
-            PnBntSignUp.Location = new Point(248, 661);
-            PnBntSignUp.Name = "PnBntSignUp";
-            PnBntSignUp.Size = new Size(386, 78);
-            PnBntSignUp.TabIndex = 24;
-            // 
-            // BntSignUp
-            // 
-            BntSignUp.BackColor = Color.Transparent;
-            BntSignUp.FlatStyle = FlatStyle.Popup;
-            BntSignUp.Location = new Point(-15, -15);
-            BntSignUp.Name = "BntSignUp";
-            BntSignUp.Size = new Size(478, 116);
-            BntSignUp.TabIndex = 6;
-            BntSignUp.Text = "   ";
-            BntSignUp.UseVisualStyleBackColor = false;
-            BntSignUp.Click += BntSignUp_Click;
-            // 
             // PbImage_Perfil
             // 
             PbImage_Perfil.BackColor = Color.Transparent;
@@ -303,27 +278,6 @@
             PbImage_Perfil.TabIndex = 26;
             PbImage_Perfil.TabStop = false;
             PbImage_Perfil.Click += pictureBoxCircle1_Click;
-            // 
-            // PnImage_Escolha
-            // 
-            PnImage_Escolha.BackColor = Color.Transparent;
-            PnImage_Escolha.Controls.Add(BntEscolher_Image);
-            PnImage_Escolha.Location = new Point(251, 558);
-            PnImage_Escolha.Name = "PnImage_Escolha";
-            PnImage_Escolha.Size = new Size(386, 78);
-            PnImage_Escolha.TabIndex = 27;
-            // 
-            // BntEscolher_Image
-            // 
-            BntEscolher_Image.BackColor = Color.Transparent;
-            BntEscolher_Image.FlatStyle = FlatStyle.Popup;
-            BntEscolher_Image.Location = new Point(-15, -15);
-            BntEscolher_Image.Name = "BntEscolher_Image";
-            BntEscolher_Image.Size = new Size(478, 116);
-            BntEscolher_Image.TabIndex = 6;
-            BntEscolher_Image.Text = "   ";
-            BntEscolher_Image.UseVisualStyleBackColor = false;
-            BntEscolher_Image.Click += BntEscolher_Image_Click;
             // 
             // FpUser
             // 
@@ -444,19 +398,53 @@
             CbUnidade.Size = new Size(220, 28);
             CbUnidade.TabIndex = 32;
             // 
+            // BntEscolher_Image_C
+            // 
+            BntEscolher_Image_C.BackColor = Color.FromArgb(9, 90, 162);
+            BntEscolher_Image_C.FlatAppearance.BorderSize = 0;
+            BntEscolher_Image_C.FlatStyle = FlatStyle.Flat;
+            BntEscolher_Image_C.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
+            BntEscolher_Image_C.ForeColor = Color.FromArgb(242, 203, 17);
+            BntEscolher_Image_C.Location = new Point(239, 557);
+            BntEscolher_Image_C.Name = "BntEscolher_Image_C";
+            BntEscolher_Image_C.Size = new Size(411, 82);
+            BntEscolher_Image_C.TabIndex = 33;
+            BntEscolher_Image_C.Text = "Escolher Imagem";
+            BntEscolher_Image_C.UseVisualStyleBackColor = false;
+            BntEscolher_Image_C.Click += BntEscolher_Image_C_Click;
+            BntEscolher_Image_C.MouseEnter += BntEscolher_Image_C_MouseEnter;
+            BntEscolher_Image_C.MouseLeave += BntEscolher_Image_C_MouseLeave;
+            // 
+            // BntSignUp_C
+            // 
+            BntSignUp_C.BackColor = Color.FromArgb(9, 90, 162);
+            BntSignUp_C.FlatAppearance.BorderSize = 0;
+            BntSignUp_C.FlatStyle = FlatStyle.Flat;
+            BntSignUp_C.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
+            BntSignUp_C.ForeColor = Color.FromArgb(242, 203, 17);
+            BntSignUp_C.Location = new Point(239, 664);
+            BntSignUp_C.Name = "BntSignUp_C";
+            BntSignUp_C.Size = new Size(411, 82);
+            BntSignUp_C.TabIndex = 34;
+            BntSignUp_C.Text = "Sign Up";
+            BntSignUp_C.UseVisualStyleBackColor = false;
+            BntSignUp_C.Click += BntSignUp_C_Click;
+            BntSignUp_C.MouseEnter += BntSignUp_C_MouseEnter;
+            BntSignUp_C.MouseLeave += BntSignUp_C_MouseLeave;
+            // 
             // FrmSignUp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 758);
+            Controls.Add(BntSignUp_C);
+            Controls.Add(BntEscolher_Image_C);
             Controls.Add(CbUnidade);
             Controls.Add(FpId);
             Controls.Add(FpNomeComp);
             Controls.Add(FpPass);
             Controls.Add(FpUser);
-            Controls.Add(PnImage_Escolha);
-            Controls.Add(PnBntSignUp);
             Controls.Add(CbAno);
             Controls.Add(CbCargo);
             Controls.Add(LbLogIn);
@@ -472,9 +460,7 @@
             ((System.ComponentModel.ISupportInitialize)PbUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)PbID).EndInit();
             ((System.ComponentModel.ISupportInitialize)PbNomeComp).EndInit();
-            PnBntSignUp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PbImage_Perfil).EndInit();
-            PnImage_Escolha.ResumeLayout(false);
             FpUser.ResumeLayout(false);
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
@@ -511,11 +497,7 @@
         private ImageList Cbimage_User;
         private ImageList CbImage_NomeComp;
         private ImageList CbImage_ID;
-        private Panel PnBntSignUp;
-        private Button BntSignUp;
         private Aprendendo_MVC.PictureBoxCircle PbImage_Perfil;
-        private Panel PnImage_Escolha;
-        private Button BntEscolher_Image;
         private FlowLayoutPanel FpUser;
         private FlowLayoutPanel flowLayoutPanel2;
         private Panel PnBarUser;
@@ -529,5 +511,7 @@
         private FlowLayoutPanel flowLayoutPanel7;
         private Panel PnBarId;
         private ComboBox CbUnidade;
+        private BntCircle BntEscolher_Image_C;
+        private BntCircle BntSignUp_C;
     }
 }

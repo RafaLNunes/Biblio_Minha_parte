@@ -100,6 +100,16 @@ namespace Minha_Parte_Biblio
 
         private void BntLogIn_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtPassWord_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BntSignUp_C_Click(object sender, EventArgs e)
+        {
             //controla as reações para logar
             //ao clicar no bnt
             Modelo_User.UserName = txtUser.Text; // o modelo vai popular a variavel UserName com o que estiver escrito em textuser
@@ -123,11 +133,6 @@ namespace Minha_Parte_Biblio
                 MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");// gera uma menssage de bem vindo
                 Boa_Vinda.ShowDialog();// abre o novo
             }
-        }
-
-        private void txtPassWord_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

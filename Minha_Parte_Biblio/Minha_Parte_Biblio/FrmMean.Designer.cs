@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMean));
             panel1 = new Panel();
+            panel2 = new Panel();
+            PbClose = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             PnPag_User = new Panel();
             PnBarPag_User = new Panel();
@@ -50,32 +52,64 @@
             PnPerguntas = new Panel();
             PnBarPerguntas = new Panel();
             LbPerguntas = new Label();
-            PbClose = new PictureBox();
             PnPerguntas_Nos = new Panel();
             PnNos = new Panel();
             PnBarNos = new Panel();
             LbNos = new Label();
+            PbUser = new Aprendendo_MVC.PictureBoxCircle();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            panel3 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PbClose).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             PnPag_User.SuspendLayout();
             PnCatalogo.SuspendLayout();
             PnHist_Livro.SuspendLayout();
             PnReserv.SuspendLayout();
             PnPerguntas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PbClose).BeginInit();
             PnNos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PbUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            flowLayoutPanel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(9, 90, 162);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Controls.Add(PbClose);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1515, 187);
             panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(flowLayoutPanel2);
+            panel2.Controls.Add(PbClose);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1515, 104);
+            panel2.TabIndex = 1;
+            // 
+            // PbClose
+            // 
+            PbClose.Image = (Image)resources.GetObject("PbClose.Image");
+            PbClose.Location = new Point(1433, 12);
+            PbClose.Name = "PbClose";
+            PbClose.Size = new Size(70, 70);
+            PbClose.SizeMode = PictureBoxSizeMode.Zoom;
+            PbClose.TabIndex = 1;
+            PbClose.TabStop = false;
+            PbClose.Click += pictureBox1_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -115,12 +149,14 @@
             // LbUser
             // 
             LbUser.AutoSize = true;
-            LbUser.Font = new Font("Sitka Text", 13.5F);
+            LbUser.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
+            LbUser.ForeColor = Color.FromArgb(242, 203, 17);
             LbUser.Location = new Point(0, 0);
             LbUser.Name = "LbUser";
-            LbUser.Size = new Size(210, 33);
+            LbUser.Size = new Size(223, 33);
             LbUser.TabIndex = 0;
             LbUser.Text = "Pagina do Usuário";
+            LbUser.Click += LbUser_Click;
             // 
             // PnPagUser_catalogo
             // 
@@ -148,12 +184,14 @@
             // LbCatalogo
             // 
             LbCatalogo.AutoSize = true;
-            LbCatalogo.Font = new Font("Sitka Text", 13.5F);
+            LbCatalogo.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
+            LbCatalogo.ForeColor = Color.FromArgb(242, 203, 17);
             LbCatalogo.Location = new Point(3, 0);
             LbCatalogo.Name = "LbCatalogo";
-            LbCatalogo.Size = new Size(109, 33);
+            LbCatalogo.Size = new Size(114, 33);
             LbCatalogo.TabIndex = 0;
             LbCatalogo.Text = "Catálogo";
+            LbCatalogo.Click += LbCatalogo_Click;
             // 
             // Pncatalogo_HistLivro
             // 
@@ -181,12 +219,14 @@
             // LbHistorico
             // 
             LbHistorico.AutoSize = true;
-            LbHistorico.Font = new Font("Sitka Text", 13.5F);
+            LbHistorico.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
+            LbHistorico.ForeColor = Color.FromArgb(242, 203, 17);
             LbHistorico.Location = new Point(4, 0);
             LbHistorico.Name = "LbHistorico";
-            LbHistorico.Size = new Size(218, 33);
+            LbHistorico.Size = new Size(229, 33);
             LbHistorico.TabIndex = 0;
             LbHistorico.Text = "histórico de Livros";
+            LbHistorico.Click += LbHistorico_Click;
             // 
             // PnHistLivro_Reserv
             // 
@@ -214,12 +254,14 @@
             // LbReserv
             // 
             LbReserv.AutoSize = true;
-            LbReserv.Font = new Font("Sitka Text", 13.5F);
+            LbReserv.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
+            LbReserv.ForeColor = Color.FromArgb(242, 203, 17);
             LbReserv.Location = new Point(4, 0);
             LbReserv.Name = "LbReserv";
-            LbReserv.Size = new Size(169, 33);
+            LbReserv.Size = new Size(177, 33);
             LbReserv.TabIndex = 0;
             LbReserv.Text = "Suas Reservas";
+            LbReserv.Click += LbReserv_Click;
             // 
             // PnReserv_Perguntas
             // 
@@ -247,23 +289,14 @@
             // LbPerguntas
             // 
             LbPerguntas.AutoSize = true;
-            LbPerguntas.Font = new Font("Sitka Text", 13.5F);
+            LbPerguntas.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
+            LbPerguntas.ForeColor = Color.FromArgb(242, 203, 17);
             LbPerguntas.Location = new Point(4, 0);
             LbPerguntas.Name = "LbPerguntas";
-            LbPerguntas.Size = new Size(252, 33);
+            LbPerguntas.Size = new Size(263, 33);
             LbPerguntas.TabIndex = 0;
             LbPerguntas.Text = "Perguntas Frequentes";
-            // 
-            // PbClose
-            // 
-            PbClose.Image = (Image)resources.GetObject("PbClose.Image");
-            PbClose.Location = new Point(1433, 12);
-            PbClose.Name = "PbClose";
-            PbClose.Size = new Size(70, 70);
-            PbClose.SizeMode = PictureBoxSizeMode.Zoom;
-            PbClose.TabIndex = 1;
-            PbClose.TabStop = false;
-            PbClose.Click += pictureBox1_Click;
+            LbPerguntas.Click += LbPerguntas_Click;
             // 
             // PnPerguntas_Nos
             // 
@@ -291,25 +324,87 @@
             // LbNos
             // 
             LbNos.AutoSize = true;
-            LbNos.Font = new Font("Sitka Text", 13.5F);
+            LbNos.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
+            LbNos.ForeColor = Color.FromArgb(242, 203, 17);
             LbNos.Location = new Point(4, 0);
             LbNos.Name = "LbNos";
-            LbNos.Size = new Size(252, 33);
+            LbNos.Size = new Size(131, 33);
             LbNos.TabIndex = 0;
-            LbNos.Text = "Perguntas Frequentes";
+            LbNos.Text = "Sobre Nós";
+            LbNos.Click += LbNos_Click;
+            // 
+            // PbUser
+            // 
+            PbUser.Location = new Point(3, 164);
+            PbUser.Name = "PbUser";
+            PbUser.Size = new Size(125, 125);
+            PbUser.SizeMode = PictureBoxSizeMode.Zoom;
+            PbUser.TabIndex = 1;
+            PbUser.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 220);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1536, 694);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(151, 95);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Showcard Gothic", 70F, FontStyle.Bold);
+            label1.Location = new Point(3, -31);
+            label1.Name = "label1";
+            label1.Size = new Size(1012, 146);
+            label1.TabIndex = 4;
+            label1.Text = "Biblioteca FIep";
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Controls.Add(pictureBox2);
+            flowLayoutPanel2.Controls.Add(panel3);
+            flowLayoutPanel2.Location = new Point(3, 3);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(1158, 98);
+            flowLayoutPanel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label1);
+            panel3.Location = new Point(160, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(987, 95);
+            panel3.TabIndex = 4;
             // 
             // FrmMean
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1515, 945);
+            Controls.Add(PbUser);
             Controls.Add(panel1);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMean";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmMean";
             Load += FrmMean_Load;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)PbClose).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             PnPag_User.ResumeLayout(false);
             PnPag_User.PerformLayout();
@@ -321,9 +416,14 @@
             PnReserv.PerformLayout();
             PnPerguntas.ResumeLayout(false);
             PnPerguntas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)PbClose).EndInit();
             PnNos.ResumeLayout(false);
             PnNos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PbUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            flowLayoutPanel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -355,5 +455,12 @@
         private Panel PnNos;
         private Panel PnBarNos;
         private Label LbNos;
+        private Panel panel2;
+        private Aprendendo_MVC.PictureBoxCircle PbUser;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private PictureBox pictureBox2;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private Panel panel3;
     }
 }
