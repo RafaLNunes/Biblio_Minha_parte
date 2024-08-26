@@ -217,7 +217,7 @@ namespace Minha_Parte_Biblio
                     if (controle_User.SignUp(Modelo_User) == true) //se essa função der certo ele abre o novo frm
                     {
 
-                        Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Cam_FT));
+                        Cam_origin = Path.Combine(Directory.GetCurrentDirectory(),"DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
                         File.Copy(Cam_FT, Cam_origin, true);
                         MessageBox.Show(Cam_origin);
                         MessageBox.Show(Cam_origin);

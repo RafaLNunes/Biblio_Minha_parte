@@ -28,9 +28,9 @@ namespace Minha_Parte_Biblio
         private void FrmBoasVindas_Load(object sender, EventArgs e)
         {
             //puxa infos de outros forms
-            String Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(Modelo_User.Caminho_FT)); ;// pega a imagem que o user escolheu e pos na dt
+            String Cam_origin = Path.Combine(Directory.GetCurrentDirectory(),"DT_Image_Users\\\\", Path.GetFileName(Modelo_User.Caminho_FT));// pega a imagem que o user escolheu e pos na dt
             DT_User = conexao.obterdados($"select * from Table_User where ID_Aluno = {Modelo_User.ID_Aluno}"); // popula a tabela com infos do usuario
-            PbImage_User.Image = Image.FromFile(DT_User.Rows[0]["IMG_User"].ToString()); // popula a picturebox com a imagem
+            PbImage_User.Image = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", DT_User.Rows[0]["IMG_User"].ToString())); // popula a picturebox com a imagem
             LbNomeComp.Text = Modelo_User.NomeComp.ToString(); // popula a label com o nome do usuario
         }
 
@@ -46,7 +46,7 @@ namespace Minha_Parte_Biblio
 
         private void BntViajar_Click(object sender, EventArgs e)
         {
-            FrmMean Principal = new FrmMean(Modelo_User);
+            FrmMeanC Principal = new FrmMeanC(Modelo_User);
             this.Hide();
             Principal.ShowDialog();
         }

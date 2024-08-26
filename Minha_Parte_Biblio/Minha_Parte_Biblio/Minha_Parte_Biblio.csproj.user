@@ -19,6 +19,9 @@
     <Compile Update="FrmMean.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmMeanC.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>

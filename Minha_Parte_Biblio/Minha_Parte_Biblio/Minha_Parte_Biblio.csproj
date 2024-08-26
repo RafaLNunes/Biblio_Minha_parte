@@ -24,7 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Imagens_DB\" />
+    <Folder Include="DT_Image_Books\" />
+    <Folder Include="DT_Image_Users\" />
   </ItemGroup>
 
   <ItemGroup>

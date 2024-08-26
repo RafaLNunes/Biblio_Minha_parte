@@ -35,7 +35,8 @@ CREATE TABLE Table_Livro (
 );
 
 CREATE TABLE Table_User (
-	ID_Aluno Varchar(45) primary key not null,
+	CD_User int primary key auto_increment,
+	ID_Aluno Varchar(45) not null,
     NameUser Varchar(45),
     Nome_Completo Varchar(45),
     Senha Varchar(45),	
@@ -50,23 +51,33 @@ CREATE TABLE Table_User (
 	ON UPDATE CASCADE
 );
 
+CREATE TABLE Table_Adm (
+	CD_Adm int primary key not null,
+    NameUser_Adm Varchar(45),
+    Senha_Adm Varchar(45),
+    CFK_User int,
+    constraint FK_Userss foreign key (CFK_User) references Table_User(CD_User)
+    ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
+
 CREATE TABLE Table_Historico (
 	CD_Hist int primary key auto_increment not null,
     DT_reserva datetime,
     DT_devolucao datetime,
     CFK_Livro int,
-    CFK_User Varchar(45),
+    CFK_User int,
     CONSTRAINT FK_Livro FOREIGN KEY (CFK_Livro) REFERENCES Table_Livro(Order_Livro),
-    CONSTRAINT FK_User FOREIGN KEY (CFK_User) REFERENCES Table_User(ID_Aluno)
+    CONSTRAINT FK_User FOREIGN KEY (CFK_User) REFERENCES Table_User(CD_User)
 );
 
 CREATE TABLE Table_reservas(
     CD_Reservas int primary key auto_increment not null,
     DT_reserva datetime,
     DT_previsao_devolucao datetime,
-    CFK_User varchar(45),
+    CFK_User int,
     CFK_Livro int,
-    CONSTRAINT FK_Users foreign key (CFK_User) references Table_User(ID_Aluno), 
+    CONSTRAINT FK_Users foreign key (CFK_User) references Table_User(CD_User), 
     CONSTRAINT FK_Livros foreign key (CFK_Livro) references Table_Livro(Order_Livro)
     ON delete cascade
     ON update cascade
@@ -134,7 +145,7 @@ Select * From Table_reservas;
 
 
 
-INSERT INTO Table_User (ID_Aluno, NameUser, Nome_Completo, Senha, IMG_User, CFK_Ano, CFK_Cargo, CFK_Unidade) VALUES ('123456789', 'JoãoDoe', 'João Pedro Doe', 'minhasenha123', 'joao.jpg', 2022, 1, 1);
+INSERT INTO Table_User (ID_Aluno, NameUser, Nome_Completo, Senha, IMG_User, CFK_Ano, CFK_Cargo, CFK_Unidade) VALUES ('123456789', 'JoãoDoe', 'João Pedro Doe', 'minhasenha123', 'joao.jpg', 7, 1, 1);
 select Table_Livro.Nome_Livro, Table_Unidade.Nome_Unidade, Table_Livro.Descricao_Livro from Table_Livro Inner Join Table_Unidade on Table_Unidade.CD_Unidade = Table_Livro.CFK_Unidade where Table_Livro.CD_Livro = "320R888C2019";	
 
 select Table_Livro.Nome_Livro, Table_Livro.CD_Livro, Table_Unidade.Nome_Unidade, Table_Livro.Descricao_Livro, Table_Unidade.CD_Unidade from Table_Livro Inner Join Table_Unidade on Table_Unidade.CD_Unidade = Table_Livro.CFK_Unidade;
@@ -152,3 +163,4 @@ select Table_User.ID_Aluno,
     inner join Table_Ano_Escolar on Table_User.CFK_Ano = Table_Ano_Escolar.CD_Ano_Escolar
     inner join Table_Cargo on Table_User.CFK_Cargo = Table_Cargo.CD_Cargo
     inner join Table_Unidade on Table_User.CFK_Unidade = Table_Unidade.CD_Unidade;
+
