@@ -39,6 +39,8 @@
             fotousuario = new PictureBox();
             cbanoescolar = new ComboBox();
             cbcargo = new ComboBox();
+            cbunidade = new ComboBox();
+            txtsenha = new TextBox();
             sausuario.SuspendLayout();
             lblvhrusuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)fotousuario).BeginInit();
@@ -89,6 +91,7 @@
             btnsalvaralteracao.Size = new Size(473, 83);
             btnsalvaralteracao.TabIndex = 6;
             btnsalvaralteracao.UseVisualStyleBackColor = false;
+            btnsalvaralteracao.Click += btnsalvaralteracao_Click;
             // 
             // sausuario
             // 
@@ -122,7 +125,7 @@
             // cbanoescolar
             // 
             cbanoescolar.FormattingEnabled = true;
-            cbanoescolar.Location = new Point(558, 272);
+            cbanoescolar.Location = new Point(556, 272);
             cbanoescolar.Name = "cbanoescolar";
             cbanoescolar.Size = new Size(446, 28);
             cbanoescolar.TabIndex = 10;
@@ -130,10 +133,26 @@
             // cbcargo
             // 
             cbcargo.FormattingEnabled = true;
-            cbcargo.Location = new Point(558, 430);
+            cbcargo.Location = new Point(556, 429);
             cbcargo.Name = "cbcargo";
             cbcargo.Size = new Size(446, 28);
             cbcargo.TabIndex = 11;
+            // 
+            // cbunidade
+            // 
+            cbunidade.FormattingEnabled = true;
+            cbunidade.Location = new Point(556, 120);
+            cbunidade.Name = "cbunidade";
+            cbunidade.Size = new Size(446, 28);
+            cbunidade.TabIndex = 12;
+            // 
+            // txtsenha
+            // 
+            txtsenha.BorderStyle = BorderStyle.None;
+            txtsenha.Location = new Point(37, 587);
+            txtsenha.Name = "txtsenha";
+            txtsenha.Size = new Size(445, 20);
+            txtsenha.TabIndex = 13;
             // 
             // Frmusuario
             // 
@@ -141,6 +160,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 785);
+            Controls.Add(txtsenha);
+            Controls.Add(cbunidade);
             Controls.Add(cbcargo);
             Controls.Add(cbanoescolar);
             Controls.Add(fotousuario);
@@ -174,5 +195,7 @@
         private PictureBox fotousuario;
         private ComboBox cbanoescolar;
         private ComboBox cbcargo;
+        private ComboBox cbunidade;
+        private TextBox txtsenha;
     }
 }

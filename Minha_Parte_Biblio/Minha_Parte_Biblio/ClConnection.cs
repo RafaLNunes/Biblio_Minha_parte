@@ -124,5 +124,56 @@ namespace Aprendendo_MVC
             return reg;
         }
 
+        public int editar(string sql, string[] campos, object[] valores, int codigo, String PK_Table)
+        {
+            int resultado = 0;
+            try
+            {
+                Conect = GetConectection();
+                Conect.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, Conect);
+
+                for (int i = 0; i < valores.Length; i++)
+                {
+                    cmd.Parameters.AddWithValue(campos[i], valores[i]);
+                }
+
+                if (codigo != 0)
+                {
+                    cmd.Parameters.AddWithValue(PK_Table, codigo.ToString());
+                }
+
+                resultado = Convert.ToInt32(cmd.ExecuteNonQuery());
+                Conect.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return resultado;
+        }
+        public int excluir(int codigo, string sql, string PK_Table)
+        {
+            int registro = 0;
+            try
+            {
+                Conect = GetConectection();
+                Conect.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, Conect);
+                if (codigo > 0)
+                    cmd.Parameters.AddWithValue(PK_Table, codigo);
+                registro = cmd.ExecuteNonQuery();
+                Conect.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return registro;
+        }
+
     }
+
 }
+

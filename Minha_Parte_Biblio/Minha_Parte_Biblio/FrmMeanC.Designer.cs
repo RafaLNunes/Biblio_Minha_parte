@@ -33,10 +33,9 @@
             LbName_User = new Label();
             PbUser = new Aprendendo_MVC.PictureBoxCircle();
             PbClose = new PictureBox();
-            label1 = new Label();
-            pictureBox2 = new PictureBox();
             FpMenu = new FlowLayoutPanel();
             PnMenu = new Panel();
+            pictureBox2 = new PictureBox();
             BntMenu = new Button();
             panel8 = new Panel();
             PnUser = new Panel();
@@ -60,9 +59,9 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PbUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             FpMenu.SuspendLayout();
             PnMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             PnUser.SuspendLayout();
             PnCatalogo.SuspendLayout();
             PnHist.SuspendLayout();
@@ -74,15 +73,13 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(9, 90, 162);
-            panel1.Controls.Add(LbName_User);
-            panel1.Controls.Add(PbUser);
-            panel1.Controls.Add(PbClose);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(LbName_User);
+            panel1.Controls.Add(PbClose);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1885, 127);
+            panel1.Size = new Size(1885, 82);
             panel1.TabIndex = 0;
             // 
             // LbName_User
@@ -90,7 +87,7 @@
             LbName_User.AutoSize = true;
             LbName_User.Font = new Font("Sitka Text", 13.2000008F, FontStyle.Bold);
             LbName_User.ForeColor = Color.Black;
-            LbName_User.Location = new Point(1322, 88);
+            LbName_User.Location = new Point(148, 26);
             LbName_User.Name = "LbName_User";
             LbName_User.Size = new Size(131, 33);
             LbName_User.TabIndex = 14;
@@ -99,7 +96,7 @@
             // 
             // PbUser
             // 
-            PbUser.Location = new Point(1191, 2);
+            PbUser.Location = new Point(207, 35);
             PbUser.Name = "PbUser";
             PbUser.Size = new Size(125, 125);
             PbUser.SizeMode = PictureBoxSizeMode.Zoom;
@@ -110,33 +107,12 @@
             // PbClose
             // 
             PbClose.Image = (Image)resources.GetObject("PbClose.Image");
-            PbClose.Location = new Point(1496, 3);
+            PbClose.Location = new Point(1815, 0);
             PbClose.Name = "PbClose";
             PbClose.Size = new Size(70, 70);
             PbClose.SizeMode = PictureBoxSizeMode.Zoom;
             PbClose.TabIndex = 13;
             PbClose.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Rockwell", 70.2000046F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 207, 0);
-            label1.Location = new Point(177, -11);
-            label1.Name = "label1";
-            label1.Size = new Size(968, 143);
-            label1.TabIndex = 6;
-            label1.Text = "Biblioteca FIEP";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(3, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(168, 121);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
             // 
             // FpMenu
             // 
@@ -155,11 +131,11 @@
             FpMenu.Controls.Add(panel11);
             FpMenu.Controls.Add(PnNos);
             FpMenu.Dock = DockStyle.Left;
-            FpMenu.Location = new Point(0, 127);
-            FpMenu.MaximumSize = new Size(385, 758);
-            FpMenu.MinimumSize = new Size(69, 758);
+            FpMenu.Location = new Point(0, 82);
+            FpMenu.MaximumSize = new Size(385, 803);
+            FpMenu.MinimumSize = new Size(69, 803);
             FpMenu.Name = "FpMenu";
-            FpMenu.Size = new Size(385, 758);
+            FpMenu.Size = new Size(385, 803);
             FpMenu.TabIndex = 1;
             FpMenu.Paint += flowLayoutPanel1_Paint;
             // 
@@ -167,6 +143,7 @@
             // 
             PnMenu.BackColor = Color.Transparent;
             PnMenu.Controls.Add(BntMenu);
+            PnMenu.Controls.Add(PbUser);
             PnMenu.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             PnMenu.ForeColor = Color.FromArgb(218, 218, 218);
             PnMenu.Location = new Point(3, 3);
@@ -174,15 +151,26 @@
             PnMenu.Size = new Size(382, 189);
             PnMenu.TabIndex = 5;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(12, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(130, 90);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
             // BntMenu
             // 
+            BntMenu.FlatAppearance.BorderSize = 0;
             BntMenu.FlatStyle = FlatStyle.Flat;
             BntMenu.Image = (Image)resources.GetObject("BntMenu.Image");
             BntMenu.ImageAlign = ContentAlignment.MiddleLeft;
             BntMenu.Location = new Point(-22, -42);
             BntMenu.Name = "BntMenu";
             BntMenu.Padding = new Padding(20, 0, 0, 0);
-            BntMenu.Size = new Size(582, 273);
+            BntMenu.Size = new Size(404, 273);
             BntMenu.TabIndex = 4;
             BntMenu.Text = "       MENU";
             BntMenu.TextAlign = ContentAlignment.MiddleLeft;
@@ -380,9 +368,9 @@
             // 
             FPnContenedor.BackColor = Color.Transparent;
             FPnContenedor.Dock = DockStyle.Fill;
-            FPnContenedor.Location = new Point(385, 127);
+            FPnContenedor.Location = new Point(385, 82);
             FPnContenedor.Name = "FPnContenedor";
-            FPnContenedor.Size = new Size(1500, 758);
+            FPnContenedor.Size = new Size(1500, 803);
             FPnContenedor.TabIndex = 2;
             // 
             // FrmMeanC
@@ -405,9 +393,9 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PbUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)PbClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             FpMenu.ResumeLayout(false);
             PnMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             PnUser.ResumeLayout(false);
             PnCatalogo.ResumeLayout(false);
             PnHist.ResumeLayout(false);
@@ -441,11 +429,10 @@
         private Panel panel10;
         private Panel panel11;
         private Panel panel2;
-        private Label label1;
-        private PictureBox pictureBox2;
         private Label LbName_User;
         private Aprendendo_MVC.PictureBoxCircle PbUser;
         private PictureBox PbClose;
         private FlowLayoutPanel FPnContenedor;
+        private PictureBox pictureBox2;
     }
 }
