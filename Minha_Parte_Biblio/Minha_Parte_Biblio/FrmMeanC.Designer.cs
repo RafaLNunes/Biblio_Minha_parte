@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMeanC));
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             LbName_User = new Label();
-            PbUser = new Aprendendo_MVC.PictureBoxCircle();
             PbClose = new PictureBox();
+            PbUser = new Aprendendo_MVC.PictureBoxCircle();
             FpMenu = new FlowLayoutPanel();
             PnMenu = new Panel();
-            pictureBox2 = new PictureBox();
             BntMenu = new Button();
             panel8 = new Panel();
             PnUser = new Panel();
@@ -57,11 +57,11 @@
             BntNos = new Button();
             FPnContenedor = new FlowLayoutPanel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PbUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PbUser).BeginInit();
             FpMenu.SuspendLayout();
             PnMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             PnUser.SuspendLayout();
             PnCatalogo.SuspendLayout();
             PnHist.SuspendLayout();
@@ -82,6 +82,16 @@
             panel1.Size = new Size(1885, 82);
             panel1.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(12, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(130, 90);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
             // LbName_User
             // 
             LbName_User.AutoSize = true;
@@ -94,16 +104,6 @@
             LbName_User.Text = "UserName";
             LbName_User.Click += LbName_User_Click;
             // 
-            // PbUser
-            // 
-            PbUser.Location = new Point(207, 35);
-            PbUser.Name = "PbUser";
-            PbUser.Size = new Size(125, 125);
-            PbUser.SizeMode = PictureBoxSizeMode.Zoom;
-            PbUser.TabIndex = 12;
-            PbUser.TabStop = false;
-            PbUser.Click += PbUser_Click;
-            // 
             // PbClose
             // 
             PbClose.Image = (Image)resources.GetObject("PbClose.Image");
@@ -113,6 +113,16 @@
             PbClose.SizeMode = PictureBoxSizeMode.Zoom;
             PbClose.TabIndex = 13;
             PbClose.TabStop = false;
+            // 
+            // PbUser
+            // 
+            PbUser.Location = new Point(207, 35);
+            PbUser.Name = "PbUser";
+            PbUser.Size = new Size(125, 125);
+            PbUser.SizeMode = PictureBoxSizeMode.Zoom;
+            PbUser.TabIndex = 12;
+            PbUser.TabStop = false;
+            PbUser.Click += PbUser_Click;
             // 
             // FpMenu
             // 
@@ -150,16 +160,6 @@
             PnMenu.Name = "PnMenu";
             PnMenu.Size = new Size(382, 189);
             PnMenu.TabIndex = 5;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(130, 90);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
             // 
             // BntMenu
             // 
@@ -367,6 +367,7 @@
             // FPnContenedor
             // 
             FPnContenedor.BackColor = Color.Transparent;
+            FPnContenedor.BackgroundImage = Properties.Resources.logo_Fundo_CertinhaCC;
             FPnContenedor.Dock = DockStyle.Fill;
             FPnContenedor.Location = new Point(385, 82);
             FPnContenedor.Name = "FPnContenedor";
@@ -391,11 +392,11 @@
             Load += FrmMeanC_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)PbUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)PbClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PbUser).EndInit();
             FpMenu.ResumeLayout(false);
             PnMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             PnUser.ResumeLayout(false);
             PnCatalogo.ResumeLayout(false);
             PnHist.ResumeLayout(false);

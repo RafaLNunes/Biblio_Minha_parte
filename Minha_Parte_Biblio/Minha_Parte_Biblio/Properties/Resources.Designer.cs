@@ -103,6 +103,26 @@ namespace Minha_Parte_Biblio.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_Fundo_CertinhaCC {
+            get {
+                object obj = ResourceManager.GetObject("logo Fundo CertinhaCC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_Fundo_Verdadeira {
+            get {
+                object obj = ResourceManager.GetObject("logo Fundo Verdadeira", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap olho_Invisivel {
             get {
                 object obj = ResourceManager.GetObject("olho_Invisivel", resourceCulture);

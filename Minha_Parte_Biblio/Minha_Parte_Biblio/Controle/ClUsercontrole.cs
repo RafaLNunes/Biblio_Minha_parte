@@ -55,13 +55,13 @@ namespace Minha_Parte_Biblio.Controle
 
 
                 //monta o script sql de cadastrar as informações no banco
-                string sql = "update Table_User set ID_Aluno=@ID_Aluno, NameUser=@NameUser, Nome_Completo=@Nome_Completo, Senha=@Senha, CFK_Cargo=@CFK_Cargo, CFK_Unidade =@CFK_Unidade, CFK_Ano=@CFK_Ano where CD_User=@CD_User LIMIT 1;";
+                string sql = "update Table_User set ID_Aluno=@ID_Aluno, NameUser=@NameUser, Nome_Completo=@Nome_Completo, Senha=@Senha, CFK_Cargo=@CFK_Cargo, CFK_Unidade=@CFK_Unidade, CFK_Ano=@CFK_Ano where CD_User=@CD_User LIMIT 1;";
                 //monto o vetor de atributos da tabela usuario
                 string[] campos = { "@ID_Aluno", "@NameUser", "@Nome_Completo", "@Senha", "@CFK_Cargo", "@CFK_Unidade", "@CFK_Ano", "@CD_User"};
                 //monto o vetor com os valores do formulario
-                string[] valores = { usuario.ID_Aluno, usuario.UserName, usuario.NomeComp, usuario.Password, usuario.Index_Cargo.ToString(), usuario.Index_Ano.ToString(), usuario.Index_Unidade.ToString(), usuario.CD_User.ToString()};
+                string[] valores = { usuario.ID_Aluno, usuario.UserName, usuario.NomeComp, usuario.Password, usuario.Index_Cargo.ToString(), usuario.Index_Unidade.ToString(), usuario.Index_Ano.ToString(), usuario.CD_User.ToString()};
                 //testar o insert no banco de dados
-                if (conexao.editar(sql, campos, valores, usuario.CD_User, "@CD_User") == 1)
+                if (conexao.editar(sql, campos, valores, 0, "@CD_User") >= 1)
 
                 {
                     resultado = true;

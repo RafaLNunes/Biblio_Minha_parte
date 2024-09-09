@@ -14,6 +14,7 @@ namespace usuario
         ClConectection conexao = new ClConectection();
         DataTable dt = new DataTable();
         ClUserModelo Modelo_User = new ClUserModelo();
+        ClUserModelo Modelo_User_New = new ClUserModelo();
 
         string ID_Aluno;
         string nameuser;
@@ -61,6 +62,8 @@ namespace usuario
 
             dt = conexao.obterdados("select*from Table_User where ID_Aluno= " + Modelo_User.ID_Aluno);
 
+           
+
             Modelo_User.CD_User = Convert.ToInt32(dt.Rows[0]["CD_User"]);
 
             string username;
@@ -103,6 +106,9 @@ namespace usuario
             cbunidade.SelectedIndex = CFK_Unidade - 1;
 
 
+            MessageBox.Show("Cargo"+cbcargo.FindStringExact(cbcargo.Text).ToString()); ;
+            MessageBox.Show("ANO"+cbanoescolar.FindStringExact(cbanoescolar.Text).ToString()); ;
+            MessageBox.Show("Unit"+cbunidade.FindStringExact(cbunidade.Text).ToString());
 
 
         }
@@ -114,9 +120,12 @@ namespace usuario
             Modelo_User.NomeComp = txtnomecompleto.Text;
             Modelo_User.UserName = txtusername.Text;
             Modelo_User.Password = txtsenha.Text;
-            Modelo_User.Index_Cargo = cbcargo.SelectedIndex;
-            Modelo_User.Index_Ano = cbanoescolar.SelectedIndex;
-            Modelo_User.Index_Unidade = cbunidade.SelectedIndex;
+
+
+
+            Modelo_User.Index_Cargo = cbcargo.FindStringExact(cbcargo.Text)+1;
+            Modelo_User.Index_Ano = cbanoescolar.FindStringExact(cbanoescolar.Text)+1;
+            Modelo_User.Index_Unidade = cbunidade.FindStringExact(cbunidade.Text)+1;
             ClUsercontrole clUsercontrole = new ClUsercontrole();
             if (clUsercontrole.editar(Modelo_User) == true)
             {

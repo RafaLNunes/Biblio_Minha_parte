@@ -83,7 +83,7 @@ namespace Minha_Parte_Biblio
 
         private void BntMenu_Click(object sender, EventArgs e)
         {
-
+            FPnContenedor.Controls.Clear();
         }
 
         private void PbUser_Click(object sender, EventArgs e)
