@@ -4,7 +4,7 @@ namespace Minha_Parte_Biblio
     public partial class FrmSplash_Screen : Form
     {
 
-        int lbPorcent;
+        float lbintPorcent = 0;
         public FrmSplash_Screen()
         {
             InitializeComponent();
@@ -12,9 +12,23 @@ namespace Minha_Parte_Biblio
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            lbintPorcent = (100 * PnCharge.Width) / PnBarCharge.MaximumSize.Width;
+            LbVisualPerct.Text = lbintPorcent.ToString() + '%';
+
             Bar_Charge.Start();
-            lbPorcent = PnBarCharge.MaximumSize.Width;
-            lbPorcent = lbPorcent / 100;
+
+
+            /*
+             *  100 ------- PnBarCharge.MaximumSize.Width
+             *    x ------- PnBarCharge.Width
+             *
+             *   x * PnBarCharge.MaximumSize.Width = 100 * PnBarCharge.Width
+             * 
+             *   x = (100 * PnBarCharge.Width)/PnBarCharge.MaximumSize.Width
+             *  
+             * 
+             */
         }
 
         private void Bar_Charge_Tick(object sender, EventArgs e)
@@ -22,8 +36,10 @@ namespace Minha_Parte_Biblio
             while(PnCharge.MaximumSize.Width > PnCharge.Width)
             {
                 PnCharge.Width += 1;
-                
-                LbPorcento.Text = lbPorcent.ToString() +"%";
+                lbintPorcent = 0;
+                    //lbintPorcent = (100 * PnCharge.Width) / PnBarCharge.MaximumSize.Width;
+                    //label1.Text = "";
+                    //label1.Text = lbintPorcent.ToString() + "%";
             }
             Bar_Charge.Stop();
                 

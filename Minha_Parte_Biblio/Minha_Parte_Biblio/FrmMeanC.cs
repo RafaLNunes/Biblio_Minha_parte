@@ -57,7 +57,16 @@ namespace Minha_Parte_Biblio
         {
             this.Modelo_User = user;
             InitializeComponent();
-            ArredondaCantosdoForm();
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is Button)
+                {
+                    Button button = (Button)control;
+                    button.Font = new Font("Chakra Petch", 12); // adjust font size as needed
+                }
+            }
+
             PnMenu.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, PnMenu.Width, PnMenu.Height, 20, 20));
             PnUser.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, PnUser.Width, PnUser.Height, 20, 20));
             PnCatalogo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, PnCatalogo.Width, PnCatalogo.Height, 20, 20));
@@ -88,7 +97,7 @@ namespace Minha_Parte_Biblio
 
         private void PbUser_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void LbName_User_Click(object sender, EventArgs e)
@@ -104,5 +113,43 @@ namespace Minha_Parte_Biblio
             FPnContenedor.Controls.Add(user);
             user.Show();
         }
+
+        private void PbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BntCatalogo_Click(object sender, EventArgs e)
+        {
+            FrmCatalogo cat = new FrmCatalogo(Modelo_User);
+            cat.TopLevel = false;
+            FPnContenedor.Controls.Clear();
+            FPnContenedor.Controls.Add(cat);
+            cat.Show();
+        }
+
+        private void BntHist_Click(object sender, EventArgs e)
+        {
+            FrmhistLivros hist = new FrmhistLivros(Modelo_User);
+            hist.TopLevel = false;
+            FPnContenedor.Controls.Clear();
+            FPnContenedor.Controls.Add(hist);
+            hist.Show();
+        }
+
+        private void BntNos_Click(object sender, EventArgs e)
+        {
+            Frmsobrenos sobr = new Frmsobrenos();
+            sobr.TopLevel = false;
+            FPnContenedor.Controls.Clear();
+            FPnContenedor.Controls.Add(sobr);
+            sobr.Show();
+        }
+
     }
 }

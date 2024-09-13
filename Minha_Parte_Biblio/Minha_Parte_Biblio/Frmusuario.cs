@@ -50,9 +50,7 @@ namespace usuario
 
         private void vhrusuario1_Click(object sender, EventArgs e)
         {
-            FrmhistLivros frmhistLivros = new FrmhistLivros();
-            this.Hide();
-            frmhistLivros.ShowDialog();
+
         }
 
         private void Frmusuario_Load(object sender, EventArgs e)
@@ -106,9 +104,9 @@ namespace usuario
             cbunidade.SelectedIndex = CFK_Unidade - 1;
 
 
-            MessageBox.Show("Cargo"+cbcargo.FindStringExact(cbcargo.Text).ToString()); ;
-            MessageBox.Show("ANO"+cbanoescolar.FindStringExact(cbanoescolar.Text).ToString()); ;
-            MessageBox.Show("Unit"+cbunidade.FindStringExact(cbunidade.Text).ToString());
+            //MessageBox.Show("Cargo"+cbcargo.FindStringExact(cbcargo.Text).ToString()); ;
+            //MessageBox.Show("ANO"+cbanoescolar.FindStringExact(cbanoescolar.Text).ToString()); ;
+            //MessageBox.Show("Unit"+cbunidade.FindStringExact(cbunidade.Text).ToString());
 
 
         }

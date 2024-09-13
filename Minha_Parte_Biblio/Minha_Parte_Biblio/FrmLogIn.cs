@@ -110,28 +110,36 @@ namespace Minha_Parte_Biblio
 
         private void BntSignUp_C_Click(object sender, EventArgs e)
         {
-            //controla as reações para logar
-            //ao clicar no bnt
-            Modelo_User.UserName = txtUser.Text; // o modelo vai popular a variavel UserName com o que estiver escrito em textuser
-            Modelo_User.Password = txtPassWord.Text; // o modelo vai popular a variavel Password com o que estiver escrito em textpassword
-
-            //cria uma table para ser populada com a conexao ao clconnection
-            DataTable DT_logIn = conexao.LogIn(Modelo_User);
-
-            //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
-            Modelo_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
-
-            //gera unma menssage de confirmação de login
-            MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
-
-            //checa se foi populado da maneira correta
-            if (Convert.ToInt32(DT_logIn.Rows[0][0]) > 0)
+            try
             {
-                //se sim
-                this.Hide();//esconde o frm atual
-                FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Modelo_User); //gera o novo
-                MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");// gera uma menssage de bem vindo
-                Boa_Vinda.ShowDialog();// abre o novo
+                //controla as reações para logar
+                //ao clicar no bnt
+                Modelo_User.UserName = txtUser.Text; // o modelo vai popular a variavel UserName com o que estiver escrito em textuser
+                Modelo_User.Password = txtPassWord.Text; // o modelo vai popular a variavel Password com o que estiver escrito em textpassword
+
+                //cria uma table para ser populada com a conexao ao clconnection
+                DataTable DT_logIn = conexao.LogIn(Modelo_User);
+
+                //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
+                Modelo_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
+
+                //gera unma menssage de confirmação de login
+                MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
+
+                //checa se foi populado da maneira correta
+                if (Convert.ToInt32(DT_logIn.Rows[0][0]) > 0)
+                {
+                    //se sim
+                    this.Hide();//esconde o frm atual
+                    FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Modelo_User); //gera o novo
+                    MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");// gera uma menssage de bem vindo
+                    Boa_Vinda.ShowDialog();// abre o novo
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Usuário Inexistente!!\nPor favor tente novamente ou vá para SignUp");
             }
         }
     }

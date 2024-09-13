@@ -81,6 +81,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1885, 82);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // pictureBox2
             // 
@@ -113,6 +114,7 @@
             PbClose.SizeMode = PictureBoxSizeMode.Zoom;
             PbClose.TabIndex = 13;
             PbClose.TabStop = false;
+            PbClose.Click += PbClose_Click;
             // 
             // PbUser
             // 
@@ -239,6 +241,7 @@
             BntCatalogo.Text = "       Catálogo";
             BntCatalogo.TextAlign = ContentAlignment.MiddleLeft;
             BntCatalogo.UseVisualStyleBackColor = true;
+            BntCatalogo.Click += BntCatalogo_Click;
             // 
             // panel3
             // 
@@ -270,6 +273,7 @@
             BntHist.Text = "       Seu Histórico";
             BntHist.TextAlign = ContentAlignment.MiddleLeft;
             BntHist.UseVisualStyleBackColor = true;
+            BntHist.Click += BntHist_Click;
             // 
             // panel4
             // 
@@ -363,6 +367,7 @@
             BntNos.Text = "       Sobre Nós";
             BntNos.TextAlign = ContentAlignment.MiddleLeft;
             BntNos.UseVisualStyleBackColor = true;
+            BntNos.Click += BntNos_Click;
             // 
             // FPnContenedor
             // 

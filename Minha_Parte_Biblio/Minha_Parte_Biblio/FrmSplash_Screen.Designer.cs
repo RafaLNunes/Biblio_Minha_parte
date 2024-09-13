@@ -33,7 +33,8 @@
             PnBarCharge = new Panel();
             PnCharge = new Panel();
             Bar_Charge = new System.Windows.Forms.Timer(components);
-            LbPorcento = new Label();
+            LbVisualPerct = new Label();
+            label1 = new Label();
             PnBarCharge.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,6 +44,8 @@
             PnBarCharge.BorderStyle = BorderStyle.Fixed3D;
             PnBarCharge.Controls.Add(PnCharge);
             PnBarCharge.Location = new Point(81, 701);
+            PnBarCharge.MaximumSize = new Size(1300, 13);
+            PnBarCharge.MinimumSize = new Size(1300, 13);
             PnBarCharge.Name = "PnBarCharge";
             PnBarCharge.Size = new Size(1300, 13);
             PnBarCharge.TabIndex = 0;
@@ -63,16 +66,24 @@
             Bar_Charge.Interval = 50;
             Bar_Charge.Tick += Bar_Charge_Tick;
             // 
-            // LbPorcento
+            // LbVisualPerct
             // 
-            LbPorcento.AutoSize = true;
-            LbPorcento.BackColor = Color.Transparent;
-            LbPorcento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LbPorcento.Location = new Point(1331, 737);
-            LbPorcento.Name = "LbPorcento";
-            LbPorcento.Size = new Size(65, 28);
-            LbPorcento.TabIndex = 1;
-            LbPorcento.Text = "label1";
+            LbVisualPerct.AutoSize = true;
+            LbVisualPerct.BackColor = Color.Transparent;
+            LbVisualPerct.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LbVisualPerct.Location = new Point(1316, 738);
+            LbVisualPerct.Name = "LbVisualPerct";
+            LbVisualPerct.Size = new Size(0, 28);
+            LbVisualPerct.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(1148, 752);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 2;
+            label1.Text = "label1";
             // 
             // FrmSplash_Screen
             // 
@@ -80,7 +91,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1497, 898);
-            Controls.Add(LbPorcento);
+            Controls.Add(label1);
+            Controls.Add(LbVisualPerct);
             Controls.Add(PnBarCharge);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmSplash_Screen";
@@ -96,6 +108,7 @@
         private Panel PnBarCharge;
         private Panel PnCharge;
         private System.Windows.Forms.Timer Bar_Charge;
-        private Label LbPorcento;
+        private Label LbVisualPerct;
+        private Label label1;
     }
 }

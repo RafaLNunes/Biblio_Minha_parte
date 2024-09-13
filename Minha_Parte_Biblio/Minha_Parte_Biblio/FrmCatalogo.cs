@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Minha_Parte_Biblio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace usuario
 {
     public partial class FrmCatalogo : Form
     {
-        public FrmCatalogo()
+        ClUserModelo Modelo_User = new ClUserModelo();
+        public FrmCatalogo(ClUserModelo User)
         {
+            this.Modelo_User = User;
             InitializeComponent();
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Minha_Parte_Biblio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace usuario
 {
     public partial class FrmhistLivros : Form
     {
-        public FrmhistLivros()
+        ClUserModelo Modelo_user = new ClUserModelo();
+        public FrmhistLivros(ClUserModelo user /* Lembrar do clmodeloreserva e livro*/)
         {
+            this.Modelo_user = user;
             InitializeComponent();
         }
 

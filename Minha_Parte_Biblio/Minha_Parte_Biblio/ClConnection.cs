@@ -11,11 +11,18 @@ namespace Aprendendo_MVC
 {
     public class ClConectection
     {
+        //        Your new database is now ready to use.
+        //        To connect to your database use these details
+        //        Server: sql10.freemysqlhosting.net
+        //        Name: sql10731212
+        //        Username: sql10731212
+        //        Password: LpGugM88e3
+        //        Port number: 3306
 
-        static private String server = "localhost"; //localhost
-        static private String DataBase = "Biblio_Sesi"; // Nome do Data Base
-        static private String User = "root"; //root senha vazia
-        static private String PassWord = ""; //senha do root é sempre vazia
+        static private String server = "sql10.freemysqlhosting.net"; //localhost
+        static private String DataBase = "sql10731212"; // Nome do Data Base
+        static private String User = "sql10731212"; //root senha vazia
+        static private String PassWord = "LpGugM88e3"; //senha do root é sempre vazia
         public MySqlConnection Conect = null; // garantia de que eesta aberta e vazia
         static private String strConect = $"server={server};database={DataBase};user id={User};password={PassWord};";
 
