@@ -378,6 +378,7 @@
             FPnContenedor.Name = "FPnContenedor";
             FPnContenedor.Size = new Size(1500, 803);
             FPnContenedor.TabIndex = 2;
+            FPnContenedor.Paint += FPnContenedor_Paint;
             // 
             // FrmMeanC
             // 

@@ -61,7 +61,7 @@ namespace usuario
             dt = conexao.obterdados("select*from Table_User where ID_Aluno= " + Modelo_User.ID_Aluno);
 
            
-
+            
             Modelo_User.CD_User = Convert.ToInt32(dt.Rows[0]["CD_User"]);
 
             string username;

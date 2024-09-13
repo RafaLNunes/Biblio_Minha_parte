@@ -151,5 +151,9 @@ namespace Minha_Parte_Biblio
             sobr.Show();
         }
 
+        private void FPnContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

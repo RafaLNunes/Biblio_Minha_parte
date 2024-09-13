@@ -14,17 +14,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace Minha_Parte_Biblio
 {
     internal class Extra
-    { 
-//        Hi
-//        Your account number is: 959435
+    {
+        //        Hi
+        //        Your account number is: 959435
 
-//        Your new database is now ready to use.
-//        To connect to your database use these details
-//        Server: sql10.freemysqlhosting.net
-//        Name: sql10731212
-//        Username: sql10731212
-//        Password: LpGugM88e3
-//        Port number: 3306
+        //Server: sql10.freemysqlhosting.net
+        //Name: sql10731271
+        //Username: sql10731271
+        //Password: HdPjE6jscM
+        //Port number: 3306
+
+
 
 //phpMyAdmin
 //phpMyAdmin is now available to administer your database. phpMyAdmin will allow you to create, edit and remove tables and to back up and import your data. Follow this link http://www.phpmyadmin.co and use the database details above to get started with your new database.
