@@ -35,14 +35,14 @@ namespace Minha_Parte_Biblio
         public string NomeLivro
         {
             get { return _NomeLivro; }
-            set { _NomeLivro = value; }
+            set { _NomeLivro = value; LbNomeLivro.Text = value; }
         }
 
         [Category("Custom Props")]
         public string Autor
         {
             get { return _Autor; }
-            set { _Autor = value; }
+            set { _Autor = value; LbNomeAutor.Text = value; }
         }
 
         [Category("Custom Props")]

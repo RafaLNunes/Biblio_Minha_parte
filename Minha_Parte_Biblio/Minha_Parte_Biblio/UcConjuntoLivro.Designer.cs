@@ -33,7 +33,9 @@
             BntReserva = new BntCircle();
             LbNomeAutor = new Label();
             LbNomeLivro = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)PbLivro).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // PbLivro
@@ -55,9 +57,9 @@
             BntReserva.FlatAppearance.BorderSize = 0;
             BntReserva.FlatStyle = FlatStyle.Flat;
             BntReserva.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BntReserva.Location = new Point(6, 370);
+            BntReserva.Location = new Point(1, 406);
             BntReserva.Name = "BntReserva";
-            BntReserva.Size = new Size(232, 65);
+            BntReserva.Size = new Size(232, 57);
             BntReserva.TabIndex = 1;
             BntReserva.Text = "Iniciar Reserva";
             BntReserva.UseVisualStyleBackColor = false;
@@ -67,38 +69,49 @@
             // 
             LbNomeAutor.AutoSize = true;
             LbNomeAutor.BackColor = Color.Transparent;
-            LbNomeAutor.Location = new Point(108, 327);
+            LbNomeAutor.Location = new Point(109, 361);
             LbNomeAutor.Name = "LbNomeAutor";
-            LbNomeAutor.Size = new Size(50, 20);
+            LbNomeAutor.Size = new Size(165, 20);
             LbNomeAutor.TabIndex = 2;
-            LbNomeAutor.Text = "label1";
+            LbNomeAutor.Text = "Gabriel García Márquez";
             // 
             // LbNomeLivro
             // 
             LbNomeLivro.AutoSize = true;
             LbNomeLivro.BackColor = Color.Transparent;
-            LbNomeLivro.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LbNomeLivro.Location = new Point(6, 292);
+            LbNomeLivro.Font = new Font("Segoe UI", 12.8F);
+            LbNomeLivro.Location = new Point(3, 0);
             LbNomeLivro.Name = "LbNomeLivro";
-            LbNomeLivro.Size = new Size(76, 31);
+            LbNomeLivro.Size = new Size(247, 60);
             LbNomeLivro.TabIndex = 3;
-            LbNomeLivro.Text = "label2";
+            LbNomeLivro.Text = "Sapiens: Uma Breve História da Humanidade";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.Transparent;
+            flowLayoutPanel1.Controls.Add(LbNomeLivro);
+            flowLayoutPanel1.Location = new Point(10, 299);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(264, 59);
+            flowLayoutPanel1.TabIndex = 4;
             // 
             // UcConjuntoLivro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            Controls.Add(LbNomeLivro);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(LbNomeAutor);
             Controls.Add(BntReserva);
             Controls.Add(PbLivro);
-            MaximumSize = new Size(314, 438);
-            MinimumSize = new Size(314, 438);
+            MaximumSize = new Size(314, 465);
+            MinimumSize = new Size(314, 465);
             Name = "UcConjuntoLivro";
-            Size = new Size(314, 438);
+            Size = new Size(314, 465);
             Load += UcConjuntoLivro_Load;
             ((System.ComponentModel.ISupportInitialize)PbLivro).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,5 +122,6 @@
         private BntCircle BntReserva;
         private Label LbNomeAutor;
         private Label LbNomeLivro;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
