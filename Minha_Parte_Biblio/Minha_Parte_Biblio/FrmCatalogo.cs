@@ -29,11 +29,12 @@ namespace usuario
             for (int i = 0; i <= 2; i++)//DT_Livros.Rows.Count
             {
 
+                MessageBox.Show(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString()));
                 Conj_Livro[i] = new UcConjuntoLivro();
                 Conj_Livro[i].Cod_Livro = (int) DT_Livros.Rows[i]["Order_Livro"];
 
 
-               Conj_Livro[i].IMG_cam = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString()));
+                Conj_Livro[i].IMG_cam = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString()));
 
 
             }
