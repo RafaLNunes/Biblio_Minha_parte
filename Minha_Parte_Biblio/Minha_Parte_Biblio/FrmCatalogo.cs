@@ -26,10 +26,16 @@ namespace usuario
             DT_Livros = conexao.obterdados("select * from Table_Livro");
             UcConjuntoLivro[] Conj_Livro = new UcConjuntoLivro[36];
 
-            for (int i = 1; i <= DT_Livros.Rows.Count; i++)
+            for (int i = 0; i <= 2; i++)//DT_Livros.Rows.Count
             {
 
-                Conj_Livro[i].LbNomeLivro = DT_Livros.Rows[i]["Nome_Livro"].ToString();
+                Conj_Livro[i] = new UcConjuntoLivro();
+                Conj_Livro[i].Cod_Livro = (int) DT_Livros.Rows[i]["Order_Livro"];
+
+
+               Conj_Livro[i].IMG_cam = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString()));
+
+
             }
 
 
@@ -42,6 +48,11 @@ namespace usuario
         }
 
         private void FPConteinerCat_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmCatalogo_Load(object sender, EventArgs e)
         {
 
         }

@@ -19,10 +19,10 @@ namespace Aprendendo_MVC
 
 
 
-        static private String server = "sql10.freemysqlhosting.net"; //localhost
-        static private String DataBase = "sql10731271"; // Nome do Data Base
-        static private String User = "sql10731271"; //root senha vazia
-        static private String PassWord = "HdPjE6jscM"; //senha do root é sempre vazia
+        static private String server = "localhost"; //localhost
+        static private String DataBase = "Biblio_Sesi"; // Nome do Data Base
+        static private String User = "root"; //root senha vazia
+        static private String PassWord = ""; //senha do root é sempre vazia
         public MySqlConnection Conect = null; // garantia de que eesta aberta e vazia
         static private String strConect = $"server={server};database={DataBase};user id={User};password={PassWord};";
 

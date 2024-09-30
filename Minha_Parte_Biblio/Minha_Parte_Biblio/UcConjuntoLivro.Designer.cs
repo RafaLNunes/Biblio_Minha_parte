@@ -54,13 +54,14 @@
             BntReserva.BackColor = Color.FromArgb(118, 136, 169);
             BntReserva.FlatAppearance.BorderSize = 0;
             BntReserva.FlatStyle = FlatStyle.Flat;
-            BntReserva.Font = new Font("Square721 BT", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BntReserva.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BntReserva.Location = new Point(6, 370);
             BntReserva.Name = "BntReserva";
             BntReserva.Size = new Size(232, 65);
             BntReserva.TabIndex = 1;
             BntReserva.Text = "Iniciar Reserva";
             BntReserva.UseVisualStyleBackColor = false;
+            BntReserva.Click += BntReserva_Click;
             // 
             // LbNomeAutor
             // 

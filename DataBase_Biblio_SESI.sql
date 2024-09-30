@@ -168,5 +168,4 @@ Select * From Table_reservas;
 
 
 
-
--- update Table_User set ID_Aluno="01242", NameUser="g", Nome_Completo="Gabriel", Senha="123", CFK_Cargo=1, CFK_Unidade =1, CFK_Ano=1 where CD_User=2 LIMIT 1;
+update Table_User set ID_Aluno="01242", NameUser="g", Nome_Completo="Gabriel", Senha="123", CFK_Cargo=1, CFK_Unidade =1, CFK_Ano=1 where CD_User=1 LIMIT 1;
