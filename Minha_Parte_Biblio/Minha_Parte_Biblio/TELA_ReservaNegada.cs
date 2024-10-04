@@ -23,6 +23,7 @@ namespace Library_Project
         ModeloLivro ModeloLivro = new ModeloLivro();
         ClUserModelo clUser = new ClUserModelo();
         ClUserModelo Modelo_User = new ClUserModelo();
+        ModeloUnidade Modelo_Unidade = new ModeloUnidade();
 
         ClConectection cn = new ClConectection();
         string codi = "";
@@ -31,10 +32,12 @@ namespace Library_Project
             codi = user.ID_Aluno;
             InitializeComponent();
             DataTable DT_User = cn.obterdados("select * from Table_User where ID_Aluno = '" + codi + "'");
-            Modelo_User.CD_User = (int)DT_User[0]["CD_User"];
-            Modelo_User.ID_Aluno = DT_User[0]["ID_Aluno"].ToString();
-            //falta o restante moelo user
-
+            Modelo_User.CD_User = (int)DT_User.Rows[0]["CD_User"];
+            Modelo_User.ID_Aluno = DT_User.Rows[0]["ID_Aluno"].ToString();
+            Modelo_User.UserName = DT_User.Rows[0]["NameUser"].ToString();
+            Modelo_User.Index_Unidade = (int)DT_User.Rows[0]["CFK_Unidade"];
+            Modelo_User.Index_Ano = (int)DT_User.Rows[0]["CFK_Ano"];
+            Modelo_User.Index_Cargo = (int)DT_User.Rows[0]["CFK_Cargo"];
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,9 +56,9 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmMeanC form1 = new FrmMeanC(Modelo_User);
+            FrmMeanC info_livro = new FrmMeanC(Modelo_User, 2);
             this.Hide();
-            form1.ShowDialog();
+            info_livro.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
