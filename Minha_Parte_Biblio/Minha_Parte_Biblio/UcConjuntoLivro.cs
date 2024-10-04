@@ -29,7 +29,7 @@ namespace Minha_Parte_Biblio
         private Image _IMG_cam;
         private Button _CAM_Bnt;
 
-        private int _Cod_Livro;
+        private string _Cod_Livro;
 
         [Category("Custom Props")]
         public string NomeLivro
@@ -60,7 +60,7 @@ namespace Minha_Parte_Biblio
         }
 
         [Category("Custom Props")]
-        public int Cod_Livro
+        public string Cod_Livro
         {
             get { return _Cod_Livro; }
             set { _Cod_Livro = value; }

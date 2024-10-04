@@ -26,17 +26,26 @@ namespace usuario
             DT_Livros = conexao.obterdados("select * from Table_Livro");
             UcConjuntoLivro[] Conj_Livro = new UcConjuntoLivro[36];
 
-            for (int i = 0; i <= DT_Livros.Rows.Count; i++)//
+            for (int i = 0; i < 24; i++)//DT_Livros.Rows.Count
             {
 
                 Conj_Livro[i] = new UcConjuntoLivro();
 
-                Conj_Livro[i].Cod_Livro = (int) DT_Livros.Rows[i]["Order_Livro"];
                 Conj_Livro[i].NomeLivro = DT_Livros.Rows[i]["Nome_Livro"].ToString();
                 Conj_Livro[i].Autor = DT_Livros.Rows[i]["Autor_Livro"].ToString();
 
-                    Conj_Livro[i].IMG_cam = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString()));
+                Conj_Livro[i].Cod_Livro = DT_Livros.Rows[i]["CD_Livro"].ToString();
+                string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString());
 
+                // Verifica se a imagem existe
+                if (File.Exists(imagePath))
+                {
+                    var img = Image.FromFile(imagePath);
+                    
+                        Conj_Livro[i].IMG_cam = (Image)img.Clone(); // Clona a imagem para evitar problemas com o disposing
+                        img.Dispose();
+                    
+                }
                 FPConteinerCat.Controls.Add(Conj_Livro[i]);
             }
 
@@ -58,7 +67,7 @@ for (int i = 0; i < DT_Livros.Rows.Count; i++)
     
     // Verifica se a imagem existe
     if (File.Exists(imagePath))
-    {
+    {   
         using (var img = Image.FromFile(imagePath))
         {
             Conj_Livro[i].IMG_cam = (Image)img.Clone(); // Clona a imagem para evitar problemas com o disposing
