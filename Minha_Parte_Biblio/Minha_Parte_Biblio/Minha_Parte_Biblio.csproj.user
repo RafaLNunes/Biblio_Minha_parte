@@ -4,6 +4,9 @@
     <Compile Update="BntCircle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -31,8 +34,26 @@
     <Compile Update="Frmusuario.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="INFO_Livro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="INFO_Unidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PictureBoxCircle.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="TELA_Perg_Frequentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TELA_ReservaNegada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TELA_Reserva_Cance_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TELA_Reserva_Feita.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="UcConjuntoLivro.cs">
       <SubType>UserControl</SubType>

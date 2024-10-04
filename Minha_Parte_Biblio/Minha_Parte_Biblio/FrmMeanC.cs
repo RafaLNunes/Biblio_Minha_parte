@@ -53,7 +53,7 @@ namespace Minha_Parte_Biblio
         }
 
 
-        public FrmMeanC(ClUserModelo user)
+        public FrmMeanC(ClUserModelo user, int pag)
         {
             this.Modelo_User = user;
             InitializeComponent();
@@ -76,6 +76,50 @@ namespace Minha_Parte_Biblio
             PnNos.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, PnNos.Width, PnNos.Height, 20, 20));
 
             this.IsMdiContainer = true;
+
+            switch (pag)
+            {
+                case 0:
+                    //0 - vazio
+                    FPnContenedor.Controls.Clear();
+                    break;
+                case 1:
+                    //1 - usuario
+                    Frmusuario Frmuser = new Frmusuario(Modelo_User);
+                    Frmuser.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(Frmuser);
+                    Frmuser.Show();
+                    break;
+                case 2:
+                    //2 - catalogo
+                    FrmCatalogo cat = new FrmCatalogo(Modelo_User);
+                    cat.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(cat);
+                    cat.Show();
+                    break;
+                case 3:
+                    //3 - historicolivros
+                    FrmhistLivros hist = new FrmhistLivros(Modelo_User);
+                    hist.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(hist);
+                    hist.Show();
+                    break;
+                case 4:
+                    //4 - sobre nos
+                    Frmsobrenos sobr = new Frmsobrenos();
+                    sobr.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(sobr);
+                    sobr.Show();
+                    break;
+                default:
+                    //Vazio
+                    FPnContenedor.Controls.Clear();
+                    break;
+            }
         }
 
         [DllImport("Gdi32")]
