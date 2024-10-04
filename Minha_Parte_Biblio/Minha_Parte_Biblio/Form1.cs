@@ -25,7 +25,7 @@ namespace Library_Project
 {
     public partial class Form1 : Form
     {
-        ModeloLivro modeloLivro = new ModeloLivro();
+        Model_Livro Model_Livro = new Model_Livro();
         ModeloUnidade unidade = new ModeloUnidade();
         ModeloReservas Modeloreserva = new ModeloReservas();
         ClUserModelo clUser = new ClUserModelo();
@@ -40,12 +40,12 @@ namespace Library_Project
         private void button1_Click(object sender, EventArgs e)
         {
             //passou o valor selecionado fixo
-            modeloLivro.CD_Livro = comboBox1.Text;
-            // modeloLivro.CD_Livro = "320C111L2021";
+            Model_Livro.CD_Livro = comboBox1.Text;
+            // Model_Livro.CD_Livro = "320C111L2021";
             DataTable dt_unit = cn.obterdados("Select * from Table_Livro where Order_Livro = '" + (comboBox1.SelectedIndex + 1).ToString() + "'");
-            modeloLivro.Index_Unidade = (int)dt_unit.Rows[0]["CFK_Unidade"];
-            unidade.CD_Unidade = modeloLivro.Index_Unidade;
-            INFO_Livro info = new INFO_Livro(modeloLivro, clUser, unidade);
+            Model_Livro.Index_Unidade = (int)dt_unit.Rows[0]["CFK_Unidade"];
+            unidade.CD_Unidade = Model_Livro.Index_Unidade;
+            INFO_Livro info = new INFO_Livro(Model_Livro, clUser, unidade);
             info.ShowDialog();
 
         }
@@ -56,11 +56,11 @@ namespace Library_Project
             // isso é apenas para teste 
             DataTable dt_unit = cn.obterdados("Select * from Table_Livro where Order_Livro = '" + (comboBox1.SelectedIndex + 1).ToString() + "'");
             //continuação
-            modeloLivro.Index_Unidade = (int)dt_unit.Rows[0]["CFK_Unidade"];
-            unidade.CD_Unidade = modeloLivro.Index_Unidade;
-            modeloLivro.CD_Livro = comboBox1.Text;
+            Model_Livro.Index_Unidade = (int)dt_unit.Rows[0]["CFK_Unidade"];
+            unidade.CD_Unidade = Model_Livro.Index_Unidade;
+            Model_Livro.CD_Livro = comboBox1.Text;
 
-            INFO_Unidade info = new INFO_Unidade(unidade, modeloLivro);
+            INFO_Unidade info = new INFO_Unidade(unidade, Model_Livro);
             info.ShowDialog();
         }
 

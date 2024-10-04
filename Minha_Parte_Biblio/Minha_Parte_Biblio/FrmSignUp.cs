@@ -1,4 +1,6 @@
 ﻿using Aprendendo_MVC;
+using Library_Project.controle;
+using Library_Project.modelo;
 using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
 using System;
@@ -16,10 +18,18 @@ namespace Minha_Parte_Biblio
 {
     public partial class FrmSignUp : Form
     {
-        //conecta as class
-        ClConectection conexao = new ClConectection(); // exclusiva para a conexao com a dt
-        ClUsercontrole controle_User = new ClUsercontrole(); //tras as funções do usuario
-        ClUserModelo Modelo_User = new ClUserModelo(); // exclusiva para infos do user
+        /* =====Importação das class de modelo===== */
+        ClUserModelo Model_User = new ClUserModelo(); // responsavel por importar info dos users
+        Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
+        ModeloReservas Model_Reserv = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloUnidade Model_Unit = new ModeloUnidade(); // responsavel por importar info das unidades 
+
+        ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
+
+        /* =====Importação das class de controle===== */
+        ClUsercontrole Controle_User = new ClUsercontrole();
+        ControleLivro Controle_Livro = new ControleLivro();
+        ControleReservas Controle_Reserv = new ControleReservas();
 
 
         //crias as variaveis, mas em aberto
@@ -206,22 +216,22 @@ namespace Minha_Parte_Biblio
                 {
 
                     //popula o modelo se não estiver vasio as text
-                    Modelo_User.Index_Cargo = CbCargo.SelectedIndex + 1;
-                    Modelo_User.Index_Ano = CbAno.SelectedIndex + 1;
-                    Modelo_User.Index_Unidade = CbUnidade.SelectedIndex + 1;
-                    Modelo_User.NomeComp = txtNomeComp.Text;
-                    Modelo_User.ID_Aluno = txtID.Text;
-                    Modelo_User.UserName = txtUser.Text;
-                    Modelo_User.Password = txtPassWord.Text;
-                    Modelo_User.Caminho_FT = Nome_Ft;
-                    if (controle_User.SignUp(Modelo_User) == true) //se essa função der certo ele abre o novo frm
+                    Model_User.Index_Cargo = CbCargo.SelectedIndex + 1;
+                    Model_User.Index_Ano = CbAno.SelectedIndex + 1;
+                    Model_User.Index_Unidade = CbUnidade.SelectedIndex + 1;
+                    Model_User.NomeComp = txtNomeComp.Text;
+                    Model_User.ID_Aluno = txtID.Text;
+                    Model_User.UserName = txtUser.Text;
+                    Model_User.Password = txtPassWord.Text;
+                    Model_User.Caminho_FT = Nome_Ft;
+                    if (Controle_User.SignUp(Model_User) == true) //se essa função der certo ele abre o novo frm
                     {
 
                         Cam_origin = Path.Combine(Directory.GetCurrentDirectory(),"DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
                         File.Copy(Cam_FT, Cam_origin, true);
                         MessageBox.Show(Cam_origin);
                         MessageBox.Show(Cam_origin);
-                        FrmBoasVindas boVindam = new FrmBoasVindas(Modelo_User);
+                        FrmBoasVindas boVindam = new FrmBoasVindas(Model_User);
                         this.Hide();
                         boVindam.ShowDialog();
                     }

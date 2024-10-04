@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_Project.modelo
 {
-    public class ModeloLivro
+    public class Model_Livro
     {
 
         //declaro as variaveis do sistema com relacao ao banco de dados
@@ -20,7 +20,7 @@ namespace Library_Project.modelo
         public string Descricao_Livro;
         public int Index_Unidade;
 
-        public ModeloLivro() {
+        public Model_Livro() {
 
             //iniciar as variaveis zeradas
             Order_Livro = 0;

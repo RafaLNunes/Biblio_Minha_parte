@@ -19,7 +19,7 @@ namespace Library_Project.controle
 
         //metodo para cadastrar 
         //Esse cadastrar é apenas demostrativo (SEM UTILIDADE PRATICA)
-        public bool cadastrar_Livro(ModeloLivro livro)
+        public bool cadastrar_Livro(Model_Livro livro)
         {
             bool resultado = false;
             try

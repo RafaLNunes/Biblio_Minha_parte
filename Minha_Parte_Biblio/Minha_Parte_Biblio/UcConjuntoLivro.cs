@@ -13,6 +13,10 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Aprendendo_MVC;
 using Minha_Parte_Biblio.Modelo;
+using Library_Project.controle;
+using Minha_Parte_Biblio.Controle;
+using Microsoft.VisualBasic.ApplicationServices;
+using Mysqlx.Session;
 
 namespace Minha_Parte_Biblio
 {
@@ -21,17 +25,24 @@ namespace Minha_Parte_Biblio
         string Cam_FT;
         //margin: 20
 
-        ModeloLivro modeloLivro = new ModeloLivro();
-        ModeloUnidade unidade = new ModeloUnidade();
-        ModeloReservas Modeloreserva = new ModeloReservas();
-        ClUserModelo clUser = new ClUserModelo();
-        ClConectection cn = new ClConectection();
+        /* =====Importação das class de modelo===== */
+        ClUserModelo Model_User = new ClUserModelo(); // responsavel por importar info dos users
+        Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
+        ModeloReservas Model_Reserv = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloUnidade Model_Unit = new ModeloUnidade(); // responsavel por importar info das unidades 
 
-        public UcConjuntoLivro(ClUserModelo Modelo_User)
+        ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
+
+        /* =====Importação das class de controle===== */
+        ClUsercontrole Controle_User = new ClUsercontrole();
+        ControleLivro Controle_Livro = new ControleLivro();
+        ControleReservas Controle_Reserv = new ControleReservas();
+
+        public UcConjuntoLivro(ClUserModelo Model_User)
 
 
         {
-            clUser = Modelo_User;
+            this.Model_User = Model_User;
             InitializeComponent();
         }
 
@@ -88,14 +99,20 @@ namespace Minha_Parte_Biblio
 
             //INFO_Livro frmLivroEx = new INFO_Livro(Cod_Livro);
             //frmLivroEx.ShowDialog();
+            try
+            {
 
-            modeloLivro.CD_Livro = Cod_Livro;
-            // modeloLivro.CD_Livro = "320C111L2021";
-            DataTable dt_unit = cn.obterdados("Select * from Table_Livro where CD_Livro = '" + modeloLivro.CD_Livro + "'");
-            modeloLivro.Index_Unidade = (int)dt_unit.Rows[0]["CFK_Unidade"];
-            unidade.CD_Unidade = modeloLivro.Index_Unidade;
-            INFO_Livro info = new INFO_Livro(modeloLivro, clUser, unidade);
-            info.ShowDialog();
+                Model_Livro.CD_Livro = Cod_Livro;
+                // Model_Livro.CD_Livro = "320C111L2021";
+                DataTable dt_unit = cn.obterdados("Select * from Table_Livro where CD_Livro = '" + Model_Livro.CD_Livro + "'");
+                Model_Livro.Index_Unidade = (int)dt_unit.Rows[0]["CFK_Unidade"];
+                unidade.CD_Unidade = Model_Livro.Index_Unidade;
+                INFO_Livro info = new INFO_Livro(Model_livro, Model_user, ModeloUnidade unidade, ModeloReservas reserv);
+                info.ShowDialog();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Problemas na Requisição das informações");
+            }
 
 
         }

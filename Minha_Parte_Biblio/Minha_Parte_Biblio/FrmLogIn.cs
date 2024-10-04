@@ -1,4 +1,7 @@
 ﻿using Aprendendo_MVC;
+using Library_Project.controle;
+using Library_Project.modelo;
+using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
 using System;
 using System.Collections.Generic;
@@ -16,9 +19,19 @@ namespace Minha_Parte_Biblio
 {
     public partial class FRMLogIn : Form
     {
-        //conecta as class
-        ClConectection conexao = new ClConectection(); // exclusiva para a conexao com a dt
-        ClUserModelo Modelo_User = new ClUserModelo(); // exclusiva para infos do user
+
+        /* =====Importação das class de modelo===== */
+        ClUserModelo Model_User = new ClUserModelo(); // responsavel por importar info dos users
+        Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
+        ModeloReservas Model_Reserv = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloUnidade Model_Unit = new ModeloUnidade(); // responsavel por importar info das unidades 
+
+        ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
+
+        /* =====Importação das class de controle===== */
+        ClUsercontrole Controle_User = new ClUsercontrole();
+        ControleLivro Controle_Livro = new ControleLivro();
+        ControleReservas Controle_Reserv = new ControleReservas();
         public FRMLogIn()
         {
             InitializeComponent();
@@ -114,14 +127,14 @@ namespace Minha_Parte_Biblio
             {
                 //controla as reações para logar
                 //ao clicar no bnt
-                Modelo_User.UserName = txtUser.Text; // o modelo vai popular a variavel UserName com o que estiver escrito em textuser
-                Modelo_User.Password = txtPassWord.Text; // o modelo vai popular a variavel Password com o que estiver escrito em textpassword
+                Model_User.UserName = txtUser.Text; // o modelo vai popular a variavel UserName com o que estiver escrito em textuser
+                Model_User.Password = txtPassWord.Text; // o modelo vai popular a variavel Password com o que estiver escrito em textpassword
 
                 //cria uma table para ser populada com a conexao ao clconnection
-                DataTable DT_logIn = conexao.LogIn(Modelo_User);
+                DataTable DT_logIn = conexao.LogIn(Model_User);
 
                 //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
-                Modelo_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
+                Model_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
 
                 //gera unma menssage de confirmação de login
                 MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
@@ -131,7 +144,7 @@ namespace Minha_Parte_Biblio
                 {
                     //se sim
                     this.Hide();//esconde o frm atual
-                    FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Modelo_User); //gera o novo
+                    FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Model_User); //gera o novo
                     MessageBox.Show($"Seja bem vindo {DT_logIn.Rows[0]["Nome_Completo"].ToString()}");// gera uma menssage de bem vindo
                     Boa_Vinda.ShowDialog();// abre o novo
                 }

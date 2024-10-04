@@ -4,6 +4,7 @@ using Library_Project.modelo;
 using Minha_Parte_Biblio;
 using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
+using Mysqlx.Session;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,21 +21,31 @@ namespace Library_Project
 {
     public partial class TELA_Reserva_Feita : Form
     {
-        ModeloUnidade model = new ModeloUnidade();
-        ClUsercontrole user = new ClUsercontrole();
-        ModeloLivro ModeloLivro = new ModeloLivro();
-        ClUserModelo Cluser = new ClUserModelo();
-        ClUserModelo Modelo_User = new ClUserModelo();
+        /* =====Importação das class de modelo===== */
+        ClUserModelo Model_User = new ClUserModelo(); // responsavel por importar info dos users
+        Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
+        ModeloReservas Model_Reserv = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloUnidade Model_Unit = new ModeloUnidade(); // responsavel por importar info das unidades 
 
-        ClConectection cn = new ClConectection();
+        ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
+
+        /* =====Importação das class de controle===== */
+        ClUsercontrole Controle_User = new ClUsercontrole();
+        ControleLivro Controle_Livro = new ControleLivro();
+        ControleReservas Controle_Reserv = new ControleReservas();
+
         string codi = "";
         string codigo = "";
         string cod1 = "";
-        public TELA_Reserva_Feita(ClUserModelo user, ModeloLivro modelolivro, ModeloUnidade mduni)
+        public TELA_Reserva_Feita(Model_Livro livro, ClUserModelo user, ModeloUnidade unidade, ModeloReservas reserv)
         {
-            codigo = modelolivro.CD_Livro;
-            cod1 = mduni.CD_Unidade.ToString();
+            codigo = Model_Livro.CD_Livro;
+            cod1 = unidade.CD_Unidade.ToString();
             codi = user.CD_User.ToString();
+            this.Model_User = user;
+            this.Model_Livro = livro;
+            this.Model_Unit = unidade;
+            this.Model_Reserv = reserv;
             InitializeComponent();
         }
 
@@ -44,7 +55,7 @@ namespace Library_Project
             try
             {
                 DataTable unidade;
-                unidade = cn.obterdados("Select * from Table_Unidade where CD_Unidade = '" + cod1 + "'");
+                unidade = conexao.obterdados("Select * from Table_Unidade where CD_Unidade = '" + cod1 + "'");
                 label6.Text = unidade.Rows[0]["Nome_Unidade"].ToString();
                 label7.Text = unidade.Rows[0]["Local_Unidade"].ToString();
             }
@@ -56,7 +67,7 @@ namespace Library_Project
             {
                 DataTable livro;
 
-                livro = cn.obterdados("Select * from Table_Livro where CD_Livro = '" + codigo + "'");
+                livro = conexao.obterdados("Select * from Table_Livro where CD_Livro = '" + codigo + "'");
                 label4.Text = livro.Rows[0]["Nome_Livro"].ToString();
                 label5.Text = livro.Rows[0]["CD_Livro"].ToString();
             }
@@ -68,7 +79,7 @@ namespace Library_Project
             try
             {
                 DataTable dados_aluno;
-                dados_aluno = cn.obterdados("Select * from Table_User where CD_User = '" + codi + "'");
+                dados_aluno = conexao.obterdados("Select * from Table_User where CD_User = '" + codi + "'");
 
                 label1.Text = dados_aluno.Rows[0]["ID_Aluno"].ToString();
                 label2.Text = dados_aluno.Rows[0]["NameUser"].ToString();
@@ -95,10 +106,10 @@ namespace Library_Project
 
 
                 DataTable dados_data;
-                DataTable DT_Pegar = cn.obterdados("select * from Table_reservas");
+                DataTable DT_Pegar = conexao.obterdados("select * from Table_reservas");
                 if (DT_Pegar.Rows.Count > 0)
                 {
-                    dados_data = cn.obterdados($"Select ABS(DATEDIFF('{data_Hoje}', DT_previsao_devolucao)) - 1 AS dias_faltando from Table_reservas where CD_Reservas = {DT_Pegar.Rows.Count}");
+                    dados_data = conexao.obterdados($"Select ABS(DATEDIFF('{data_Hoje}', DT_previsao_devolucao)) - 1 AS dias_faltando from Table_reservas where CD_Reservas = {DT_Pegar.Rows.Count}");
                     label3.Text = dados_data.Rows[0][0].ToString();
                 }
             }
@@ -115,14 +126,14 @@ namespace Library_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMeanC frmean = new FrmMeanC(Modelo_User, 2);
+            FrmMeanC frmean = new FrmMeanC(Model_User, 2);
             this.Hide();
             frmean.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmCatalogo cat = new FrmCatalogo(Cluser);
+            FrmCatalogo cat = new FrmCatalogo(Model_Livro, Model_User, Model_Unit, Model_Reserv);
             this.Hide();
             cat.ShowDialog();
         }
@@ -134,7 +145,7 @@ namespace Library_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmMeanC frm = new FrmMeanC(Modelo_User, 2);
+            FrmMeanC frm = new FrmMeanC(Model_User, 2);
             this.Hide();
             frm.ShowDialog();
         }

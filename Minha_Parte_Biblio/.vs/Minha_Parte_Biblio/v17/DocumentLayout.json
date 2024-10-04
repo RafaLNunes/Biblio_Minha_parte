@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\ucconjuntolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\ucconjuntolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\tela_reserva_feita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\tela_reserva_feita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\tela_reservanegada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\tela_reservanegada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UcConjuntoLivro.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\UcConjuntoLivro.cs",
+              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\UcConjuntoLivro.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\UcConjuntoLivro.cs",
+              "RelativeToolTip": "Minha_Parte_Biblio\\UcConjuntoLivro.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAuwG0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:35:10.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TELA_Reserva_Feita.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\TELA_Reserva_Feita.cs",
+              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\TELA_Reserva_Feita.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\TELA_Reserva_Feita.cs",
+              "RelativeToolTip": "Minha_Parte_Biblio\\TELA_Reserva_Feita.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAiwIcAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:34:22.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TELA_ReservaNegada.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\TELA_ReservaNegada.cs",
+              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\TELA_ReservaNegada.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\TELA_ReservaNegada.cs",
+              "RelativeToolTip": "Minha_Parte_Biblio\\TELA_ReservaNegada.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAmwEEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:34:03.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmSignUp.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmSignUp.cs",
+              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmSignUp.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmSignUp.cs",
+              "RelativeToolTip": "Minha_Parte_Biblio\\FrmSignUp.cs",
+              "ViewState": "AQIAANcAAAAAAAAAAAAuwOIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:33:48.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmMeanC.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanC.cs",
+              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmMeanC.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanC.cs",
+              "RelativeToolTip": "Minha_Parte_Biblio\\FrmMeanC.cs",
+              "ViewState": "AQIAAPkAAAAAAAAAAAAqwAMBAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T16:29:19.619Z",
+              "EditorCaption": ""
             }
           ]
         }

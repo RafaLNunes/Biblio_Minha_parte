@@ -2,6 +2,7 @@ using Aprendendo_MVC;
 using Library_Project.controle;
 using Library_Project.modelo;
 using Minha_Parte_Biblio;
+using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
 using MySqlX.XDevAPI;
 using System.Data;
@@ -12,13 +13,19 @@ namespace Library_Project
 {
     public partial class INFO_Livro : Form
     {
-        //criar a instancia do objeto usuario
-        ControleLivro controle = new ControleLivro();
-        ModeloLivro ModeloLivro = new ModeloLivro();
-        ModeloUnidade modelounidade = new ModeloUnidade();
-        ClUserModelo ModeloUser = new ClUserModelo();
+        /* =====Importação das class de modelo===== */
+        ClUserModelo Model_User = new ClUserModelo(); // responsavel por importar info dos users
+        Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
+        ModeloReservas Model_Reserv = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloUnidade Model_Unit = new ModeloUnidade(); // responsavel por importar info das unidades 
 
-        ClConectection cn = new ClConectection();
+        ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
+
+        /* =====Importação das class de controle===== */
+        ClUsercontrole Controle_User = new ClUsercontrole();
+        ControleLivro Controle_Livro = new ControleLivro();
+        ControleReservas Controle_Reserv = new ControleReservas();
+
         string descricao;
         String codi = "";
         String nom = "";
@@ -35,12 +42,13 @@ namespace Library_Project
         int mon1 = 0;
         int ano1 = 0;
 
-        public INFO_Livro(ModeloLivro livro, ClUserModelo user, ModeloUnidade unidade)
+        public INFO_Livro(Model_Livro livro, ClUserModelo user, ModeloUnidade unidade, ModeloReservas reserv)
         {
 
             this.ModeloUser = user;
-            this.ModeloLivro = livro;
+            this.Model_Livro = livro;
             this.modelounidade = unidade;
+            this.Model_Reserv = reserv;
 
 
             //ModeloUser.ID_Aluno = "123456789";
@@ -65,9 +73,9 @@ namespace Library_Project
             {
                 DataTable dados;
                 dados = cn.obterdados("Select * from Table_Livro where CD_Livro = '" + codi + "'");
-                ModeloLivro.Order_Livro = Convert.ToInt32(dados.Rows[0]["Order_Livro"]);
+                Model_Livro.Order_Livro = Convert.ToInt32(dados.Rows[0]["Order_Livro"]);
 
-                cd = ModeloLivro.Order_Livro;
+                cd = Model_Livro.Order_Livro;
 
 
                 descricao = dados.Rows[0]["Descricao_Livro"].ToString();
@@ -90,7 +98,7 @@ namespace Library_Project
         {
 
             DataTable dt = new DataTable();
-            dt = cn.obterdados("Select * from Table_reservas where CFK_Livro = " + cd);
+            dt = conexao.obterdados("Select * from Table_reservas where CFK_Livro = " + cd);
 
             if (dt.Rows.Count <= 0)
             {
@@ -154,7 +162,7 @@ namespace Library_Project
 
                 if (ctr.registrar_Reserva(re) == true)
                 {
-                    TELA_Reserva_Feita tr = new TELA_Reserva_Feita(ModeloUser, ModeloLivro, modelounidade);
+                    TELA_Reserva_Feita tr = new TELA_Reserva_Feita(ModeloUser, Model_Livro, modelounidade);
                     tr.ShowDialog();
                 }
                 else

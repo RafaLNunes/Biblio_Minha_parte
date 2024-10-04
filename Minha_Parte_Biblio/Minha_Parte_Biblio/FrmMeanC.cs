@@ -1,4 +1,9 @@
-﻿using Minha_Parte_Biblio.Modelo;
+﻿using Aprendendo_MVC;
+using Library_Project;
+using Library_Project.controle;
+using Library_Project.modelo;
+using Minha_Parte_Biblio.Controle;
+using Minha_Parte_Biblio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +22,24 @@ namespace Minha_Parte_Biblio
     public partial class FrmMeanC : Form
     {
 
-        ClUserModelo Modelo_User = new ClUserModelo();
+        /* =====Importação das class de modelo===== */
+        ClUserModelo Model_User = new ClUserModelo(); // responsavel por importar info dos users
+        Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
+        ModeloReservas Model_Reserv = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloUnidade Model_Unit = new ModeloUnidade(); // responsavel por importar info das unidades 
+
+        ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
+
+        /* =====Importação das class de controle===== */
+        ClUsercontrole Controle_User = new ClUsercontrole();
+        ControleLivro Controle_Livro = new ControleLivro();
+        ControleReservas Controle_Reserv = new ControleReservas();
+
+        /* =====criação de uma table para armazenar os dados===== */
+        DataTable DT_User = new DataTable(); //dados exclusivos do usuario
+        DataTable DT_Livro = new DataTable(); //dados exclusivos do livro
+        DataTable DT_Reserv = new DataTable(); //dados exclusivos das reservas
+        DataTable DT_Unit = new DataTable(); // dados exclusivods das unidades
         public void ArredondaCantosdoForm()
         {
             // ARREDONDAMENTO DE BORDA
@@ -55,7 +77,7 @@ namespace Minha_Parte_Biblio
 
         public FrmMeanC(ClUserModelo user, int pag)
         {
-            this.Modelo_User = user;
+            this.Model_User = user;
             InitializeComponent();
 
             foreach (Control control in this.Controls)
@@ -85,7 +107,7 @@ namespace Minha_Parte_Biblio
                     break;
                 case 1:
                     //1 - usuario
-                    Frmusuario Frmuser = new Frmusuario(Modelo_User);
+                    Frmusuario Frmuser = new Frmusuario(Model_Livro, Model_User, Model_Unit, Model_Reserv);
                     Frmuser.TopLevel = false;
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(Frmuser);
@@ -93,7 +115,7 @@ namespace Minha_Parte_Biblio
                     break;
                 case 2:
                     //2 - catalogo
-                    FrmCatalogo cat = new FrmCatalogo(Modelo_User);
+                    FrmCatalogo cat = new FrmCatalogo(Model_Livro, Model_User, Model_Unit, Model_Reserv);
                     cat.TopLevel = false;
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(cat);
@@ -101,7 +123,7 @@ namespace Minha_Parte_Biblio
                     break;
                 case 3:
                     //3 - historicolivros
-                    FrmhistLivros hist = new FrmhistLivros(Modelo_User);
+                    FrmhistLivros hist = new FrmhistLivros(Model_Livro, Model_User, Model_Unit, Model_Reserv);
                     hist.TopLevel = false;
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(hist);
@@ -109,11 +131,58 @@ namespace Minha_Parte_Biblio
                     break;
                 case 4:
                     //4 - sobre nos
-                    Frmsobrenos sobr = new Frmsobrenos();
+                    Frmsobrenos sobr = new Frmsobrenos(Model_Livro, Model_User, Model_Unit, Model_Reserv);
                     sobr.TopLevel = false;
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(sobr);
                     sobr.Show();
+                    break;
+                case 5:
+                    //5 - info livro
+                    INFO_Livro infl = new INFO_Livro(Model_Livro, Model_User, Model_Unit, Model_Reserv);
+                    infl.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(infl);
+                    infl.Show();
+                    break;
+                case 6:
+                    //6 - info unidade
+                    INFO_Unidade infu = new INFO_Unidade(Model_Livro, Model_User, Model_Unit, Model_Reserv);
+                    infu.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(infu);
+                    infu.Show();
+                    break;
+
+                case 7:
+                    //7 - perguntas freq
+                    TELA_Perg_Frequentes perf = new TELA_Perg_Frequentes(Model_Livro, Model_User, Model_Unit, Model_Reserv);
+                    perf.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(perf);
+                    perf.Show();
+                    break;
+                case 8:
+                    //8 - reserva feita
+                    TELA_Reserva_Feita ReservF = new TELA_Reserva_Feita(Model_Livro, Model_User, Model_Unit, Model_Reserv);
+                    ReservF.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(ReservF);
+                    ReservF.Show();
+                    break;
+                case 9:
+                    //9 - reserva negada
+                    TELA_ReservaNegada reservaNegada = new TELA_ReservaNegada(Model_Livro, Model_User, Model_Unit, Model_Reserv);
+                    reservaNegada.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(reservaNegada);
+                    reservaNegada.Show();
+                    break; 
+                case 101:
+                    //10 - ucconjunto
+
+                    break;
+                case 11:
                     break;
                 default:
                     //Vazio
@@ -151,7 +220,7 @@ namespace Minha_Parte_Biblio
 
         private void BntUser_Click(object sender, EventArgs e)
         {
-            Frmusuario user = new Frmusuario(Modelo_User);
+            Frmusuario user = new Frmusuario(Model_Livro, Model_User, Model_Unit, Model_Reserv);
             user.TopLevel = false;
             FPnContenedor.Controls.Clear();
             FPnContenedor.Controls.Add(user);
@@ -170,7 +239,7 @@ namespace Minha_Parte_Biblio
 
         private void BntCatalogo_Click(object sender, EventArgs e)
         {
-            FrmCatalogo cat = new FrmCatalogo(Modelo_User);
+            FrmCatalogo cat = new FrmCatalogo(Model_Livro, Model_User, Model_Unit, Model_Reserv);
             cat.TopLevel = false;
             FPnContenedor.Controls.Clear();
             FPnContenedor.Controls.Add(cat);
@@ -179,7 +248,7 @@ namespace Minha_Parte_Biblio
 
         private void BntHist_Click(object sender, EventArgs e)
         {
-            FrmhistLivros hist = new FrmhistLivros(Modelo_User);
+            FrmhistLivros hist = new FrmhistLivros(Model_Livro, Model_User, Model_Unit, Model_Reserv);
             hist.TopLevel = false;
             FPnContenedor.Controls.Clear();
             FPnContenedor.Controls.Add(hist);
@@ -188,7 +257,7 @@ namespace Minha_Parte_Biblio
 
         private void BntNos_Click(object sender, EventArgs e)
         {
-            Frmsobrenos sobr = new Frmsobrenos();
+            Frmsobrenos sobr = new Frmsobrenos(Model_Livro, Model_User, Model_Unit, Model_Reserv);
             sobr.TopLevel = false;
             FPnContenedor.Controls.Clear();
             FPnContenedor.Controls.Add(sobr);

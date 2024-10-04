@@ -97,16 +97,16 @@ namespace Aprendendo_MVC
         }
 
 
-        public DataTable LogIn(ClUserModelo Modelo_User)
+        public DataTable LogIn(ClUserModelo Model_User)
         {
             DataTable reg = new DataTable();
 
             try
             {
                 //User Name
-                String nameuser = Modelo_User.UserName;
+                String nameuser = Model_User.UserName;
                 //password
-                String password = Modelo_User.Password;
+                String password = Model_User.Password;
 
                 String sql = "select * from Table_User where NameUser=@nameuser and Senha=@password";
 
