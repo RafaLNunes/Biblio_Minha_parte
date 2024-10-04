@@ -115,7 +115,7 @@ namespace Library_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMeanC frmean= new FrmMeanC(Modelo_User, 2);
+            FrmMeanC frmean = new FrmMeanC(Modelo_User, 2);
             this.Hide();
             frmean.ShowDialog();
         }
@@ -134,9 +134,14 @@ namespace Library_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            FrmMeanC frm = new FrmMeanC(Modelo_User, 2);
             this.Hide();
-            frm.ShowDialog();   
+            frm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,6 +38,11 @@ namespace Library_Project
             Modelo_User.Index_Unidade = (int)DT_User.Rows[0]["CFK_Unidade"];
             Modelo_User.Index_Ano = (int)DT_User.Rows[0]["CFK_Ano"];
             Modelo_User.Index_Cargo = (int)DT_User.Rows[0]["CFK_Cargo"];
+
+            label1.Text = DT_User.Rows[0]["ID_Aluno"].ToString();
+            label2.Text = DT_User.Rows[0]["NameUser"].ToString();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,9 +68,14 @@ namespace Library_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmCatalogo cat = new FrmCatalogo(clUser);
+            FrmMeanC info_livro = new FrmMeanC(Modelo_User, 2);
             this.Hide();
-            cat.ShowDialog();
+            info_livro.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

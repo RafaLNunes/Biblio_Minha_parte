@@ -29,7 +29,7 @@ namespace usuario
             for (int i = 0; i < 24; i++)//DT_Livros.Rows.Count
             {
 
-                Conj_Livro[i] = new UcConjuntoLivro();
+                Conj_Livro[i] = new UcConjuntoLivro(Modelo_User);
 
                 Conj_Livro[i].NomeLivro = DT_Livros.Rows[i]["Nome_Livro"].ToString();
                 Conj_Livro[i].Autor = DT_Livros.Rows[i]["Autor_Livro"].ToString();

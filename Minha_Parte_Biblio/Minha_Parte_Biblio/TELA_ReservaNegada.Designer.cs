@@ -139,6 +139,7 @@
             label2.Size = new Size(99, 36);
             label2.TabIndex = 8;
             label2.Text = "label2";
+            label2.Click += label2_Click;
             // 
             // panel3
             // 

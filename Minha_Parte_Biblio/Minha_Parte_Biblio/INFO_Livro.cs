@@ -1,6 +1,7 @@
 using Aprendendo_MVC;
 using Library_Project.controle;
 using Library_Project.modelo;
+using Minha_Parte_Biblio;
 using Minha_Parte_Biblio.Modelo;
 using MySqlX.XDevAPI;
 using System.Data;
@@ -42,7 +43,7 @@ namespace Library_Project
             this.modelounidade = unidade;
 
 
-            ModeloUser.ID_Aluno = "123456789";
+            //ModeloUser.ID_Aluno = "123456789";
             DataTable dt_Inicial = new DataTable();
 
             dt_Inicial = cn.obterdados($"select * from Table_User where ID_Aluno = {ModeloUser.ID_Aluno}");
@@ -196,9 +197,9 @@ namespace Library_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            FrmMeanC FrmM = new FrmMeanC(ModeloUser, 0);
             this.Hide();
-            form1.ShowDialog();
+            FrmM.ShowDialog();
         }
     }
 }

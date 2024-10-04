@@ -27,10 +27,11 @@ namespace Minha_Parte_Biblio
         ClUserModelo clUser = new ClUserModelo();
         ClConectection cn = new ClConectection();
 
-        public UcConjuntoLivro()
+        public UcConjuntoLivro(ClUserModelo Modelo_User)
 
 
         {
+            clUser = Modelo_User;
             InitializeComponent();
         }
 
