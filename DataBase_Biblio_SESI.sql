@@ -22,7 +22,7 @@ CREATE TABLE Table_Unidade(
 
 CREATE TABLE Table_Livro (
 	Order_Livro int primary key auto_increment,
-	Order_Livro varchar(80) not null,
+	CD_Livro varchar(80) not null,
     Nome_Livro Varchar(80),
     Autor_Livro Varchar(80),
     QTD_estoque int,
