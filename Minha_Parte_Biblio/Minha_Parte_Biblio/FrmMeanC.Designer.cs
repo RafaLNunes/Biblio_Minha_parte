@@ -108,9 +108,9 @@
             // PbClose
             // 
             PbClose.Image = (Image)resources.GetObject("PbClose.Image");
-            PbClose.Location = new Point(1815, 0);
+            PbClose.Location = new Point(1797, 3);
             PbClose.Name = "PbClose";
-            PbClose.Size = new Size(70, 70);
+            PbClose.Size = new Size(85, 76);
             PbClose.SizeMode = PictureBoxSizeMode.Zoom;
             PbClose.TabIndex = 13;
             PbClose.TabStop = false;
