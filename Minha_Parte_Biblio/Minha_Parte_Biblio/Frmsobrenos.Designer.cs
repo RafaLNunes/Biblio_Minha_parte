@@ -45,6 +45,7 @@
             bntCircle1.TabIndex = 0;
             bntCircle1.Text = "Desenvolvedores";
             bntCircle1.UseVisualStyleBackColor = false;
+            bntCircle1.Click += bntCircle1_Click;
             // 
             // Frmsobrenos
             // 

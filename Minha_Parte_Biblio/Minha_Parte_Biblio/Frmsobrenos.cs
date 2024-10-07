@@ -40,5 +40,10 @@ namespace usuario
             this.Model_Reserv = reserv;
             InitializeComponent();
         }
+
+        private void bntCircle1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
