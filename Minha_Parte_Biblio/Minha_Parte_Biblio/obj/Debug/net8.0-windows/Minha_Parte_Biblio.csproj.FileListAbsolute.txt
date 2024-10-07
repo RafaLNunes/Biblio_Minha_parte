@@ -65,3 +65,5 @@ C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Base Estragada\Minha_Parte_Bi
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Base Estragada\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\usuario.FrmhistLivros.resources
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Base Estragada\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FRMLogIn.resources
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Base Estragada\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmLogInE.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmSendEmail.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmSobreDevs.resources
