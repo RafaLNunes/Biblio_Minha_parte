@@ -46,7 +46,7 @@ namespace usuario
             DT_Livros = conexao.obterdados("select * from Table_Livro");
             UcConjuntoLivro[] Conj_Livro = new UcConjuntoLivro[36];
 
-            for (int i = 0; i < 24; i++)//DT_Livros.Rows.Count
+            for (int i = 0; i < DT_Livros.Rows.Count; i++)//DT_Livros.Rows.Count
             {
 
                 Conj_Livro[i] = new UcConjuntoLivro(Model_User);

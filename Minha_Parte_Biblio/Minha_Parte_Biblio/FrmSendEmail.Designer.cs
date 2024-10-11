@@ -29,7 +29,86 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSendEmail));
+            SendEmail = new BntCircle();
+            txtIndexMail = new TextBox();
+            txtAssunto = new TextBox();
+            txtFirstName = new TextBox();
+            txtSecondName = new TextBox();
+            txtMensagem = new TextBox();
+            txtremetente = new TextBox();
             SuspendLayout();
+            // 
+            // SendEmail
+            // 
+            SendEmail.BackColor = Color.Black;
+            SendEmail.FlatAppearance.BorderSize = 0;
+            SendEmail.FlatStyle = FlatStyle.Flat;
+            SendEmail.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            SendEmail.ForeColor = Color.White;
+            SendEmail.Location = new Point(504, 598);
+            SendEmail.Name = "SendEmail";
+            SendEmail.Size = new Size(477, 80);
+            SendEmail.TabIndex = 0;
+            SendEmail.Text = "Enviar Mensagem";
+            SendEmail.UseVisualStyleBackColor = false;
+            SendEmail.Click += SendEmail_Click;
+            // 
+            // txtIndexMail
+            // 
+            txtIndexMail.BackColor = Color.FromArgb(195, 195, 195);
+            txtIndexMail.BorderStyle = BorderStyle.None;
+            txtIndexMail.Location = new Point(494, 167);
+            txtIndexMail.Name = "txtIndexMail";
+            txtIndexMail.Size = new Size(514, 20);
+            txtIndexMail.TabIndex = 1;
+            // 
+            // txtAssunto
+            // 
+            txtAssunto.BackColor = Color.FromArgb(195, 195, 195);
+            txtAssunto.BorderStyle = BorderStyle.None;
+            txtAssunto.Location = new Point(207, 276);
+            txtAssunto.Name = "txtAssunto";
+            txtAssunto.Size = new Size(299, 20);
+            txtAssunto.TabIndex = 2;
+            // 
+            // txtFirstName
+            // 
+            txtFirstName.BackColor = Color.FromArgb(195, 195, 195);
+            txtFirstName.BorderStyle = BorderStyle.None;
+            txtFirstName.Location = new Point(207, 429);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(299, 20);
+            txtFirstName.TabIndex = 3;
+            // 
+            // txtSecondName
+            // 
+            txtSecondName.BackColor = Color.FromArgb(195, 195, 195);
+            txtSecondName.BorderStyle = BorderStyle.None;
+            txtSecondName.ImeMode = ImeMode.NoControl;
+            txtSecondName.Location = new Point(207, 530);
+            txtSecondName.Name = "txtSecondName";
+            txtSecondName.Size = new Size(299, 20);
+            txtSecondName.TabIndex = 4;
+            // 
+            // txtMensagem
+            // 
+            txtMensagem.BackColor = Color.FromArgb(195, 195, 195);
+            txtMensagem.BorderStyle = BorderStyle.None;
+            txtMensagem.ImeMode = ImeMode.NoControl;
+            txtMensagem.Location = new Point(587, 276);
+            txtMensagem.Multiline = true;
+            txtMensagem.Name = "txtMensagem";
+            txtMensagem.Size = new Size(689, 274);
+            txtMensagem.TabIndex = 5;
+            // 
+            // txtremetente
+            // 
+            txtremetente.BackColor = Color.FromArgb(195, 195, 195);
+            txtremetente.BorderStyle = BorderStyle.None;
+            txtremetente.Location = new Point(494, 113);
+            txtremetente.Name = "txtremetente";
+            txtremetente.Size = new Size(514, 20);
+            txtremetente.TabIndex = 6;
             // 
             // FrmSendEmail
             // 
@@ -37,13 +116,29 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 758);
+            Controls.Add(txtremetente);
+            Controls.Add(txtMensagem);
+            Controls.Add(txtSecondName);
+            Controls.Add(txtFirstName);
+            Controls.Add(txtAssunto);
+            Controls.Add(txtIndexMail);
+            Controls.Add(SendEmail);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmSendEmail";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmSendEmail";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private BntCircle SendEmail;
+        private TextBox txtIndexMail;
+        private TextBox txtAssunto;
+        private TextBox txtFirstName;
+        private TextBox txtSecondName;
+        private TextBox txtMensagem;
+        private TextBox txtremetente;
     }
 }

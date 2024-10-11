@@ -78,8 +78,10 @@ namespace Minha_Parte_Biblio
         public FrmMeanC(ClUserModelo user, int pag)
         {
             this.Model_User = user;
+            
             InitializeComponent();
 
+            LbName_User.Text = user.UserName;
             foreach (Control control in this.Controls)
             {
                 if (control is Button)
