@@ -35,17 +35,19 @@ namespace Library_Project
         ControleReservas Controle_Reserv = new ControleReservas();
 
         string codi = "";
-        string codigo = "";
+        string codigo;
         string cod1 = "";
         public TELA_Reserva_Feita(Model_Livro livro, ClUserModelo user, ModeloUnidade unidade, ModeloReservas reserv)
         {
-            codigo = Model_Livro.CD_Livro;
+
             cod1 = unidade.CD_Unidade.ToString();
             codi = user.CD_User.ToString();
             this.Model_User = user;
             this.Model_Livro = livro;
             this.Model_Unit = unidade;
             this.Model_Reserv = reserv;
+
+            codigo = Model_Livro.CD_Livro;
             InitializeComponent();
         }
 
