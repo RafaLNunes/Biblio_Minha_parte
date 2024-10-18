@@ -232,24 +232,24 @@
             CbVisivel_Senha.ColorDepth = ColorDepth.Depth32Bit;
             CbVisivel_Senha.ImageStream = (ImageListStreamer)resources.GetObject("CbVisivel_Senha.ImageStream");
             CbVisivel_Senha.TransparentColor = Color.Transparent;
-            CbVisivel_Senha.Images.SetKeyName(0, "Olho_Visivel.png");
-            CbVisivel_Senha.Images.SetKeyName(1, "Olhp_Invisivel.png");
+            CbVisivel_Senha.Images.SetKeyName(0, "olho_Visivel.png");
+            CbVisivel_Senha.Images.SetKeyName(1, "olho-Invisivel.png");
             // 
             // Cbimage_PassWord
             // 
             Cbimage_PassWord.ColorDepth = ColorDepth.Depth32Bit;
             Cbimage_PassWord.ImageStream = (ImageListStreamer)resources.GetObject("Cbimage_PassWord.ImageStream");
             Cbimage_PassWord.TransparentColor = Color.Transparent;
-            Cbimage_PassWord.Images.SetKeyName(0, "PassWord_Click.png");
-            Cbimage_PassWord.Images.SetKeyName(1, "PassWord_UnClick.png");
+            Cbimage_PassWord.Images.SetKeyName(0, "pass_click.png");
+            Cbimage_PassWord.Images.SetKeyName(1, "pass_UnClick.png");
             // 
             // Cbimage_User
             // 
             Cbimage_User.ColorDepth = ColorDepth.Depth32Bit;
             Cbimage_User.ImageStream = (ImageListStreamer)resources.GetObject("Cbimage_User.ImageStream");
             Cbimage_User.TransparentColor = Color.Transparent;
-            Cbimage_User.Images.SetKeyName(0, "User_Click.png");
-            Cbimage_User.Images.SetKeyName(1, "User_UnClick.png");
+            Cbimage_User.Images.SetKeyName(0, "user_Click.png");
+            Cbimage_User.Images.SetKeyName(1, "user_Unclick.png");
             // 
             // CbImage_NomeComp
             // 
@@ -264,8 +264,8 @@
             CbImage_ID.ColorDepth = ColorDepth.Depth32Bit;
             CbImage_ID.ImageStream = (ImageListStreamer)resources.GetObject("CbImage_ID.ImageStream");
             CbImage_ID.TransparentColor = Color.Transparent;
-            CbImage_ID.Images.SetKeyName(0, "ID_Click.png");
-            CbImage_ID.Images.SetKeyName(1, "ID_UnClick.png");
+            CbImage_ID.Images.SetKeyName(0, "Id_click.png");
+            CbImage_ID.Images.SetKeyName(1, "id_Unclick.png");
             // 
             // PbImage_Perfil
             // 

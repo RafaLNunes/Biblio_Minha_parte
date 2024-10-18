@@ -89,12 +89,12 @@ namespace Minha_Parte_Biblio
             if (txtPassWord.PasswordChar == '•')// checa se está ou não ativado
             {
                 txtPassWord.PasswordChar = '\0'; // se estiver vira inativo
-                Image_Visivel.Image = CbVisivel_Senha.Images[1]; //e a imagem do Bnt fica como a 1 do ComboBox image
+                Image_Visivel.Image = CbVisivel_Senha.Images[0]; //e a imagem do Bnt fica como a 1 do ComboBox image
             }
             else if (txtPassWord.PasswordChar == '\0') //checa de novo
             {
                 txtPassWord.PasswordChar = '•';// se n estiver ativa
-                Image_Visivel.Image = CbVisivel_Senha.Images[0];// a imagem vira a 0 do comboimage
+                Image_Visivel.Image = CbVisivel_Senha.Images[1];// a imagem vira a 0 do comboimage
             }
         }
 

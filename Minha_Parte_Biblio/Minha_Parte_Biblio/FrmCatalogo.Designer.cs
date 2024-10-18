@@ -37,14 +37,14 @@
             // 
             FPConteinerCat.AutoScroll = true;
             FPConteinerCat.BackColor = Color.Transparent;
-            FPConteinerCat.Location = new Point(119, 126);
+            FPConteinerCat.Location = new Point(100, 124);
             FPConteinerCat.Name = "FPConteinerCat";
-            FPConteinerCat.Size = new Size(1270, 633);
+            FPConteinerCat.Size = new Size(1305, 633);
             FPConteinerCat.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(82, 81);
+            button1.Location = new Point(426, 66);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
