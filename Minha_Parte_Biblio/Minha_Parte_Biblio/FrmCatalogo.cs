@@ -33,6 +33,14 @@ namespace usuario
         ControleLivro Controle_Livro = new ControleLivro();
         ControleReservas Controle_Reserv = new ControleReservas();
 
+        //CbCargo.DataSource = conexao.obterdados("select * from Table_Cargo");
+        //CbCargo.DisplayMember = "Cargo";
+        //CbCargo.ValueMember = "CD_Cargo";
+        //CbCargo.Text = String.Empty;
+
+        
+
+
         public FrmCatalogo(Model_Livro livro, ClUserModelo user, ModeloUnidade unidade, ModeloReservas reserv)
         {
             this.Model_User = user;
@@ -123,7 +131,12 @@ for (int i = 0; i < DT_Livros.Rows.Count; i++)
 
         private void FrmCatalogo_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

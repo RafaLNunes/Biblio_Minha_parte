@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCatalogo));
             FPConteinerCat = new FlowLayoutPanel();
             button1 = new Button();
+            textPesquisa = new TextBox();
             SuspendLayout();
             // 
             // FPConteinerCat
@@ -51,6 +52,16 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
+            // textPesquisa
+            // 
+            textPesquisa.BackColor = SystemColors.HotTrack;
+            textPesquisa.ForeColor = Color.White;
+            textPesquisa.Location = new Point(100, 68);
+            textPesquisa.Name = "textPesquisa";
+            textPesquisa.Size = new Size(320, 27);
+            textPesquisa.TabIndex = 1;
+            textPesquisa.TextChanged += txtPesquisa_TextChanged;
+            // 
             // FrmCatalogo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -59,6 +70,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1500, 785);
+            Controls.Add(textPesquisa);
             Controls.Add(button1);
             Controls.Add(FPConteinerCat);
             DoubleBuffered = true;
@@ -68,11 +80,13 @@
             Text = "estantelivros";
             Load += FrmCatalogo_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private FlowLayoutPanel FPConteinerCat;
         private Button button1;
+        private TextBox textPesquisa;
     }
 }
