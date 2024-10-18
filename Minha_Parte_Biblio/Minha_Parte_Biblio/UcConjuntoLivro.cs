@@ -55,6 +55,7 @@ namespace Minha_Parte_Biblio
         private Image _IMG_cam;
 
         private string _Cod_Livro;
+        private int _Order_Livro;
 
         [Category("Custom Props")]
         public string NomeLivro
@@ -84,10 +85,24 @@ namespace Minha_Parte_Biblio
             set { _Cod_Livro = value; }
         }
 
+        [Category("Custom Props")]
+        public int Order_Livro
+        {
+            get { return _Order_Livro; }
+            set { _Order_Livro = value; }
+        }
+
         #endregion
         private void UcConjuntoLivro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void Visibilidade()
+        {
+            BntReserva.Visible = false;
+            LbIndisp.Visible = true;
+            BackgroundImage = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "CadaLivro indisp.png"));
         }
 
         private void BntReserva_Click(object sender, EventArgs e)

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcConjuntoLivro));
             PbLivro = new PictureBox();
             BntReserva = new BntCircle();
             LbNomeAutor = new Label();
             LbNomeLivro = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            LbIndisp = new Label();
             ((System.ComponentModel.ISupportInitialize)PbLivro).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -95,11 +95,24 @@
             flowLayoutPanel1.Size = new Size(264, 59);
             flowLayoutPanel1.TabIndex = 4;
             // 
+            // LbIndisp
+            // 
+            LbIndisp.AutoSize = true;
+            LbIndisp.BackColor = Color.Transparent;
+            LbIndisp.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            LbIndisp.Location = new Point(-1, 415);
+            LbIndisp.Name = "LbIndisp";
+            LbIndisp.Size = new Size(247, 37);
+            LbIndisp.TabIndex = 5;
+            LbIndisp.Text = "Livro Indisponivel";
+            LbIndisp.Visible = false;
+            // 
             // UcConjuntoLivro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.CadaLivro_disp;
+            Controls.Add(LbIndisp);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(LbNomeAutor);
             Controls.Add(BntReserva);
@@ -123,5 +136,6 @@
         private Label LbNomeAutor;
         private Label LbNomeLivro;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Label LbIndisp;
     }
 }

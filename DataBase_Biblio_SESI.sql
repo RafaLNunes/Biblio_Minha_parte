@@ -83,6 +83,8 @@ CREATE TABLE Table_reservas(
     ON update cascade
 );
 
+select * from Table_reservas;
+
 insert into Table_Cargo(Cargo) values("Gerente"), ("Aluno"), ("Professor"), ("Externo");
 insert into Table_Ano_Escolar(Ano_Escolar) values ("1° EF"), ("2° EF"), ("3° EF"), ("4° EF"), ("5° EF"), ("6° EF"), ("7° EF"), ("8° EF"), ("9° EF"), ("1° EM"), ("2° EM"), ("3° EM"), ("Diretoria");
 insert into Table_Unidade(Nome_Unidade, Local_Unidade, IMG_Unidade, Descricao_Retirada)

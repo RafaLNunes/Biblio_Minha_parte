@@ -101,6 +101,7 @@ namespace Minha_Parte_Biblio
 
             this.IsMdiContainer = true;
 
+
             switch (pag)
             {
                 case 0:

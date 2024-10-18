@@ -135,9 +135,9 @@ namespace Library_Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmCatalogo cat = new FrmCatalogo(Model_Livro, Model_User, Model_Unit, Model_Reserv);
+            FrmMeanC frmean = new FrmMeanC(Model_User, 2);
             this.Hide();
-            cat.ShowDialog();
+            frmean.ShowDialog();
         }
 
         private void label4_Click(object sender, EventArgs e)

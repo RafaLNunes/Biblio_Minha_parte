@@ -73,6 +73,36 @@ namespace Minha_Parte_Biblio.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CadaLivro_disp {
+            get {
+                object obj = ResourceManager.GetObject("CadaLivro disp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CadaLivro_indisp {
+            get {
+                object obj = ResourceManager.GetObject("CadaLivro indisp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Certo_base_disp {
+            get {
+                object obj = ResourceManager.GetObject("Certo base disp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap duplicada_LogIn {
             get {
                 object obj = ResourceManager.GetObject("duplicada LogIn", resourceCulture);

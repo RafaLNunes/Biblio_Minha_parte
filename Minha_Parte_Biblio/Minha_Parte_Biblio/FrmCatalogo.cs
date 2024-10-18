@@ -46,28 +46,48 @@ namespace usuario
             DT_Livros = conexao.obterdados("select * from Table_Livro");
             UcConjuntoLivro[] Conj_Livro = new UcConjuntoLivro[36];
 
-            for (int i = 0; i < DT_Livros.Rows.Count; i++)//DT_Livros.Rows.Count
-            {
+            DataTable DT_Reserv = new DataTable();
+            DT_Reserv = conexao.obterdados("select * from Table_reservas");
 
+            for (int i = 0; i < DT_Livros.Rows.Count; i++)
+            {
                 Conj_Livro[i] = new UcConjuntoLivro(Model_User);
 
                 Conj_Livro[i].NomeLivro = DT_Livros.Rows[i]["Nome_Livro"].ToString();
                 Conj_Livro[i].Autor = DT_Livros.Rows[i]["Autor_Livro"].ToString();
-
                 Conj_Livro[i].Cod_Livro = DT_Livros.Rows[i]["CD_Livro"].ToString();
+                Conj_Livro[i].Order_Livro = (int)DT_Livros.Rows[i]["Order_Livro"];
+
                 string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[i]["IMG_Livro"].ToString());
 
                 // Verifica se a imagem existe
                 if (File.Exists(imagePath))
                 {
                     var img = Image.FromFile(imagePath);
-                    
-                        Conj_Livro[i].IMG_cam = (Image)img.Clone(); // Clona a imagem para evitar problemas com o disposing
-                        img.Dispose();
-                    
+                    Conj_Livro[i].IMG_cam = (Image)img.Clone(); // Clona a imagem para evitar problemas com o disposing
+                    img.Dispose();
                 }
+
+                // Verificação se o livro está reservado
+                bool livroReservado = false;
+                for (int j = 0; j < DT_Reserv.Rows.Count; j++)
+                {
+                    if (DT_Reserv.Rows[j]["CFK_Livro"] != DBNull.Value && (int)DT_Reserv.Rows[j]["CFK_Livro"] == Conj_Livro[i].Order_Livro)
+                    {
+                        livroReservado = true;
+                        break; // Sai do loop se o livro for encontrado como reservado
+                    }
+                }
+
+                // Se o livro estiver reservado, chama o método Visibilidade
+                if (livroReservado)
+                {
+                    Conj_Livro[i].Visibilidade();
+                }
+
                 FPConteinerCat.Controls.Add(Conj_Livro[i]);
             }
+
 
             /*
              * 
@@ -101,19 +121,10 @@ for (int i = 0; i < DT_Livros.Rows.Count; i++)
 
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FPConteinerCat_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FrmCatalogo_Load(object sender, EventArgs e)
         {
 
         }
     }
 }
+
