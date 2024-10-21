@@ -57,7 +57,7 @@
             // 
             txtIndexMail.BackColor = Color.FromArgb(195, 195, 195);
             txtIndexMail.BorderStyle = BorderStyle.None;
-            txtIndexMail.Location = new Point(494, 167);
+            txtIndexMail.Location = new Point(494, 199);
             txtIndexMail.Name = "txtIndexMail";
             txtIndexMail.Size = new Size(514, 20);
             txtIndexMail.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             txtAssunto.BackColor = Color.FromArgb(195, 195, 195);
             txtAssunto.BorderStyle = BorderStyle.None;
-            txtAssunto.Location = new Point(207, 276);
+            txtAssunto.Location = new Point(207, 296);
             txtAssunto.Name = "txtAssunto";
             txtAssunto.Size = new Size(299, 20);
             txtAssunto.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             txtFirstName.BackColor = Color.FromArgb(195, 195, 195);
             txtFirstName.BorderStyle = BorderStyle.None;
-            txtFirstName.Location = new Point(207, 429);
+            txtFirstName.Location = new Point(207, 446);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(299, 20);
             txtFirstName.TabIndex = 3;
@@ -85,7 +85,7 @@
             txtSecondName.BackColor = Color.FromArgb(195, 195, 195);
             txtSecondName.BorderStyle = BorderStyle.None;
             txtSecondName.ImeMode = ImeMode.NoControl;
-            txtSecondName.Location = new Point(207, 530);
+            txtSecondName.Location = new Point(207, 548);
             txtSecondName.Name = "txtSecondName";
             txtSecondName.Size = new Size(299, 20);
             txtSecondName.TabIndex = 4;
@@ -95,17 +95,17 @@
             txtMensagem.BackColor = Color.FromArgb(195, 195, 195);
             txtMensagem.BorderStyle = BorderStyle.None;
             txtMensagem.ImeMode = ImeMode.NoControl;
-            txtMensagem.Location = new Point(587, 276);
+            txtMensagem.Location = new Point(587, 285);
             txtMensagem.Multiline = true;
             txtMensagem.Name = "txtMensagem";
-            txtMensagem.Size = new Size(689, 274);
+            txtMensagem.Size = new Size(689, 292);
             txtMensagem.TabIndex = 5;
             // 
             // txtremetente
             // 
             txtremetente.BackColor = Color.FromArgb(195, 195, 195);
             txtremetente.BorderStyle = BorderStyle.None;
-            txtremetente.Location = new Point(494, 113);
+            txtremetente.Location = new Point(494, 107);
             txtremetente.Name = "txtremetente";
             txtremetente.Size = new Size(514, 20);
             txtremetente.TabIndex = 6;
@@ -127,6 +127,7 @@
             Name = "FrmSendEmail";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmSendEmail";
+            Load += FrmSendEmail_Load;
             ResumeLayout(false);
             PerformLayout();
         }

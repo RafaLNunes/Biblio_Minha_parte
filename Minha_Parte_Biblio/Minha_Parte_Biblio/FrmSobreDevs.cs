@@ -18,19 +18,19 @@ namespace Minha_Parte_Biblio
             InitializeComponent();
         }
 
-        string AdStrEmail = "";
-        string RaStrEmail = "";
-        string GaStrEmail = "";
+        string AdStrEmail = "adamfap2021@gmail.com";
+        string RaStrEmail = "rafaf.code@gmail.com";
+        string GaStrEmail = "gabioliva2007@gmail.com";
 
-        string AdStrGit = "";
+        string AdStrGit = "https://github.com/Adam2005Prado";
         string RaStrGit = "https://github.com/RafaLNunes";
-        string GaStrGit = "";
+        string GaStrGit = "https://github.com/gabrieldeoliveira1";
 
-        string AdStrLinkdn = "";
+        string AdStrLinkdn = "https://www.linkedin.com/in/adam-prado-5b5159244";
         string RaStrLinkdn = "https://www.linkedin.com/in/rafael-nunes-aa77b6309/";
-        string GaStrLinkdn = "";
+        string GaStrLinkdn = "https://www.linkedin.com/in/gabriel-de-oliveira-9a8321268/";
 
-        
+
         private void AdLbEmail_Click(object sender, EventArgs e)
         {
 
@@ -74,6 +74,11 @@ namespace Minha_Parte_Biblio
         private void GaLbLinkdin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(GaStrLinkdn);
+        }
+
+        private void AdLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

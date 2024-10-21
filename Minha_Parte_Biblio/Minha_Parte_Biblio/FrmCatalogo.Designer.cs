@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCatalogo));
             FPConteinerCat = new FlowLayoutPanel();
-            button1 = new Button();
+            BntPesquisa = new Button();
             textPesquisa = new TextBox();
             SuspendLayout();
             // 
@@ -43,17 +43,19 @@
             FPConteinerCat.Size = new Size(1305, 633);
             FPConteinerCat.TabIndex = 0;
             // 
-            // button1
+            // BntPesquisa
             // 
-            button1.Location = new Point(426, 66);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            BntPesquisa.Location = new Point(426, 66);
+            BntPesquisa.Name = "BntPesquisa";
+            BntPesquisa.Size = new Size(94, 29);
+            BntPesquisa.TabIndex = 0;
+            BntPesquisa.Text = "Pesquisar";
+            BntPesquisa.UseVisualStyleBackColor = true;
+            BntPesquisa.Click += BntPesquisa_Click;
             // 
             // textPesquisa
             // 
+            textPesquisa.AutoCompleteMode = AutoCompleteMode.Suggest;
             textPesquisa.BackColor = SystemColors.HotTrack;
             textPesquisa.ForeColor = Color.White;
             textPesquisa.Location = new Point(100, 68);
@@ -71,7 +73,7 @@
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1500, 785);
             Controls.Add(textPesquisa);
-            Controls.Add(button1);
+            Controls.Add(BntPesquisa);
             Controls.Add(FPConteinerCat);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
@@ -86,7 +88,7 @@
         #endregion
 
         private FlowLayoutPanel FPConteinerCat;
-        private Button button1;
+        private Button BntPesquisa;
         private TextBox textPesquisa;
     }
 }

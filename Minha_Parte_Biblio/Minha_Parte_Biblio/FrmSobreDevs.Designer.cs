@@ -54,6 +54,7 @@
             AdLbEmail.TabIndex = 0;
             AdLbEmail.TabStop = true;
             AdLbEmail.Text = "EMAIL";
+            AdLbEmail.LinkClicked += AdLbEmail_LinkClicked;
             AdLbEmail.Click += AdLbEmail_Click;
             // 
             // AdLbGit
