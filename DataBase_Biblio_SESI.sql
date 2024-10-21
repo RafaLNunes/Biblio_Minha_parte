@@ -1,4 +1,4 @@
-	CREATE DATABASE Biblio_Sesi;
+CREATE DATABASE Biblio_Sesi;
 Use Biblio_Sesi;
 
 
@@ -6,6 +6,7 @@ CREATE TABLE Table_Cargo (
 	CD_Cargo int primary key auto_increment not null,
     Cargo Varchar(45)
 );
+
 
 CREATE TABLE Table_Ano_Escolar (
 	CD_Ano_Escolar int primary key auto_increment not null,
@@ -166,7 +167,7 @@ Select * From Table_Livro;
 Select * From Table_User;
 Select * From Table_Historico;
 Select * From Table_reservas;
-
+Select * From Table_Adm;
 
 
 
