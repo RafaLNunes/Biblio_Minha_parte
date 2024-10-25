@@ -1,6 +1,7 @@
 ﻿using Aprendendo_MVC;
 using Library_Project.controle;
 using Library_Project.modelo;
+using Minha_Parte_Biblio;
 using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
 using System;
@@ -43,7 +44,8 @@ namespace usuario
 
         private void bntCircle1_Click(object sender, EventArgs e)
         {
-
+            FrmMeanC menu = new FrmMeanC(Model_User, 12, "0");
+            menu.ShowDialog();
         }
     }
 }

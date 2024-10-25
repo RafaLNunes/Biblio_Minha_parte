@@ -39,7 +39,7 @@
             bntCircle1.FlatStyle = FlatStyle.Flat;
             bntCircle1.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
             bntCircle1.ForeColor = Color.FromArgb(242, 203, 17);
-            bntCircle1.Location = new Point(393, 582);
+            bntCircle1.Location = new Point(396, 572);
             bntCircle1.Name = "bntCircle1";
             bntCircle1.Size = new Size(411, 82);
             bntCircle1.TabIndex = 0;

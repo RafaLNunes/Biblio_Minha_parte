@@ -63,14 +63,17 @@
             AdLbGit.AutoSize = true;
             AdLbGit.BackColor = Color.Transparent;
             AdLbGit.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            AdLbGit.LinkArea = new LinkArea(0, 8);
             AdLbGit.LinkBehavior = LinkBehavior.HoverUnderline;
             AdLbGit.LinkColor = Color.Black;
+            AdLbGit.LinkVisited = true;
             AdLbGit.Location = new Point(222, 451);
             AdLbGit.Name = "AdLbGit";
-            AdLbGit.Size = new Size(131, 41);
+            AdLbGit.Size = new Size(126, 47);
             AdLbGit.TabIndex = 1;
             AdLbGit.TabStop = true;
             AdLbGit.Text = "GITHUB";
+            AdLbGit.UseCompatibleTextRendering = true;
             AdLbGit.LinkClicked += AdLbGit_LinkClicked;
             AdLbGit.Click += AdLbEmail_Click;
             // 

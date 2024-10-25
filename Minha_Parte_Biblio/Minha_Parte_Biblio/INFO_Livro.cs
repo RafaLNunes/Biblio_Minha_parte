@@ -205,7 +205,7 @@ namespace Library_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMeanC FrmM = new FrmMeanC(Model_User, 0);
+            FrmMeanC FrmM = new FrmMeanC(Model_User, 0, "0");
             this.Hide();
             FrmM.ShowDialog();
         }

@@ -128,14 +128,14 @@ namespace Library_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMeanC frmean = new FrmMeanC(Model_User, 2);
+            FrmMeanC frmean = new FrmMeanC(Model_User, 2, "0");
             this.Hide();
             frmean.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmMeanC frmean = new FrmMeanC(Model_User, 2);
+            FrmMeanC frmean = new FrmMeanC(Model_User, 2, "0");
             this.Hide();
             frmean.ShowDialog();
         }
@@ -147,7 +147,7 @@ namespace Library_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmMeanC frm = new FrmMeanC(Model_User, 2);
+            FrmMeanC frm = new FrmMeanC(Model_User, 2, "0");
             this.Hide();
             frm.ShowDialog();
         }

@@ -1,4 +1,4 @@
-﻿using Aprendendo_MVC;
+﻿    using Aprendendo_MVC;
 using Library_Project;
 using Library_Project.controle;
 using Library_Project.modelo;
@@ -74,11 +74,11 @@ namespace Minha_Parte_Biblio
             form1.BringToFront();
         }
 
-
-        public FrmMeanC(ClUserModelo user, int pag)
+        string SendEmailTo = "";
+        public FrmMeanC(ClUserModelo user, int pag, string UtilitarioString)
         {
             this.Model_User = user;
-            
+            SendEmailTo = UtilitarioString;   
             InitializeComponent();
 
             LbName_User.Text = user.UserName;
@@ -186,6 +186,20 @@ namespace Minha_Parte_Biblio
 
                     break;
                 case 11:
+                    //11 - contato consco
+                    FrmSendEmail sendemail = new FrmSendEmail(SendEmailTo);
+                    sendemail.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(sendemail);
+                    sendemail.Show();
+                    break;
+                case 12:
+                    //12 - sobre o Dev
+                    FrmSobreDevs devs = new FrmSobreDevs();
+                    devs.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(devs);
+                    devs.Show();
                     break;
                 default:
                     //Vazio

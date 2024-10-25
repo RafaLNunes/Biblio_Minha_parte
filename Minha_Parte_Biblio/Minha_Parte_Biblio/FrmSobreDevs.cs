@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace Minha_Parte_Biblio
     {
         public FrmSobreDevs()
         {
-            System.Diagnostics.Process.Start("");
+            //System.Diagnostics.Process.Start("");
             InitializeComponent();
         }
 
@@ -22,13 +23,13 @@ namespace Minha_Parte_Biblio
         string RaStrEmail = "rafaf.code@gmail.com";
         string GaStrEmail = "gabioliva2007@gmail.com";
 
-        string AdStrGit = "https://github.com/Adam2005Prado";
-        string RaStrGit = "https://github.com/RafaLNunes";
-        string GaStrGit = "https://github.com/gabrieldeoliveira1";
+        string AdStrGit = "http://github.com/Adam2005Prado";
+        string RaStrGit = "http://github.com/RafaLNunes";
+        string GaStrGit = "http://github.com/gabrieldeoliveira1";
 
-        string AdStrLinkdn = "https://www.linkedin.com/in/adam-prado-5b5159244";
-        string RaStrLinkdn = "https://www.linkedin.com/in/rafael-nunes-aa77b6309/";
-        string GaStrLinkdn = "https://www.linkedin.com/in/gabriel-de-oliveira-9a8321268/";
+        string AdStrLinkdn = "http://www.linkedin.com/in/adam-prado-5b5159244";
+        string RaStrLinkdn = "http://www.linkedin.com/in/rafael-nunes-aa77b6309/";
+        string GaStrLinkdn = "http://www.linkedin.com/in/gabriel-de-oliveira-9a8321268/";
 
 
         private void AdLbEmail_Click(object sender, EventArgs e)
@@ -48,7 +49,8 @@ namespace Minha_Parte_Biblio
 
         private void AdLbGit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(AdStrGit);
+            System.Diagnostics.Process.Start("https://www.google.com.br");
+            //Process.Start("IExplore.exe","https://github.com/Adam2005Prado");
         }
 
         private void RaLbGit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

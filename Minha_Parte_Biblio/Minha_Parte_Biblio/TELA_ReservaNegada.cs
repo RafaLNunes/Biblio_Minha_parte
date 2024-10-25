@@ -71,14 +71,14 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmMeanC info_livro = new FrmMeanC(Model_User, 2);
+            FrmMeanC info_livro = new FrmMeanC(Model_User, 2, "0");
             this.Hide();
             info_livro.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmMeanC info_livro = new FrmMeanC(Model_User, 2);
+            FrmMeanC info_livro = new FrmMeanC(Model_User, 2, "0");
             this.Hide();
             info_livro.ShowDialog();
         }

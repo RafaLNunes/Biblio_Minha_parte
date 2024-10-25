@@ -61,7 +61,7 @@ namespace Minha_Parte_Biblio
 
         private void BntViajar_Click(object sender, EventArgs e)
         {
-            FrmMeanC Principal = new FrmMeanC(Model_User, 0);
+            FrmMeanC Principal = new FrmMeanC(Model_User, 0, "0");
             this.Hide();
             Principal.ShowDialog();
         }
