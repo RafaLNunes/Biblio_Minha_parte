@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmsobredevs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmsobredevs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmsobredevs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmsobredevs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Minha_Parte_Biblio\\FrmMeanC.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAgwBkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T16:33:50.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T16:33:50.868Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmSobreDevs.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmSobreDevs.cs",
               "RelativeToolTip": "Minha_Parte_Biblio\\FrmSobreDevs.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAwwDEAAAAeAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwDEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T16:32:44.818Z",
               "EditorCaption": ""
@@ -59,8 +58,7 @@
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmSobreDevs.cs [Projeto]",
               "RelativeToolTip": "Minha_Parte_Biblio\\FrmSobreDevs.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T16:32:41.256Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-10-25T16:32:41.256Z"
             }
           ]
         }
