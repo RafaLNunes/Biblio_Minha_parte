@@ -35,21 +35,19 @@ namespace Minha_Parte_Biblio
         string GaStrLinkdn = "http://www.linkedin.com/in/gabriel-de-oliveira-9a8321268/";
 
 
-        private void AdLbEmail_Click(object sender, EventArgs e)
-        {
-            FrmMeanC menu = new FrmMeanC(model_User, 11, AdStrEmail);
-            menu.ShowDialog();
-        }
+
 
         private void RaLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmMeanC menu = new FrmMeanC(model_User, 11, RaStrEmail);
+            this.Hide();
             menu.ShowDialog();
         }
 
         private void GaLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmMeanC menu = new FrmMeanC(model_User, 11, GaStrEmail);
+            this.Hide();
             menu.ShowDialog();
         }
 
@@ -86,7 +84,9 @@ namespace Minha_Parte_Biblio
 
         private void AdLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FrmMeanC menu = new FrmMeanC(model_User, 11, AdStrEmail);
+            this.Hide();
+            menu.ShowDialog();
         }
 
         public void Opening_WebLink(string url)

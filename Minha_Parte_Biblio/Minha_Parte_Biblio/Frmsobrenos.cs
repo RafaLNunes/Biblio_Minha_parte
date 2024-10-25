@@ -45,6 +45,8 @@ namespace usuario
         private void bntCircle1_Click(object sender, EventArgs e)
         {
             FrmMeanC menu = new FrmMeanC(Model_User, 12, "0");
+            this.Hide();
+            this.Hide();
             menu.ShowDialog();
         }
     }

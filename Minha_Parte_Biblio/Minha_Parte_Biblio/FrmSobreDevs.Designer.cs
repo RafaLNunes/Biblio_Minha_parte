@@ -55,7 +55,6 @@
             AdLbEmail.TabStop = true;
             AdLbEmail.Text = "EMAIL";
             AdLbEmail.LinkClicked += AdLbEmail_LinkClicked;
-            AdLbEmail.Click += AdLbEmail_Click;
             // 
             // AdLbGit
             // 
@@ -75,7 +74,6 @@
             AdLbGit.Text = "GITHUB";
             AdLbGit.UseCompatibleTextRendering = true;
             AdLbGit.LinkClicked += AdLbGit_LinkClicked;
-            AdLbGit.Click += AdLbEmail_Click;
             // 
             // AdLbLinkdin
             // 
@@ -92,7 +90,6 @@
             AdLbLinkdin.TabStop = true;
             AdLbLinkdin.Text = "LINKEDIN";
             AdLbLinkdin.LinkClicked += AdLbLinkdin_LinkClicked;
-            AdLbLinkdin.Click += AdLbEmail_Click;
             // 
             // RaLbLinkdin
             // 
@@ -109,7 +106,6 @@
             RaLbLinkdin.TabStop = true;
             RaLbLinkdin.Text = "LINKEDIN";
             RaLbLinkdin.LinkClicked += RaLbLinkdin_LinkClicked;
-            RaLbLinkdin.Click += AdLbEmail_Click;
             // 
             // RaLbGit
             // 
@@ -126,7 +122,6 @@
             RaLbGit.TabStop = true;
             RaLbGit.Text = "GITHUB";
             RaLbGit.LinkClicked += RaLbGit_LinkClicked;
-            RaLbGit.Click += AdLbEmail_Click;
             // 
             // RaLbEmail
             // 
@@ -143,7 +138,6 @@
             RaLbEmail.TabStop = true;
             RaLbEmail.Text = "EMAIL";
             RaLbEmail.LinkClicked += RaLbEmail_LinkClicked;
-            RaLbEmail.Click += AdLbEmail_Click;
             // 
             // GaLbLinkdin
             // 
@@ -160,7 +154,6 @@
             GaLbLinkdin.TabStop = true;
             GaLbLinkdin.Text = "LINKEDIN";
             GaLbLinkdin.LinkClicked += GaLbLinkdin_LinkClicked;
-            GaLbLinkdin.Click += AdLbEmail_Click;
             // 
             // GaLbGit
             // 
@@ -177,7 +170,6 @@
             GaLbGit.TabStop = true;
             GaLbGit.Text = "GITHUB";
             GaLbGit.LinkClicked += GaLbGit_LinkClicked;
-            GaLbGit.Click += AdLbEmail_Click;
             // 
             // GaLbEmail
             // 
@@ -194,7 +186,6 @@
             GaLbEmail.TabStop = true;
             GaLbEmail.Text = "EMAIL";
             GaLbEmail.LinkClicked += GaLbEmail_LinkClicked;
-            GaLbEmail.Click += AdLbEmail_Click;
             // 
             // FrmSobreDevs
             // 
@@ -217,7 +208,6 @@
             Name = "FrmSobreDevs";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmSobreDevs";
-            Click += AdLbEmail_Click;
             ResumeLayout(false);
             PerformLayout();
         }
