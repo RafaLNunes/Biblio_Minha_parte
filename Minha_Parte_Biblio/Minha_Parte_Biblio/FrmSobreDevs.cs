@@ -82,5 +82,17 @@ namespace Minha_Parte_Biblio
         {
 
         }
+
+        public void Opening_WebLink(string url)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro ao tentar abrir o link: {ex.Message}");
+            }
+        }
     }
 }
