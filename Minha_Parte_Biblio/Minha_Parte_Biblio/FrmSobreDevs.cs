@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Minha_Parte_Biblio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,10 @@ namespace Minha_Parte_Biblio
 {
     public partial class FrmSobreDevs : Form
     {
-        public FrmSobreDevs()
+        ClUserModelo model_User = new ClUserModelo();
+        public FrmSobreDevs(ClUserModelo cluser )
         {
+            this.model_User = cluser;
             //System.Diagnostics.Process.Start("");
             InitializeComponent();
         }
@@ -34,48 +37,51 @@ namespace Minha_Parte_Biblio
 
         private void AdLbEmail_Click(object sender, EventArgs e)
         {
-
+            FrmMeanC menu = new FrmMeanC(model_User, 11, AdStrEmail);
+            menu.ShowDialog();
         }
 
         private void RaLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FrmMeanC menu = new FrmMeanC(model_User, 11, RaStrEmail);
+            menu.ShowDialog();
         }
 
         private void GaLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FrmMeanC menu = new FrmMeanC(model_User, 11, GaStrEmail);
+            menu.ShowDialog();
         }
 
         private void AdLbGit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.google.com.br");
-            //Process.Start("IExplore.exe","https://github.com/Adam2005Prado");
+            
+            Opening_WebLink(AdStrGit);
         }
 
         private void RaLbGit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(RaStrGit);
+            Opening_WebLink(RaStrGit);
         }
 
         private void GaLbGit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(GaStrGit);
+            Opening_WebLink(GaStrGit);
         }
 
         private void AdLbLinkdin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(AdStrLinkdn);
+            Opening_WebLink(AdStrLinkdn);
         }
 
         private void RaLbLinkdin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(RaStrLinkdn);
+            Opening_WebLink(RaStrLinkdn);
         }
 
         private void GaLbLinkdin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(GaStrLinkdn);
+            Opening_WebLink(GaStrLinkdn);
         }
 
         private void AdLbEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -87,11 +93,11 @@ namespace Minha_Parte_Biblio
         {
             try
             {
-                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = false });
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ocorreu um erro ao tentar abrir o link: {ex.Message}");
+                Console.WriteLine($"Ocorreu um erro ao tentar abrir o link");
             }
         }
     }

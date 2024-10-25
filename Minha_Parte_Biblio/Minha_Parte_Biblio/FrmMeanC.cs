@@ -195,7 +195,7 @@ namespace Minha_Parte_Biblio
                     break;
                 case 12:
                     //12 - sobre o Dev
-                    FrmSobreDevs devs = new FrmSobreDevs();
+                    FrmSobreDevs devs = new FrmSobreDevs(Model_User);
                     devs.TopLevel = false;
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(devs);
