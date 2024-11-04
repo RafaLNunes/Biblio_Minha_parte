@@ -47,9 +47,9 @@ namespace Minha_Parte_Biblio
             try
             {
                 // Configurar o cliente SMTP
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587) // Use o servidor SMTP e a porta apropriados
+                SmtpClient client = new SmtpClient("smtp.mailersend.net", 587) // Use o servidor SMTP e a porta apropriados
                 {
-                    Credentials = new NetworkCredential("lixomovel.teste@gmail.com", ")7dMZhuqM3-P"),
+                    Credentials = new NetworkCredential("MS_c5qogf@trial-0p7kx4xjwv7l9yjr.mlsender.net", "AtUu9pTt9jhRYv9I"),
                     EnableSsl = true // Ative SSL se necessário
                 };
 
