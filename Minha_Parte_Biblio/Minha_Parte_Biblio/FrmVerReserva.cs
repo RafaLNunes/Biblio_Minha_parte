@@ -81,7 +81,31 @@ namespace Minha_Parte_Biblio
                 DateTime dtReserva = Convert.ToDateTime(row.Cells[2].Value); // DT_reserva
                 DateTime dtPrevisaoDevolucao = Convert.ToDateTime(row.Cells[3].Value); // DT_previsao_devolucao
                 LbNome_Obra.Text = nomeLivro;
-                TimeSpan Diferenca 
+                
+
+                    // Obtém a data atual
+                    DateTime dataAtual = DateTime.Now;
+
+                    // Calcula a diferença entre as datas
+                    TimeSpan diferenca = dtPrevisaoDevolucao - dataAtual;
+
+                    // Obtém o número de dias restantes
+                    int diasRestantes = (int)diferenca.TotalDays;
+
+                    // Exibe o resultado
+                    if (diasRestantes > 0)
+                    {
+                        LbDias.Text = diasRestantes.ToString();
+                    }
+                    else if (diasRestantes == 0)
+                    {
+                        MessageBox.Show("A data é hoje!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("A data já passou.");
+                    }
+               
             }
         }
 

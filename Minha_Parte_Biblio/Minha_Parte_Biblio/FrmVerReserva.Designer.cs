@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVerReserva));
             panel1 = new Panel();
             BntRefazer = new Button();
@@ -39,10 +39,12 @@
             clPainelPersonalizado1 = new ClPainelPersonalizado();
             LbNome_Obra = new Label();
             LbDias = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             clPainelPersonalizado1.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -92,24 +94,24 @@
             dataGridView.BorderStyle = BorderStyle.None;
             dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.DodgerBlue;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Cursor = Cursors.Cross;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView.Dock = DockStyle.Fill;
             dataGridView.EnableHeadersVisualStyles = false;
             dataGridView.Location = new Point(0, 0);
@@ -141,11 +143,10 @@
             LbNome_Obra.BackColor = Color.White;
             LbNome_Obra.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             LbNome_Obra.ForeColor = Color.FromArgb(9, 90, 162);
-            LbNome_Obra.Location = new Point(1192, 340);
+            LbNome_Obra.Location = new Point(3, 0);
             LbNome_Obra.Name = "LbNome_Obra";
-            LbNome_Obra.Size = new Size(70, 28);
+            LbNome_Obra.Size = new Size(0, 28);
             LbNome_Obra.TabIndex = 4;
-            LbNome_Obra.Text = "label1";
             // 
             // LbDias
             // 
@@ -153,11 +154,19 @@
             LbDias.BackColor = Color.White;
             LbDias.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             LbDias.ForeColor = Color.FromArgb(9, 90, 162);
-            LbDias.Location = new Point(1192, 426);
+            LbDias.Location = new Point(1255, 424);
             LbDias.Name = "LbDias";
-            LbDias.Size = new Size(76, 28);
+            LbDias.Size = new Size(0, 28);
             LbDias.TabIndex = 5;
-            LbDias.Text = " label1";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.White;
+            flowLayoutPanel1.Controls.Add(LbNome_Obra);
+            flowLayoutPanel1.Location = new Point(1143, 327);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(258, 64);
+            flowLayoutPanel1.TabIndex = 6;
             // 
             // FrmVerReserva
             // 
@@ -165,8 +174,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 756);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(LbDias);
-            Controls.Add(LbNome_Obra);
             Controls.Add(clPainelPersonalizado1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -179,6 +188,8 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             clPainelPersonalizado1.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,5 +204,6 @@
         private ClPainelPersonalizado clPainelPersonalizado1;
         private Label LbNome_Obra;
         private Label LbDias;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
