@@ -224,16 +224,23 @@ namespace Minha_Parte_Biblio
                     Model_User.UserName = txtUser.Text;
                     Model_User.Password = txtPassWord.Text;
                     Model_User.Caminho_FT = Nome_Ft;
-                    if (Controle_User.SignUp(Model_User) == true) //se essa função der certo ele abre o novo frm
+                    if (Model_User.Index_Cargo != 1 || Model_User.Index_Ano != 13)
                     {
+                        if (Controle_User.SignUp(Model_User) == true) //se essa função der certo ele abre o novo frm
+                        {
 
-                        Cam_origin = Path.Combine(Directory.GetCurrentDirectory(),"DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
-                        File.Copy(Cam_FT, Cam_origin, true);
-                        MessageBox.Show(Cam_origin);
-                        MessageBox.Show(Cam_origin);
-                        FrmBoasVindas boVindam = new FrmBoasVindas(Model_User);
-                        this.Hide();
-                        boVindam.ShowDialog();
+                            Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
+                            File.Copy(Cam_FT, Cam_origin, true);
+                            MessageBox.Show(Cam_origin);
+                            MessageBox.Show(Cam_origin);
+                            FrmBoasVindas boVindam = new FrmBoasVindas(Model_User);
+                            this.Hide();
+                            boVindam.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Testando dados");
                     }
                 }
 

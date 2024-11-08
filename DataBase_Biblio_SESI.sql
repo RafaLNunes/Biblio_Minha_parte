@@ -53,7 +53,7 @@ CREATE TABLE Table_User (
 );
 
 CREATE TABLE Table_Adm (
-	CD_Adm int primary key not null,
+	CD_Adm int primary key not null auto_increment,
     NameUser_Adm Varchar(45),
     Senha_Adm Varchar(45),
     CFK_User int,

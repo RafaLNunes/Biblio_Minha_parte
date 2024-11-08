@@ -7,6 +7,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmADMSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmMeanC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmQuestionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmSendEmail.cs">
