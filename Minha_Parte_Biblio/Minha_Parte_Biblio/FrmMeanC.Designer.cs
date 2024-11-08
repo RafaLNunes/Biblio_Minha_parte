@@ -305,6 +305,7 @@
             BntReserv.Text = "       Suas Reservas";
             BntReserv.TextAlign = ContentAlignment.MiddleLeft;
             BntReserv.UseVisualStyleBackColor = true;
+            BntReserv.Click += BntReserv_Click;
             // 
             // panel10
             // 

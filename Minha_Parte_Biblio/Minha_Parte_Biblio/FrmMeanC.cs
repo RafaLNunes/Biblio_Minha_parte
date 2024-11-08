@@ -78,7 +78,7 @@ namespace Minha_Parte_Biblio
         public FrmMeanC(ClUserModelo user, int pag, string UtilitarioString)
         {
             this.Model_User = user;
-            SendEmailTo = UtilitarioString;   
+            SendEmailTo = UtilitarioString;
             InitializeComponent();
 
             LbName_User.Text = user.UserName;
@@ -180,7 +180,7 @@ namespace Minha_Parte_Biblio
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(reservaNegada);
                     reservaNegada.Show();
-                    break; 
+                    break;
                 case 101:
                     //10 - ucconjunto
 
@@ -284,6 +284,15 @@ namespace Minha_Parte_Biblio
         private void FPnContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BntReserv_Click(object sender, EventArgs e)
+        {
+            FrmVerReserva reservas = new FrmVerReserva(Model_Livro, Model_Reserv);
+            reservas.TopLevel = false;
+            FPnContenedor.Controls.Clear();
+            FPnContenedor.Controls.Add(reservas);
+            reservas.Show();
         }
     }
 }

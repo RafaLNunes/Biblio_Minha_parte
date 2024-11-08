@@ -4,6 +4,9 @@
     <Compile Update="BntCircle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="ClPainelPersonalizado.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -44,6 +47,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Frmusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmVerReserva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="INFO_Livro.cs">

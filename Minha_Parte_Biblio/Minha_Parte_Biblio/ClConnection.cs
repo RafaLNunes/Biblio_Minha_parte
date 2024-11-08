@@ -1,11 +1,6 @@
 ﻿using Minha_Parte_Biblio.Modelo;
 using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aprendendo_MVC
 {
@@ -63,7 +58,7 @@ namespace Aprendendo_MVC
                 if (codigo > 0)
                 {
                     //se o codigo existir no registro, sera substituido aqui para execução
-                    cmd.Parameters.AddWithValue(PK_Table , codigo);
+                    cmd.Parameters.AddWithValue(PK_Table, codigo);
                 }
 
                 //executa o script sql
