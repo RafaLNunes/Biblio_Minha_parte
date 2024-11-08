@@ -78,8 +78,10 @@ namespace Minha_Parte_Biblio
                 codigo1 = Convert.ToInt32(row.Cells[0].Value.ToString()); // CD_Reservas
                                                                           // Você pode acessar outros valores assim:
                 string nomeLivro = row.Cells[1].Value.ToString(); // Nome_Livro
-                //DateTime dtReserva = Convert.ToDateTime(row.Cells[2].Value); // DT_reserva
-                //DateTime dtPrevisaoDevolucao = Convert.ToDateTime(row.Cells[3].Value); // DT_previsao_devolucao
+                DateTime dtReserva = Convert.ToDateTime(row.Cells[2].Value); // DT_reserva
+                DateTime dtPrevisaoDevolucao = Convert.ToDateTime(row.Cells[3].Value); // DT_previsao_devolucao
+                LbNome_Obra.Text = nomeLivro;
+                TimeSpan Diferenca 
             }
         }
 
