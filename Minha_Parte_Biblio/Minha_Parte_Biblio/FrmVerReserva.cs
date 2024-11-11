@@ -32,6 +32,17 @@ namespace Minha_Parte_Biblio
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                //Antes de deletar, deve pegar os dados e passar para a tabela de hist
+                //aqui coloca uma função que pega, os dados e insert into table_historico
+
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro na tranferencia de dados para o histórico" + ex.Message);
+            }
+
             int exclude = conexao.excluir(0, $"DELETE FROM Table_reservas WHERE CD_Reservas = {codigo1} ", "@CD_Resevas");
             if (exclude > 0)
             {

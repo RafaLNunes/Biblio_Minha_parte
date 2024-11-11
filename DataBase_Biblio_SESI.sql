@@ -164,12 +164,14 @@ Select * From Table_Cargo;
 Select * From Table_Ano_Escolar;
 Select * From Table_Unidade;
 Select * From Table_Livro;
-Select * From Table_User;
+Select * From Table_Uxser;
 Select * From Table_Historico;
 Select * From Table_reservas;
 Select * From Table_Adm;
 
+-- insert into table_historico(DT_reserva, DT_devolucao, CFK_Livro, CFK_User) values('', '', , );
 
 
+Select  Table_Livro.Nome_Livro as 'Nome do Livro', Table_User.ID_Aluno as 'ID Usuário', 
 
 -- update Table_User set ID_Aluno="01242", NameUser="g", Nome_Completo="Gabriel", Senha="123", CFK_Cargo=1, CFK_Unidade =1, CFK_Ano=1 where CD_User=1 LIMIT 1;

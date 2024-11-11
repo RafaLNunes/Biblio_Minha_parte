@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace usuario
 {
@@ -29,6 +30,11 @@ namespace usuario
         ClUsercontrole Controle_User = new ClUsercontrole();
         ControleLivro Controle_Livro = new ControleLivro();
         ControleReservas Controle_Reserv = new ControleReservas();
+
+        DataTable data = new DataTable();
+        int index = 0;
+        int codigo1 = 0;
+        string codi = "";
         public FrmhistLivros(Model_Livro livro, ClUserModelo user, ModeloUnidade unidade, ModeloReservas reserv)
         {
             this.Model_User = user;
@@ -46,11 +52,40 @@ namespace usuario
 
         private void FrmhistLivros_Load(object sender, EventArgs e)
         {
+            try
+            {
+                // Obtendo os dados da consulta
+                data = conexao.obterdados(""); //Pode deixar que eu o Rafael faço esse ineer join
 
+                // Definindo a fonte de dados do DataGridView
+                dataGridView.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados: " + ex.Message);
+            }
+            StyleDataGridView();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+        void StyleDataGridView()
+        {
+            dataGridView.BorderStyle = BorderStyle.None;
+            dataGridView.RowHeadersVisible = false;
+            //dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(9, 90, 162);
+            //dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            //dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 207, 0);
+            dataGridView.ForeColor = Color.Black;
+            //dataGridView.BackgroundColor = Color.FromArgb(122, 193, 255); 
+            dataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            //dataGridView.EnableHeadersVisualStyles = false;
+            //dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
+            //dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(39, 101, 155);
+            //dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
     }
