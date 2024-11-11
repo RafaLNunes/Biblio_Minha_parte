@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Minha_Parte_Biblio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,32 @@ namespace Minha_Parte_Biblio
 {
     public partial class FrmQuestionario : Form
     {
-        public FrmQuestionario()
+
+        ClUserModelo Model_User = new ClUserModelo();
+        public FrmQuestionario(ClUserModelo User)
         {
+            this.Model_User = User;
             InitializeComponent();
         }
 
         private void BntADM_Click(object sender, EventArgs e)
         {
-
+            FrmADMSign Sign = new FrmADMSign(Model_User);
+            this.Hide();
+            Sign.ShowDialog();
         }
 
         private void BntNADM_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmLogIn log = new FrmLogIn();
+            this.Hide();
+            log.ShowDialog();
+
+        }
+
+        private void FrmQuestionario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

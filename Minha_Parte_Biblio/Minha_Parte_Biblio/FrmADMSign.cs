@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Minha_Parte_Biblio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Minha_Parte_Biblio
 {
     public partial class FrmADMSign : Form
     {
-        public FrmADMSign()
+        ClUserModelo Model_User = new ClUserModelo();
+        public FrmADMSign(ClUserModelo User)
         {
+            this.Model_User = User;
             InitializeComponent();
+        }
+
+        private void FrmADMSign_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

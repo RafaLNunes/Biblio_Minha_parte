@@ -29,7 +29,57 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmADMSign));
+            bntCircle1 = new BntCircle();
+            bntCircle2 = new BntCircle();
+            txtUsername = new TextBox();
+            txtpass = new TextBox();
             SuspendLayout();
+            // 
+            // bntCircle1
+            // 
+            bntCircle1.BackColor = Color.FromArgb(62, 6, 44);
+            bntCircle1.FlatAppearance.BorderSize = 0;
+            bntCircle1.FlatStyle = FlatStyle.Flat;
+            bntCircle1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            bntCircle1.ForeColor = Color.White;
+            bntCircle1.Location = new Point(30, 535);
+            bntCircle1.Name = "bntCircle1";
+            bntCircle1.Size = new Size(378, 99);
+            bntCircle1.TabIndex = 0;
+            bntCircle1.Text = "LogIn como ADM";
+            bntCircle1.UseVisualStyleBackColor = false;
+            // 
+            // bntCircle2
+            // 
+            bntCircle2.BackColor = Color.FromArgb(62, 6, 44);
+            bntCircle2.FlatAppearance.BorderSize = 0;
+            bntCircle2.FlatStyle = FlatStyle.Flat;
+            bntCircle2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            bntCircle2.ForeColor = Color.White;
+            bntCircle2.Location = new Point(426, 535);
+            bntCircle2.Name = "bntCircle2";
+            bntCircle2.Size = new Size(378, 99);
+            bntCircle2.TabIndex = 1;
+            bntCircle2.Text = "Retornar para Log In";
+            bntCircle2.UseVisualStyleBackColor = false;
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = Color.FromArgb(101, 0, 69);
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Location = new Point(167, 226);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(448, 20);
+            txtUsername.TabIndex = 2;
+            // 
+            // txtpass
+            // 
+            txtpass.BackColor = Color.FromArgb(101, 0, 69);
+            txtpass.BorderStyle = BorderStyle.None;
+            txtpass.Location = new Point(167, 378);
+            txtpass.Name = "txtpass";
+            txtpass.Size = new Size(448, 20);
+            txtpass.TabIndex = 3;
             // 
             // FrmADMSign
             // 
@@ -37,13 +87,24 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 758);
+            Controls.Add(txtpass);
+            Controls.Add(txtUsername);
+            Controls.Add(bntCircle2);
+            Controls.Add(bntCircle1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmADMSign";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FrmADMLog";
+            Text = "x";
+            Load += FrmADMSign_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private BntCircle bntCircle1;
+        private BntCircle bntCircle2;
+        private TextBox txtUsername;
+        private TextBox txtpass;
     }
 }

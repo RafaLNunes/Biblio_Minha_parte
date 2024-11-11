@@ -87,6 +87,7 @@
             Name = "FrmQuestionario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmQuestionario";
+            Load += FrmQuestionario_Load;
             ResumeLayout(false);
             PerformLayout();
         }
