@@ -30,7 +30,7 @@ namespace Minha_Parte_Biblio
 
         private void BntNADM_Click(object sender, EventArgs e)
         {
-            FrmLogIn log = new FrmLogIn();
+            FrmSignUp log = new FrmSignUp();
             this.Hide();
             log.ShowDialog();
 

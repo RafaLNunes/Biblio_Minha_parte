@@ -164,7 +164,7 @@ Select * From Table_Cargo;
 Select * From Table_Ano_Escolar;
 Select * From Table_Unidade;
 Select * From Table_Livro;
-Select * From Table_Uxser;
+Select * From Table_User;
 Select * From Table_Historico;
 Select * From Table_reservas;
 Select * From Table_Adm;
