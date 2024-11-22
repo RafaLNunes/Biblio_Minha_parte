@@ -25,6 +25,9 @@
     <Compile Update="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmMeanADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmMeanC.cs">
       <SubType>Form</SubType>
     </Compile>

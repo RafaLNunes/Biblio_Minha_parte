@@ -1,4 +1,5 @@
-﻿using Minha_Parte_Biblio.Modelo;
+﻿using Microsoft.Win32;
+using Minha_Parte_Biblio.Modelo;
 using MySql.Data.MySqlClient;
 using System.Data;
 
@@ -114,6 +115,40 @@ namespace Aprendendo_MVC
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 adapter.Fill(reg);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
+
+
+            return reg;
+        }
+
+        public int LogInADM(TextBox textuser, TextBox txtsenha, String sql)
+        {
+            int reg = 0;
+
+            try
+            {
+                //User Name
+                String nameuser = textuser.Text;
+                //password
+                String password = txtsenha.Text;
+
+
+
+                MySqlConnection com = GetConectection();
+
+                MySqlCommand cmd = new MySqlCommand(sql, Conect);
+
+                cmd.Parameters.AddWithValue("@nameuser", nameuser);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                reg = cmd.ExecuteNonQuery();
+                Conect.Close();
 
 
             }

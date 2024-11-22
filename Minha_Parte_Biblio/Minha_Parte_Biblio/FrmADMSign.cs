@@ -40,7 +40,13 @@ namespace Minha_Parte_Biblio
 
         private void bntCircle1_Click(object sender, EventArgs e)
         {
-            //puxar a   qui o log
+            if (conexao.LogInADM(txtUsername, txtpass, "SELECT * FROM Table_Adm WHERE NameUser _Adm = @nameuser AND Senha_Adm = @password") >=1) 
+            { 
+
+
+            }
+
+        
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
