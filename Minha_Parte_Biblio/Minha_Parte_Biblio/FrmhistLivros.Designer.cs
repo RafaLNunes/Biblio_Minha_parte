@@ -109,6 +109,7 @@
             dataGridView.RowHeadersWidth = 51;
             dataGridView.Size = new Size(946, 578);
             dataGridView.TabIndex = 2;
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
             // 
             // FrmhistLivros
             // 

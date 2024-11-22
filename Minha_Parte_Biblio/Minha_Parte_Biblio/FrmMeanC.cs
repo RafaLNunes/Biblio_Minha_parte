@@ -201,6 +201,14 @@ namespace Minha_Parte_Biblio
                     FPnContenedor.Controls.Add(devs);
                     devs.Show();
                     break;
+                case 13:
+                    //13 - verreservas
+                    FrmVerReserva reservas = new FrmVerReserva(Model_Livro, Model_Reserv);
+                    reservas.TopLevel = false;
+                    FPnContenedor.Controls.Clear();
+                    FPnContenedor.Controls.Add(reservas);
+                    reservas.Show();
+                    break;
                 default:
                     //Vazio
                     FPnContenedor.Controls.Clear();

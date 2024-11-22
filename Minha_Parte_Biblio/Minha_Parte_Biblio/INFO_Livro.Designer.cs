@@ -40,11 +40,13 @@
             panel3 = new Panel();
             button1 = new Button();
             panel4 = new Panel();
+            bookImage = new PictureBox();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bookImage).BeginInit();
             SuspendLayout();
             // 
             // BNT_Voltar_ao_inicio
@@ -128,9 +130,9 @@
             // 
             flowLayoutPanel2.BackColor = Color.Transparent;
             flowLayoutPanel2.Controls.Add(label2);
-            flowLayoutPanel2.Location = new Point(674, 72);
+            flowLayoutPanel2.Location = new Point(677, 12);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(753, 109);
+            flowLayoutPanel2.Size = new Size(753, 160);
             flowLayoutPanel2.TabIndex = 7;
             // 
             // panel3
@@ -164,12 +166,23 @@
             panel4.Size = new Size(658, 48);
             panel4.TabIndex = 9;
             // 
+            // bookImage
+            // 
+            bookImage.BackColor = Color.Transparent;
+            bookImage.Location = new Point(94, 34);
+            bookImage.Name = "bookImage";
+            bookImage.Size = new Size(500, 703);
+            bookImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            bookImage.TabIndex = 10;
+            bookImage.TabStop = false;
+            // 
             // INFO_Livro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 758);
+            Controls.Add(bookImage);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(flowLayoutPanel2);
@@ -188,6 +201,7 @@
             flowLayoutPanel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bookImage).EndInit();
             ResumeLayout(false);
         }
 
@@ -204,5 +218,6 @@
         private Panel panel3;
         private Button button1;
         private Panel panel4;
+        private PictureBox bookImage;
     }
 }

@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Minha_Parte_Biblio
 {
@@ -116,15 +117,36 @@ namespace Minha_Parte_Biblio
                 //cria uma table para ser populada com a conexao ao clconnection
                 DataTable DT_logIn = conexao.LogIn(Model_User);
 
-                //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
-                Model_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
 
-                //gera unma menssage de confirmação de login
-                MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
+
 
                 //checa se foi populado da maneira correta
                 if (Convert.ToInt32(DT_logIn.Rows[0][0]) > 0)
                 {
+
+                    Model_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
+                    Model_User.NomeComp = DT_logIn.Rows[0]["Nome_Completo"].ToString();
+                   
+                    Model_User.Caminho_FT = DT_logIn.Rows[0]["IMG_User"].ToString();
+                    Model_User.Index_Cargo = (int)DT_logIn.Rows[0]["CFK_Cargo"];
+                    Model_User.Index_Ano = (int)DT_logIn.Rows[0]["CFK_Ano"];
+                    Model_User.Index_Unidade = (int)DT_logIn.Rows[0]["CFK_Unidade"];
+                    Model_User.CD_User = (int)DT_logIn.Rows[0]["CD_User"];
+
+                    if ((int)DT_logIn.Rows[0]["CFK_Cargo"] == 1 || (int)DT_logIn.Rows[0]["CFK_Unidade"] == 13)
+                    {
+                        FrmAcessoLog log = new FrmAcessoLog(Model_User);
+                        this.Hide();
+                        log.ShowDialog();
+                    }
+
+                    //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
+                    Model_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
+
+                    //gera unma menssage de confirmação de login
+                    MessageBox.Show($"ID Logado: {DT_logIn.Rows[0]["ID_Aluno"].ToString()}\nUser Name: {DT_logIn.Rows[0]["NameUser"].ToString()}");
+
+
                     //se sim
                     this.Hide();//esconde o frm atual
                     FrmBoasVindas Boa_Vinda = new FrmBoasVindas(Model_User); //gera o novo

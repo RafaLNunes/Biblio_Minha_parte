@@ -68,6 +68,19 @@ namespace Library_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            DataTable DT_Livros = new DataTable();
+            DT_Livros = conexao.obterdados($"select * from Table_Livro WHERE CD_Livro = '{Model_Livro.CD_Livro}'");
+            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Books\\\\", DT_Livros.Rows[0]["IMG_Livro"].ToString());
+
+
+            if (File.Exists(imagePath))
+            {
+                var img = Image.FromFile(imagePath);
+                bookImage.Image = (Image)img.Clone(); // Clona a imagem para evitar problemas com o disposing
+                img.Dispose();
+            }
+
+
 
             try
             {

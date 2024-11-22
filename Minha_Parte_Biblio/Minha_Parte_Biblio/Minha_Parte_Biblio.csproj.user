@@ -58,6 +58,9 @@
     <Compile Update="INFO_Unidade.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="LIXOLIXOLIXO.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PictureBoxCircle.cs">
       <SubType>Component</SubType>
     </Compile>

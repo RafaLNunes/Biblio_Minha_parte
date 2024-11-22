@@ -70,3 +70,5 @@ C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Part
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmADMSign.resources
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmQuestionario.resources
 C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmVerReserva.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmAcessoLog.resources
+C:\Users\Aluno\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.LIXOLIXOLIXO.resources

@@ -1,6 +1,7 @@
 ﻿using Aprendendo_MVC;
 using Library_Project.controle;
 using Library_Project.modelo;
+using Minha_Parte_Biblio.Modelo;
 using System.Data;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -13,10 +14,13 @@ namespace Minha_Parte_Biblio
         ClConectection conexao = new ClConectection(); // responsavel pela conexao com a dt
         Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
         ModeloReservas Model_Reservas = new ModeloReservas(); // resposavel por importar info das reservas
+        ModeloHistorico Model_Hist = new ModeloHistorico();
 
         ControleLivro Controle_Livro = new ControleLivro();
         ControleReservas Controle_Reserv = new ControleReservas();
         DataTable data = new DataTable();
+        DataTable data_dados = new DataTable();
+        DataTable insercao = new DataTable();
         int index = 0;
         int codigo1 = 0;
         string codi = "";
@@ -36,6 +40,27 @@ namespace Minha_Parte_Biblio
             {
                 //Antes de deletar, deve pegar os dados e passar para a tabela de hist
                 //aqui coloca uma função que pega, os dados e insert into table_historico
+                int index_current = (int)dataGridView.CurrentCell.RowIndex;
+
+                data_dados = conexao.obterdados($"SELECT * FROM Table_Reservas WHERE CD_Reservas = {data.Rows[index_current]["CD_Reservas"]}");
+
+                DateTime devolucao = DateTime.Now;
+                string devolucao_format = devolucao.ToString("yyyy-MM-dd HH:mm:ss");
+
+                DateTime reserva_date = (DateTime)data_dados.Rows[0]["DT_reserva"];
+                string reserva_format = reserva_date.ToString("yyyy-MM-dd HH:mm:ss");
+                Model_Hist.DT_devolucao = devolucao_format.ToString();
+                Model_Hist.CFK_Livro = (int)data_dados.Rows[0]["CFK_Livro"];
+                Model_Hist.CFK_User = (int)data_dados.Rows[0]["CFK_User"];
+                Model_Hist.DT_reserva = reserva_format.ToString();
+
+
+
+                if (Controle_Reserv.registrar_Historico(Model_Hist) == true)
+                {
+                    MessageBox.Show("Trasferido com sucesso");
+                }
+                
 
 
             }catch(Exception ex)
@@ -146,8 +171,8 @@ namespace Minha_Parte_Biblio
 
         private void BntRefazer_Click(object sender, EventArgs e)
         {
-            
-           
+
+
 
 
             // Obtendo a data atual

@@ -256,14 +256,13 @@ namespace Minha_Parte_Biblio
                                 }
                                 }
                         }
-                        if (Model_User.Index_Cargo == 1)
+                        if (Model_User.Index_Cargo == 1 || Model_User.Index_Ano == 13)
                         {
-                            if (Model_User.Index_Ano == 13)
-                            {
+                          
                                 FrmQuestionario quest = new FrmQuestionario(Model_User);
                                 this.Hide();
                                 quest.ShowDialog();
-                            }
+                            
                         }
                     }
                     else

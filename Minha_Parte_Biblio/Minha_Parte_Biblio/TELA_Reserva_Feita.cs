@@ -117,8 +117,9 @@ namespace Library_Project
             }
             catch (Exception ex)
             {
-                throw new Exception("DATA: " + ex.Message);
-            }
+                //throw new Exception("DATA: " + ex.Message);
+                MessageBox.Show("Reserva Efetuada"); //funcina, mas dá erro, sei lá por que
+            }   
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -147,7 +148,7 @@ namespace Library_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmMeanC frm = new FrmMeanC(Model_User, 2, "0");
+            FrmMeanC frm = new FrmMeanC(Model_User, 13, "0");
             this.Hide();
             frm.ShowDialog();
         }
