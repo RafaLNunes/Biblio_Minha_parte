@@ -48,6 +48,7 @@
             bntCircle1.TabIndex = 0;
             bntCircle1.Text = "LogIn como ADM";
             bntCircle1.UseVisualStyleBackColor = false;
+            bntCircle1.Click += bntCircle1_Click;
             // 
             // bntCircle2
             // 
@@ -62,24 +63,31 @@
             bntCircle2.TabIndex = 1;
             bntCircle2.Text = "Retornar para Log In";
             bntCircle2.UseVisualStyleBackColor = false;
+            bntCircle2.Click += bntCircle2_Click;
             // 
             // txtUsername
             // 
             txtUsername.BackColor = Color.FromArgb(101, 0, 69);
             txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.ForeColor = Color.White;
             txtUsername.Location = new Point(167, 226);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(448, 20);
             txtUsername.TabIndex = 2;
+            txtUsername.Enter += txtUsername_Enter;
+            txtUsername.Leave += txtUsername_Leave;
             // 
             // txtpass
             // 
             txtpass.BackColor = Color.FromArgb(101, 0, 69);
             txtpass.BorderStyle = BorderStyle.None;
+            txtpass.ForeColor = Color.White;
             txtpass.Location = new Point(167, 378);
             txtpass.Name = "txtpass";
             txtpass.Size = new Size(448, 20);
             txtpass.TabIndex = 3;
+            txtpass.Enter += txtpass_Enter;
+            txtpass.Leave += txtpass_Leave;
             // 
             // FrmADMSign
             // 

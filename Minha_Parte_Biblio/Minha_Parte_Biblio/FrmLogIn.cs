@@ -115,7 +115,7 @@ namespace Minha_Parte_Biblio
                 Model_User.Password = txtPassWord.Text; // o modelo vai popular a variavel Password com o que estiver escrito em textpassword
 
                 //cria uma table para ser populada com a conexao ao clconnection
-                DataTable DT_logIn = conexao.LogIn(Model_User);
+                DataTable DT_logIn = conexao.LogIn(Model_User,"select * from Table_User where NameUser=@nameuser and Senha=@password");
 
 
 

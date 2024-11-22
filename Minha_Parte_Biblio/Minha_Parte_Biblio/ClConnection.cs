@@ -92,7 +92,7 @@ namespace Aprendendo_MVC
         }
 
 
-        public DataTable LogIn(ClUserModelo Model_User)
+        public DataTable LogIn(ClUserModelo Model_User, String sql)
         {
             DataTable reg = new DataTable();
 
@@ -103,7 +103,7 @@ namespace Aprendendo_MVC
                 //password
                 String password = Model_User.Password;
 
-                String sql = "select * from Table_User where NameUser=@nameuser and Senha=@password";
+                
 
                 MySqlConnection com = GetConectection();
 
