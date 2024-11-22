@@ -44,7 +44,7 @@ namespace Minha_Parte_Biblio
         {
             //puxa infos de outros forms
             String Cam_origin = Path.Combine(Directory.GetCurrentDirectory(),"DT_Image_Users\\\\", Path.GetFileName(Model_User.Caminho_FT));// pega a imagem que o user escolheu e pos na dt
-            DT_User = conexao.obterdados($"select * from Table_User where ID_Aluno = {Model_User.ID_Aluno}"); // popula a tabela com infos do usuario
+            DT_User = conexao.obterdados($"select * from Table_User where ID_Aluno = '{Model_User.ID_Aluno}'"); // popula a tabela com infos do usuario
             PbImage_User.Image = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", DT_User.Rows[0]["IMG_User"].ToString())); // popula a picturebox com a imagem
             LbNomeComp.Text = Model_User.NomeComp.ToString(); // popula a label com o nome do usuario
         }

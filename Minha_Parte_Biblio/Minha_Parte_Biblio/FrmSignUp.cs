@@ -225,31 +225,50 @@ namespace Minha_Parte_Biblio
                     Model_User.Password = txtPassWord.Text;
                     Model_User.Caminho_FT = Nome_Ft;
                     bool tester = false;
-                    if (Controle_User.SignUp(Model_User) == true) {
-                        Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
-                        File.Copy(Cam_FT, Cam_origin, true);
-                        //MessageBox.Show(Cam_origin);
-                        //MessageBox.Show(Cam_origin);
-                        tester = true;
-                    }
-                    DataTable dt_user = new DataTable();
-                    dt_user = conexao.obterdados($"select * from Table_User where NameUser = {} OR Senha = {}");
+                    bool admduv = false;
 
-                    if (Model_User.Index_Cargo != 1 || Model_User.Index_Ano != 13 || )
+                    DataTable dt_usert = new DataTable();
+                    dt_usert = conexao.obterdados($"select * from Table_User where NameUser = '{Model_User.UserName}' OR Senha = '{Model_User.Password}'");
+                    if (dt_usert.Rows.Count <= 0)
                     {
-                        if (tester = true) //se essa função der certo ele abre o novo frm
-                        {
-                            FrmBoasVindas boVindam = new FrmBoasVindas(Model_User);
-                            this.Hide();
-                            boVindam.ShowDialog();
 
+                        if (Controle_User.SignUp(Model_User) == true)
+                        {
+                            Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
+                            File.Copy(Cam_FT, Cam_origin, true);
+                            //MessageBox.Show(Cam_origin);
+                            //MessageBox.Show(Cam_origin);
+                            tester = true;
+                        }
+                        if (Model_User.Index_Cargo != 1)// nao sei porque, mas mesmo as variaveis sendo 1 ou 13, eles nçao funcinam
+                        {
+                            if (Model_User.Index_Ano != 13)
+                            {
+                                if (tester == true && admduv == false) //se essa função der certo ele abre o novo frm
+                                {
+
+
+
+                                    FrmBoasVindas boVindam = new FrmBoasVindas(Model_User);
+                                    this.Hide();
+                                    boVindam.ShowDialog();
+
+                                }
+                                }
+                        }
+                        if (Model_User.Index_Cargo == 1)
+                        {
+                            if (Model_User.Index_Ano == 13)
+                            {
+                                FrmQuestionario quest = new FrmQuestionario(Model_User);
+                                this.Hide();
+                                quest.ShowDialog();
+                            }
                         }
                     }
                     else
                     {
-                        FrmQuestionario quest = new FrmQuestionario(Model_User);
-                        this.Hide();
-                        quest.ShowDialog();
+                        MessageBox.Show("Usuário já existente");
                     }
                 }
 
