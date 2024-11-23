@@ -53,9 +53,11 @@ CREATE TABLE Table_User (
 );
 
 CREATE TABLE Table_Adm (
-	CD_Adm int primary key not null auto_increment,
+	CD_Admtable_user int primary key not null auto_increment,
     NameUser_Adm Varchar(45),
-    Senha_Adm Varchar(45)
+    Senha_Adm Varchar(45),
+    CFK_User int,
+    constraint FK_usered foreign key (CFK_User) references Table_User(CD_User)
 );
 
 CREATE TABLE Table_Historico (
@@ -82,7 +84,7 @@ CREATE TABLE Table_reservas(
 
 select * from Table_reservas;
 
-insert into table_adm(NameUser_Adm, Senha_Adm) values("Skyline", "Pass123");
+insert into table_adm(NameUser_Adm, Senha_Adm, CFK_User) values("Skyline", "Pass123", 1);
 insert into Table_Cargo(Cargo) values("Gerente"), ("Aluno"), ("Professor"), ("Externo");
 insert into Table_Ano_Escolar(Ano_Escolar) values ("1° EF"), ("2° EF"), ("3° EF"), ("4° EF"), ("5° EF"), ("6° EF"), ("7° EF"), ("8° EF"), ("9° EF"), ("1° EM"), ("2° EM"), ("3° EM"), ("Diretoria");
 insert into Table_Unidade(Nome_Unidade, Local_Unidade, IMG_Unidade, Descricao_Retirada)
@@ -169,7 +171,6 @@ Select * From Table_Adm;
 -- insert into table_historico(DT_reserva, DT_devolucao, CFK_Livro, CFK_User) values('', '', , );
 
 
-Select  Table_Livro.Nome_Livro as 'Nome do Livro', Table_User.ID_Aluno as 'ID Usuário', 
 
 -- update Table_User set ID_Aluno="01242", NameUser="g", Nome_Completo="Gabriel", Senha="123", CFK_Cargo=1, CFK_Unidade =1, CFK_Ano=1 where CD_User=1 LIMIT 1;
 

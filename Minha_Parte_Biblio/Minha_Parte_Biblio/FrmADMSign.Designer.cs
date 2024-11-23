@@ -33,6 +33,7 @@
             bntCircle2 = new BntCircle();
             txtUsername = new TextBox();
             txtpass = new TextBox();
+            LbTipo = new Label();
             SuspendLayout();
             // 
             // bntCircle1
@@ -89,12 +90,25 @@
             txtpass.Enter += txtpass_Enter;
             txtpass.Leave += txtpass_Leave;
             // 
+            // LbTipo
+            // 
+            LbTipo.AutoSize = true;
+            LbTipo.BackColor = Color.Transparent;
+            LbTipo.Font = new Font("Sigmar One", 26F, FontStyle.Bold);
+            LbTipo.ForeColor = Color.White;
+            LbTipo.Location = new Point(70, 46);
+            LbTipo.Name = "LbTipo";
+            LbTipo.Size = new Size(206, 73);
+            LbTipo.TabIndex = 4;
+            LbTipo.Text = "label1";
+            // 
             // FrmADMSign
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1500, 758);
+            Controls.Add(LbTipo);
             Controls.Add(txtpass);
             Controls.Add(txtUsername);
             Controls.Add(bntCircle2);
@@ -114,5 +128,6 @@
         private BntCircle bntCircle2;
         private TextBox txtUsername;
         private TextBox txtpass;
+        private Label LbTipo;
     }
 }

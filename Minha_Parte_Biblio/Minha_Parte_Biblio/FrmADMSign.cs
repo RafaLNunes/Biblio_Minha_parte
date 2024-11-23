@@ -1,4 +1,5 @@
 ﻿using Aprendendo_MVC;
+using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
 using System;
 using System.Collections.Generic;
@@ -16,16 +17,31 @@ namespace Minha_Parte_Biblio
     {
         ClUserModelo Model_User = new ClUserModelo();
         ClConectection conexao = new ClConectection();
-        public FrmADMSign(ClUserModelo User)
+        ClUsercontrole controle_User = new ClUsercontrole();
+        ModeloAdm ModelADM = new ModeloAdm();
+
+        int tipo = 0;
+        public FrmADMSign(ClUserModelo User, int tipoabertura)
         {
+            tipo = tipoabertura;
             this.Model_User = User;
             InitializeComponent();
         }
 
         private void FrmADMSign_Load(object sender, EventArgs e)
         {
-            //define aparencias dos itens no design
-            txtUsername.ForeColor = Color.FromArgb(164, 186, 178);//controla a cor abaixo das textbox
+            if (tipo == 0)
+            {
+                LbTipo.Text = "Acessando ADM";
+            }
+
+            if (tipo == 1)
+            {
+                LbTipo.Text = "Criando ADM";
+            }
+
+                //define aparencias dos itens no design
+                txtUsername.ForeColor = Color.FromArgb(164, 186, 178);//controla a cor abaixo das textbox
             txtUsername.Text = "Entre com o seu NameUser"; //cria um place holder para o user
             txtpass.ForeColor = Color.FromArgb(164, 186, 178); //controla a cor abaixo das textbox
             txtpass.Text = "Entre com a sua Senha"; //cria um place holder para a senha
@@ -40,14 +56,53 @@ namespace Minha_Parte_Biblio
 
         private void bntCircle1_Click(object sender, EventArgs e)
         {
-            if (conexao.LogInADM(txtUsername, txtpass, "SELECT * FROM Table_Adm WHERE NameUser _Adm = @nameuser AND Senha_Adm = @password") >=1) 
-            { 
+            DataTable dt_user = conexao.obterdados($"select * from Table_User where NameUser = '{Model_User.UserName}' AND Senha = '{Model_User.Password}'");
+            //0 - vindo do log in
+
+            if(tipo == 0)
+            {
+                LbTipo.Text = "Acessando ADM";
+
+                DataTable dt_adm = conexao.obterdados($"Select * from Table_Adm where NameUser_Adm = '{txtUsername.Text}' AND Senha_Adm = '{txtpass.Text}' AND CFK_User = {dt_user.Rows[0]["CD_User"]}");
+                if (dt_adm.Rows.Count > 0)
+                {
+                    //MessageBox.Show("deu, logado");
+
+
+                    ModelADM.userADM = txtUsername.Text;
+                    ModelADM.passADM = txtpass.Text;
+                    ModelADM.index_clint = (int)dt_user.Rows[0]["CD_User"];
+                    ModelADM.index_adm = (int)dt_adm.Rows[0]["CD_Adm"];
+                    FrmMeanADM ADMCenter = new FrmMeanADM(ModelADM, Model_User, 0, "0");
+                    this.Hide();
+                    ADMCenter.ShowDialog();
+                }
+            }
+
+            //1 - vindo do sign up
+
+            if (tipo == 1)
+            {
+                LbTipo.Text = "Criando ADM";
+
+                ModelADM.userADM = txtUsername.Text;
+                ModelADM.passADM = txtpass.Text;
+                ModelADM.index_clint = (int)dt_user.Rows[0]["CD_User"];
+
+                if (controle_User.CreateADM(ModelADM) == true)
+                {
+                   //MessageBox.Show("Deu, criado");
+                   DataTable dt_adms = conexao.obterdados($"Select * from Table_Adm where NameUser_Adm = '{txtUsername.Text}' AND Senha_Adm = '{txtpass.Text}' AND CFK_User = {dt_user.Rows[0]["CD_User"]}");
+
+                    ModelADM.index_adm = (int)dt_adms.Rows[0]["CD_Adm"];
+                    FrmMeanADM ADMCenter = new FrmMeanADM(ModelADM, Model_User, 0, "0");
+                    this.Hide();
+                    ADMCenter.ShowDialog();
+                }
+            }
 
 
             }
-
-        
-        }
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {

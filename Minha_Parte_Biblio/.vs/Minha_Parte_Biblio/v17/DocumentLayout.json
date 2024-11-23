@@ -1,38 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\",
+  "WorkspaceRootPath": "D:\\OneDrive\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmmeanadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|d:\\onedrive\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmmeanadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmmeanadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmmeanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\clconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\clconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmacessolog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmacessolog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\controle\\clusercontrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\controle\\clusercontrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|c:\\users\\aluno\\documents\\github\\biblio_minha_parte\\minha_parte_biblio\\minha_parte_biblio\\frmadmsign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmadmsign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmadmsign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmadmsign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\minha_parte_biblio\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F07BBF-5DB0-46F0-BA14-966EBB228C74}|Minha_Parte_Biblio\\Minha_Parte_Biblio.csproj|solutionrelative:minha_parte_biblio\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,107 +14,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmMeanC.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanC.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmMeanC.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanC.cs [Projeto]",
-              "RelativeToolTip": "Minha_Parte_Biblio\\FrmMeanC.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T18:26:10.436Z",
-              "EditorCaption": " [Projeto]"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FrmMeanADM.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanADM.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanADM.cs",
               "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmMeanADM.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanADM.cs [Projeto]",
+              "ToolTip": "D:\\OneDrive\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmMeanADM.cs [Projeto]",
               "RelativeToolTip": "Minha_Parte_Biblio\\FrmMeanADM.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T18:25:25.661Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FrmLogIn.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmLogIn.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmLogIn.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmLogIn.cs",
-              "RelativeToolTip": "Minha_Parte_Biblio\\FrmLogIn.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAowHUAAACFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:22:04.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmAcessoLog.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmAcessoLog.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmAcessoLog.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmAcessoLog.cs",
-              "RelativeToolTip": "Minha_Parte_Biblio\\FrmAcessoLog.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCUAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:21:41.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClConnection.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\ClConnection.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\ClConnection.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\ClConnection.cs",
-              "RelativeToolTip": "Minha_Parte_Biblio\\ClConnection.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAAwIIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:20:56.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClUsercontrole.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\Controle\\ClUsercontrole.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\Controle\\ClUsercontrole.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\Controle\\ClUsercontrole.cs",
-              "RelativeToolTip": "Minha_Parte_Biblio\\Controle\\ClUsercontrole.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAmwB4AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:20:44.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FrmADMSign.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmADMSign.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmADMSign.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmADMSign.cs",
-              "RelativeToolTip": "Minha_Parte_Biblio\\FrmADMSign.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAIwCwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:20:35.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmADMSign.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmADMSign.cs",
-              "RelativeDocumentMoniker": "Minha_Parte_Biblio\\FrmADMSign.cs",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\Biblio_Minha_parte\\Minha_Parte_Biblio\\Minha_Parte_Biblio\\FrmADMSign.cs [Projeto]",
-              "RelativeToolTip": "Minha_Parte_Biblio\\FrmADMSign.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:20:33.803Z",
+              "WhenOpened": "2024-11-23T06:24:59.926Z",
               "EditorCaption": " [Projeto]"
             }
           ]

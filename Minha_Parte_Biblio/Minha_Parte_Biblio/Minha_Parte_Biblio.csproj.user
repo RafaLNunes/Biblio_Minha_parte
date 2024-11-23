@@ -22,6 +22,9 @@
     <Compile Update="FrmhistLivros.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmLivrosADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -32,6 +35,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmQuestionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmReservADM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmSendEmail.cs">
@@ -47,6 +53,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmSplash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmUserADM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Frmusuario.cs">

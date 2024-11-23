@@ -47,6 +47,39 @@ namespace Minha_Parte_Biblio.Controle
             return Resultado;
         }
 
+        public bool CreateADM(ModeloAdm Perfil)
+        {
+            bool Resultado = false;
+
+            try
+            {
+
+                String SQL_Insert = "insert into Table_Adm(NameUser_Adm, Senha_Adm, CFK_User)values(@UserADM, @pass, @userclint)";
+
+                string[] campos = { "@UserADM", "@pass", "@userclint" };
+                //monto o vetor com os valores do formulario
+                string[] valores = {Perfil.userADM, Perfil.passADM, Perfil.index_clint.ToString()};
+
+                //testar o insert no banco de dados
+                if (conexao.cadastrar(0, campos, valores, SQL_Insert, "@CD_Adm") >= 1)
+                {
+                    Resultado = true;
+                }
+                else
+                {
+                    Resultado = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+
+
+            return Resultado;
+        }
+
         public bool editar(ClUserModelo usuario)
         {
             bool resultado = false;

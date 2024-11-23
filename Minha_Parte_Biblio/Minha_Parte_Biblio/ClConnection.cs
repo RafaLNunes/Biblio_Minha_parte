@@ -141,6 +141,7 @@ namespace Aprendendo_MVC
 
 
                 MySqlConnection com = GetConectection();
+                com.Open();
 
                 MySqlCommand cmd = new MySqlCommand(sql, Conect);
 

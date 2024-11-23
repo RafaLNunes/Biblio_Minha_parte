@@ -23,7 +23,7 @@ namespace Minha_Parte_Biblio
 
         private void BntADM_Click(object sender, EventArgs e)
         {
-            FrmADMSign Sign = new FrmADMSign(Model_User);
+            FrmADMSign Sign = new FrmADMSign(Model_User, 1);
             this.Hide();
             Sign.ShowDialog();
         }
