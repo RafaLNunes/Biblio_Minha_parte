@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMeanADM));
             panel1 = new Panel();
+            bntCircle1 = new BntCircle();
+            pictureBox1 = new PictureBox();
             panel2 = new Panel();
             BntBooks = new BntCircle();
             UserAdm = new Label();
@@ -41,6 +44,7 @@
             label1 = new Label();
             FPnContenedor = new FlowLayoutPanel();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PbcUser).BeginInit();
             flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
@@ -48,6 +52,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(43, 21, 38);
+            panel1.Controls.Add(bntCircle1);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(BntBooks);
             panel1.Controls.Add(UserAdm);
@@ -62,6 +68,32 @@
             panel1.Size = new Size(1885, 136);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
+            // 
+            // bntCircle1
+            // 
+            bntCircle1.BackColor = Color.FromArgb(9, 90, 162);
+            bntCircle1.FlatAppearance.BorderSize = 0;
+            bntCircle1.FlatStyle = FlatStyle.Flat;
+            bntCircle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            bntCircle1.ForeColor = Color.FromArgb(242, 203, 17);
+            bntCircle1.Location = new Point(73, 12);
+            bntCircle1.Name = "bntCircle1";
+            bntCircle1.Size = new Size(208, 49);
+            bntCircle1.TabIndex = 9;
+            bntCircle1.Text = "Pagina do Usuário";
+            bntCircle1.UseVisualStyleBackColor = false;
+            bntCircle1.Click += bntCircle1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(55, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
@@ -225,6 +257,7 @@
             Load += FrmMeanADM_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PbcUser).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
@@ -245,5 +278,7 @@
         private Label UserClint;
         private BntCircle BntBooks;
         private Panel panel2;
+        private BntCircle bntCircle1;
+        private PictureBox pictureBox1;
     }
 }

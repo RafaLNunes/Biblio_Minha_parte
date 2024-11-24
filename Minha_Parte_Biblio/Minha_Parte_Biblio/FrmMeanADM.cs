@@ -182,5 +182,17 @@ namespace Minha_Parte_Biblio
             FPnContenedor.Controls.Add(booksview);
             booksview.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bntCircle1_Click(object sender, EventArgs e)
+        {
+            FrmMeanC mean_User = new FrmMeanC(Model_User, 0, "0");
+            this.Hide();
+            mean_User.ShowDialog();
+        }
     }
 }

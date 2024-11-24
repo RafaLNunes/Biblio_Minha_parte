@@ -81,6 +81,7 @@ namespace Minha_Parte_Biblio
             SendEmailTo = UtilitarioString;
             InitializeComponent();
 
+
             LbName_User.Text = user.UserName;
             foreach (Control control in this.Controls)
             {
@@ -220,6 +221,20 @@ namespace Minha_Parte_Biblio
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
         private void FrmMeanC_Load(object sender, EventArgs e)
         {
+            if (Model_User.Index_Cargo == 1)
+            {
+                if (Model_User.Index_Ano == 13)
+                {
+                    BntAcessoADM.Visible = true;
+
+
+                }
+                else
+                {
+                    BntAcessoADM.Visible = false;
+                }
+            }
+            else { BntAcessoADM.Visible = false; }
 
         }
 
@@ -301,6 +316,13 @@ namespace Minha_Parte_Biblio
             FPnContenedor.Controls.Clear();
             FPnContenedor.Controls.Add(reservas);
             reservas.Show();
+        }
+
+        private void bntCircle1_Click(object sender, EventArgs e)
+        {
+            FrmADMSign ADMlog = new FrmADMSign(Model_User, 0);
+            this.Hide();
+            ADMlog.ShowDialog();
         }
     }
 }

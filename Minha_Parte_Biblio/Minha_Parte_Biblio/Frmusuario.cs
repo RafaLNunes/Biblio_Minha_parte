@@ -72,7 +72,7 @@ namespace usuario
 
             DataTable dt = new DataTable();
 
-            dt = conexao.obterdados("select*from Table_User where ID_Aluno= " + Model_User.ID_Aluno);
+            dt = conexao.obterdados($"select*from Table_User where ID_Aluno='{Model_User.ID_Aluno}'");
 
            
             

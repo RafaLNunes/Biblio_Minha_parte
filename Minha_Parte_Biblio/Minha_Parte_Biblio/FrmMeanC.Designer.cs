@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMeanC));
             panel1 = new Panel();
+            BntAcessoADM = new BntCircle();
             pictureBox2 = new PictureBox();
             LbName_User = new Label();
             PbClose = new PictureBox();
@@ -73,6 +74,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(9, 90, 162);
+            panel1.Controls.Add(BntAcessoADM);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(LbName_User);
             panel1.Controls.Add(PbClose);
@@ -82,6 +84,21 @@
             panel1.Size = new Size(1885, 82);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // BntAcessoADM
+            // 
+            BntAcessoADM.BackColor = Color.FromArgb(54, 21, 38);
+            BntAcessoADM.FlatAppearance.BorderSize = 0;
+            BntAcessoADM.FlatStyle = FlatStyle.Flat;
+            BntAcessoADM.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            BntAcessoADM.ForeColor = Color.White;
+            BntAcessoADM.Location = new Point(1543, 14);
+            BntAcessoADM.Name = "BntAcessoADM";
+            BntAcessoADM.Size = new Size(248, 57);
+            BntAcessoADM.TabIndex = 15;
+            BntAcessoADM.Text = "Pagina do ADM";
+            BntAcessoADM.UseVisualStyleBackColor = false;
+            BntAcessoADM.Click += bntCircle1_Click;
             // 
             // pictureBox2
             // 
@@ -442,5 +459,6 @@
         private PictureBox PbClose;
         private FlowLayoutPanel FPnContenedor;
         private PictureBox pictureBox2;
+        private BntCircle BntAcessoADM;
     }
 }

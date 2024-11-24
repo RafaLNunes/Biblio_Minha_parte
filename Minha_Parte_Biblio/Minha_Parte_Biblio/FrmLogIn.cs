@@ -133,13 +133,15 @@ namespace Minha_Parte_Biblio
                     Model_User.Index_Unidade = (int)DT_logIn.Rows[0]["CFK_Unidade"];
                     Model_User.CD_User = (int)DT_logIn.Rows[0]["CD_User"];
 
-                    if ((int)DT_logIn.Rows[0]["CFK_Cargo"] == 1 || (int)DT_logIn.Rows[0]["CFK_Unidade"] == 13)
-                    {
-                        FrmAcessoLog log = new FrmAcessoLog(Model_User);
-                        this.Hide();
-                        log.ShowDialog();
-                    }
+                    if ((int)DT_logIn.Rows[0]["CFK_Cargo"] == 1) {
+                        if ((int) DT_logIn.Rows[0]["CFK_Unidade"] == 13)
+                        {
+                            FrmAcessoLog log = new FrmAcessoLog(Model_User);
+                            this.Hide();
+                            log.ShowDialog();
+                        }
 
+                    }
                     //popula a var ID_Aluno do modelo com infos vindas da tabela, estando na linha 0 e coluna "ID_Aluno"
                     Model_User.ID_Aluno = DT_logIn.Rows[0]["ID_Aluno"].ToString();
 

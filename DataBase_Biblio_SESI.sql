@@ -1,7 +1,6 @@
 CREATE DATABASE Biblio_Sesi;
 Use Biblio_Sesi;
 
-
 CREATE TABLE Table_Cargo (
 	CD_Cargo int primary key auto_increment not null,
     Cargo Varchar(45)

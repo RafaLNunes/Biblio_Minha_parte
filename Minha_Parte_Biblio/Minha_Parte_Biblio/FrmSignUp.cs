@@ -211,8 +211,13 @@ namespace Minha_Parte_Biblio
         {
             try
             { //tenta o try para caso haja problema
+                bool verificar = false;
 
-                if (!String.IsNullOrEmpty(txtID.Text) || !String.IsNullOrEmpty(txtNomeComp.Text) || !String.IsNullOrEmpty(txtUser.Text) || !String.IsNullOrEmpty(txtPassWord.Text))
+
+
+
+            
+                if (!String.IsNullOrEmpty(txtID.Text) && !String.IsNullOrEmpty(txtNomeComp.Text) && !String.IsNullOrEmpty(txtUser.Text) && !String.IsNullOrEmpty(txtPassWord.Text) && !String.IsNullOrEmpty(CbAno.Text) && !String.IsNullOrEmpty(CbCargo.Text))
                 {
 
                     //popula o modelo se não estiver vasio as text
@@ -227,48 +232,77 @@ namespace Minha_Parte_Biblio
                     bool tester = false;
                     bool admduv = false;
 
+
+
                     DataTable dt_usert = new DataTable();
                     dt_usert = conexao.obterdados($"select * from Table_User where NameUser = '{Model_User.UserName}' OR Senha = '{Model_User.Password}'");
                     if (dt_usert.Rows.Count <= 0)
                     {
 
-                        if (Controle_User.SignUp(Model_User) == true)
-                        {
-                            Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
-                            File.Copy(Cam_FT, Cam_origin, true);
-                            //MessageBox.Show(Cam_origin);
-                            //MessageBox.Show(Cam_origin);
-                            tester = true;
-                        }
+
                         if (Model_User.Index_Cargo != 1)// nao sei porque, mas mesmo as variaveis sendo 1 ou 13, eles nçao funcinam
                         {
                             if (Model_User.Index_Ano != 13)
                             {
+                                
+
+                                if (Controle_User.SignUp(Model_User) == true)
+                                {
+                                        Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
+                                        File.Copy(Cam_FT, Cam_origin, true);
+                                        //MessageBox.Show(Cam_origin);
+                                        //MessageBox.Show(Cam_origin);
+                                        tester = true;
+                                }
                                 if (tester == true && admduv == false) //se essa função der certo ele abre o novo frm
                                 {
-
-
-
                                     FrmBoasVindas boVindam = new FrmBoasVindas(Model_User);
                                     this.Hide();
                                     boVindam.ShowDialog();
 
                                 }
-                                }
+                            }
                         }
-                        if (Model_User.Index_Cargo == 1 || Model_User.Index_Ano == 13)
+                        if (CbCargo.SelectedIndex + 1 == 1)
                         {
-                          
+                            if (CbAno.SelectedIndex + 1 == 13)
+                            {
+                                if (Controle_User.SignUp(Model_User) == true)
+                                {
+                                    Cam_origin = Path.Combine(Directory.GetCurrentDirectory(), "DT_Image_Users\\\\", Path.GetFileName(Cam_FT));
+                                    File.Copy(Cam_FT, Cam_origin, true);
+                                    //MessageBox.Show(Cam_origin);
+                                    //MessageBox.Show(Cam_origin);
+                                    tester = true;
+                                }
+
+                                verificar = true;
                                 FrmQuestionario quest = new FrmQuestionario(Model_User);
                                 this.Hide();
                                 quest.ShowDialog();
-                            
+
+                            }
+                            else
+                            {
+                                verificar = false;
+                            }
                         }
+                        else { verificar = false; }
+
+                        if (verificar == false)
+                        {
+                            MessageBox.Show("Ambos, Cargo e Ano devem ser ADM para logar como um ADM");
+                            MessageBox.Show("Ou ambos devem remeter a não ADM para logar como Usuário");
+                            CbAno.Text = string.Empty;
+                            CbCargo.Text = string.Empty;
+                        }
+
                     }
                     else
                     {
                         MessageBox.Show("Usuário já existente");
                     }
+
                 }
 
             }
