@@ -43,31 +43,31 @@ namespace Minha_Parte_Biblio
             {
                 case 0:
                     //0 - MENU
-                    BntMenu.BackColor = Color.FromArgb(104, 21, 38);
-                    BntUsers.BackColor = Color.FromArgb(54, 21, 38);
-                    BntReserv.BackColor = Color.FromArgb(54, 21, 38);
-                    BntBooks.BackColor = Color.FromArgb(54, 21, 38);
+                    BntMenu.BackColor = Color.FromArgb(9, 90, 59);
+                    BntUsers.BackColor = Color.FromArgb(9, 90, 162);
+                    BntReserv.BackColor = Color.FromArgb(9, 90, 162);
+                    BntBooks.BackColor = Color.FromArgb(9, 90, 162);
                     break;
                 case 1:
                     //1 - User
-                    BntMenu.BackColor = Color.FromArgb(54, 21, 38);
-                    BntUsers.BackColor = Color.FromArgb(104, 21, 38);
-                    BntReserv.BackColor = Color.FromArgb(54, 21, 38);
-                    BntBooks.BackColor = Color.FromArgb(54, 21, 38);
+                    BntMenu.BackColor = Color.FromArgb(9, 90, 162);
+                    BntUsers.BackColor = Color.FromArgb(9, 90, 59);
+                    BntReserv.BackColor = Color.FromArgb(9, 90, 162);
+                    BntBooks.BackColor = Color.FromArgb(9, 90, 162);
                     break;
                 case 2:
                     //2 - Reserv
-                    BntMenu.BackColor = Color.FromArgb(54, 21, 38);
-                    BntUsers.BackColor = Color.FromArgb(54, 21, 38);
-                    BntReserv.BackColor = Color.FromArgb(104, 21, 38);
-                    BntBooks.BackColor = Color.FromArgb(54, 21, 38);
+                    BntMenu.BackColor = Color.FromArgb(9, 90, 162);
+                    BntUsers.BackColor = Color.FromArgb(9, 90, 162);
+                    BntReserv.BackColor = Color.FromArgb(9, 90, 59);
+                    BntBooks.BackColor = Color.FromArgb(9, 90, 162);
                     break;
                 case 3:
                     //3 - Livro
-                    BntMenu.BackColor = Color.FromArgb(54, 21, 38);
-                    BntUsers.BackColor = Color.FromArgb(54, 21, 38);
-                    BntReserv.BackColor = Color.FromArgb(54, 21, 38);
-                    BntBooks.BackColor = Color.FromArgb(104, 21, 38);
+                    BntMenu.BackColor = Color.FromArgb(9, 90, 162);
+                    BntUsers.BackColor = Color.FromArgb(9, 90, 162);
+                    BntReserv.BackColor = Color.FromArgb(9, 90, 162);
+                    BntBooks.BackColor = Color.FromArgb(9, 90, 59);
                     break;
                 default:
                     //Outras situações
@@ -101,7 +101,7 @@ namespace Minha_Parte_Biblio
             {
                 case 0:
                     //0 - MENU
-
+                    FPnContenedor.Controls.Clear();
                     break;
                 case 1:
                     //1 - User
@@ -144,6 +144,7 @@ namespace Minha_Parte_Biblio
         private void BntMenu_Click(object sender, EventArgs e)
         {
             Pagina_Abertura = 0;
+            FPnContenedor.Controls.Clear();
             selctColor();
         }
 

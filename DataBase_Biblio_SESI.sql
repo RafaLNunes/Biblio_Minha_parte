@@ -169,8 +169,38 @@ Select * From Table_Adm;
 
 -- insert into table_historico(DT_reserva, DT_devolucao, CFK_Livro, CFK_User) values('', '', , );
 
-
+-- DELETE FROM Table_User WHERE CD_User = 7;
 
 -- update Table_User set ID_Aluno="01242", NameUser="g", Nome_Completo="Gabriel", Senha="123", CFK_Cargo=1, CFK_Unidade =1, CFK_Ano=1 where CD_User=1 LIMIT 1;
 
+SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro where Table_Reservas.CFK_User = 1;
+
 select * from Table_User where NameUser = "g" OR Senha = "123";
+
+SELECT 
+    u.CD_User "Index",
+    u.ID_Aluno as "ID",
+    u.Nome_Completo as "Nome Completo",
+    u.NameUser as "NameUser",
+    c.Cargo as "Cargo",
+    a.Ano_Escolar as "Ano",
+    un.Nome_Unidade as "Unidade",
+    COUNT(r.CD_Reservas) AS "Numb Reservas",
+    COUNT(h.CD_Hist) AS "Numb Histórico"
+FROM 
+    Table_User u
+INNER JOIN 
+    Table_Cargo c ON u.CFK_Cargo = c.CD_Cargo
+INNER JOIN 
+    Table_Ano_Escolar a ON u.CFK_Ano = a.CD_Ano_Escolar
+INNER JOIN 
+    Table_Unidade un ON u.CFK_Unidade = un.CD_Unidade
+LEFT JOIN 
+    Table_Reservas r ON u.CD_User = r.CFK_User
+LEFT JOIN 
+    Table_Historico h ON u.CD_User = h.CFK_User
+GROUP BY 
+    u.CD_User, u.ID_Aluno, u.Nome_Completo, u.NameUser , u.IMG_User, c.Cargo, a.Ano_Escolar, un.Nome_Unidade;
+    
+    
+    select * from table_historico where CFK_User = 1;

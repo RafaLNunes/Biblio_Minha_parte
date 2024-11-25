@@ -200,8 +200,10 @@ namespace Aprendendo_MVC
                 Conect.Open();
                 MySqlCommand cmd = new MySqlCommand(sql, Conect);
                 if (codigo > 0)
+                {
                     cmd.Parameters.AddWithValue(PK_Table, codigo);
-                registro = cmd.ExecuteNonQuery();
+                }
+                    registro = cmd.ExecuteNonQuery();
                 Conect.Close();
             }
             catch (Exception ex)

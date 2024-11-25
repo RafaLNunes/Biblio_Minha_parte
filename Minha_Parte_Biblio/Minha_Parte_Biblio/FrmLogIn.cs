@@ -134,7 +134,7 @@ namespace Minha_Parte_Biblio
                     Model_User.CD_User = (int)DT_logIn.Rows[0]["CD_User"];
 
                     if ((int)DT_logIn.Rows[0]["CFK_Cargo"] == 1) {
-                        if ((int) DT_logIn.Rows[0]["CFK_Unidade"] == 13)
+                        if ((int) DT_logIn.Rows[0]["CFK_Ano"] == 13)
                         {
                             FrmAcessoLog log = new FrmAcessoLog(Model_User);
                             this.Hide();

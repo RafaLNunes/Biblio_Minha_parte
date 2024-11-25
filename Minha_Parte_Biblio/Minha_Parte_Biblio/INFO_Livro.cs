@@ -54,7 +54,7 @@ namespace Library_Project
             //ModeloUser.ID_Aluno = "123456789";
             DataTable dt_Inicial = new DataTable();
 
-            dt_Inicial = conexao.obterdados($"select * from Table_User where ID_Aluno = {Model_User.ID_Aluno}");
+            dt_Inicial = conexao.obterdados($"select * from Table_User where ID_Aluno = '{Model_User.ID_Aluno}'");
 
             Model_User.CD_User = (int)dt_Inicial.Rows[0]["CD_User"];
 

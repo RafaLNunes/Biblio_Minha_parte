@@ -59,7 +59,7 @@ namespace usuario
             try
             {
                 // Obter os dados
-                var data = conexao.obterdados("SELECT Table_Livro.CD_Livro, Table_Livro.Nome_Livro, Table_Livro.Edicao_Livro, Table_Unidade.Nome_Unidade, Table_Historico.DT_reserva, Table_Historico.DT_devolucao FROM Table_Historico INNER JOIN Table_Livro ON Table_Historico.CFK_Livro = Table_Livro.Order_Livro INNER JOIN Table_Unidade ON Table_Livro.CFK_Unidade = Table_Unidade.CD_Unidade;");
+                var data = conexao.obterdados($"SELECT Table_Livro.CD_Livro, Table_Livro.Nome_Livro, Table_Livro.Edicao_Livro, Table_Unidade.Nome_Unidade, Table_Historico.DT_reserva, Table_Historico.DT_devolucao FROM Table_Historico INNER JOIN Table_Livro ON Table_Historico.CFK_Livro = Table_Livro.Order_Livro INNER JOIN Table_Unidade ON Table_Livro.CFK_Unidade = Table_Unidade.CD_Unidade where Table_Historico.CFK_User = {Model_User.CD_User};");
                 nlivros.Text = data.Rows.Count.ToString();
                 // Limpar colunas existentes (se necessário)
                 dataGridView.Columns.Clear();

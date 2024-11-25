@@ -58,6 +58,9 @@
     <Compile Update="FrmUserADM.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmUserAnalitc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Frmusuario.cs">
       <SubType>Form</SubType>
     </Compile>

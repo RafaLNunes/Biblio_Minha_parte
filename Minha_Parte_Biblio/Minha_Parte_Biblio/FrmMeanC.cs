@@ -11,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,6 +76,7 @@ namespace Minha_Parte_Biblio
         }
 
         string SendEmailTo = "";
+        
         public FrmMeanC(ClUserModelo user, int pag, string UtilitarioString)
         {
             this.Model_User = user;
@@ -204,7 +206,7 @@ namespace Minha_Parte_Biblio
                     break;
                 case 13:
                     //13 - verreservas
-                    FrmVerReserva reservas = new FrmVerReserva(Model_Livro, Model_Reserv);
+                    FrmVerReserva reservas = new FrmVerReserva(Model_Livro, Model_Reserv, Model_User);
                     reservas.TopLevel = false;
                     FPnContenedor.Controls.Clear();
                     FPnContenedor.Controls.Add(reservas);
@@ -311,7 +313,7 @@ namespace Minha_Parte_Biblio
 
         private void BntReserv_Click(object sender, EventArgs e)
         {
-            FrmVerReserva reservas = new FrmVerReserva(Model_Livro, Model_Reserv);
+            FrmVerReserva reservas = new FrmVerReserva(Model_Livro, Model_Reserv, Model_User);
             reservas.TopLevel = false;
             FPnContenedor.Controls.Clear();
             FPnContenedor.Controls.Add(reservas);

@@ -1,6 +1,7 @@
 using Aprendendo_MVC;
 using Library_Project.controle;
 using Library_Project.modelo;
+using Minha_Parte_Biblio;
 using Minha_Parte_Biblio.Controle;
 using Minha_Parte_Biblio.Modelo;
 using System.Data;
@@ -64,7 +65,9 @@ namespace usuario
 
         private void vhrusuario1_Click(object sender, EventArgs e)
         {
-
+            FrmMeanC mean = new FrmMeanC(Model_User, 3, "0");
+            this.Hide();
+            mean.ShowDialog();
         }
 
         private void Frmusuario_Load(object sender, EventArgs e)
@@ -72,7 +75,7 @@ namespace usuario
 
             DataTable dt = new DataTable();
 
-            dt = conexao.obterdados($"select*from Table_User where ID_Aluno='{Model_User.ID_Aluno}'");
+            dt = conexao.obterdados($"select * from Table_User where ID_Aluno ='{Model_User.ID_Aluno}'");
 
            
             

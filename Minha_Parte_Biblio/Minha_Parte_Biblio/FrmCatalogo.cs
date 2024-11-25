@@ -40,14 +40,12 @@ namespace usuario
 
 
 
-
         public FrmCatalogo(Model_Livro livro, ClUserModelo user, ModeloUnidade unidade, ModeloReservas reserv)
         {
             this.Model_User = user;
             this.Model_Livro = livro;
             this.Model_Unit = unidade;
             this.Model_Reserv = reserv;
-
             InitializeComponent();
 
             DataTable DT_Livros = new DataTable();

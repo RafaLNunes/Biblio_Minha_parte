@@ -35,11 +35,11 @@
             // 
             // BntADM
             // 
-            BntADM.BackColor = Color.FromArgb(62, 6, 44);
+            BntADM.BackColor = Color.FromArgb(9, 90, 162);
             BntADM.FlatAppearance.BorderSize = 0;
             BntADM.FlatStyle = FlatStyle.Flat;
             BntADM.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            BntADM.ForeColor = Color.White;
+            BntADM.ForeColor = Color.FromArgb(242, 203, 17);
             BntADM.Location = new Point(12, 172);
             BntADM.Name = "BntADM";
             BntADM.Size = new Size(215, 77);
@@ -50,11 +50,11 @@
             // 
             // BntNADM
             // 
-            BntNADM.BackColor = Color.FromArgb(62, 6, 44);
+            BntNADM.BackColor = Color.FromArgb(9, 90, 162);
             BntNADM.FlatAppearance.BorderSize = 0;
             BntNADM.FlatStyle = FlatStyle.Flat;
             BntNADM.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            BntNADM.ForeColor = Color.White;
+            BntNADM.ForeColor = Color.FromArgb(242, 203, 17);
             BntNADM.Location = new Point(241, 172);
             BntNADM.Name = "BntNADM";
             BntNADM.Size = new Size(215, 77);
@@ -78,7 +78,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(101, 0, 69);
+            BackColor = Color.FromArgb(35, 49, 65);
             ClientSize = new Size(468, 257);
             Controls.Add(label1);
             Controls.Add(BntNADM);

@@ -51,7 +51,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(43, 21, 38);
+            panel1.BackColor = Color.FromArgb(35, 49, 65);
             panel1.Controls.Add(bntCircle1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel2);
@@ -106,11 +106,11 @@
             // 
             // BntBooks
             // 
-            BntBooks.BackColor = Color.FromArgb(54, 21, 38);
+            BntBooks.BackColor = Color.FromArgb(9, 90, 162);
             BntBooks.FlatAppearance.BorderSize = 0;
             BntBooks.FlatStyle = FlatStyle.Flat;
             BntBooks.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            BntBooks.ForeColor = Color.White;
+            BntBooks.ForeColor = Color.FromArgb(242, 203, 17);
             BntBooks.Location = new Point(936, 69);
             BntBooks.Name = "BntBooks";
             BntBooks.Padding = new Padding(0, 10, 0, 0);
@@ -155,17 +155,17 @@
             PbcUser.Location = new Point(1753, 8);
             PbcUser.Name = "PbcUser";
             PbcUser.Size = new Size(120, 120);
-            PbcUser.SizeMode = PictureBoxSizeMode.StretchImage;
+            PbcUser.SizeMode = PictureBoxSizeMode.CenterImage;
             PbcUser.TabIndex = 3;
             PbcUser.TabStop = false;
             // 
             // BntReserv
             // 
-            BntReserv.BackColor = Color.FromArgb(54, 21, 38);
+            BntReserv.BackColor = Color.FromArgb(9, 90, 162);
             BntReserv.FlatAppearance.BorderSize = 0;
             BntReserv.FlatStyle = FlatStyle.Flat;
             BntReserv.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            BntReserv.ForeColor = Color.White;
+            BntReserv.ForeColor = Color.FromArgb(242, 203, 17);
             BntReserv.Location = new Point(637, 69);
             BntReserv.Name = "BntReserv";
             BntReserv.Padding = new Padding(0, 10, 0, 0);
@@ -178,11 +178,11 @@
             // 
             // BntUsers
             // 
-            BntUsers.BackColor = Color.FromArgb(54, 21, 38);
+            BntUsers.BackColor = Color.FromArgb(9, 90, 162);
             BntUsers.FlatAppearance.BorderSize = 0;
             BntUsers.FlatStyle = FlatStyle.Flat;
             BntUsers.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            BntUsers.ForeColor = Color.White;
+            BntUsers.ForeColor = Color.FromArgb(242, 203, 17);
             BntUsers.Location = new Point(338, 69);
             BntUsers.Name = "BntUsers";
             BntUsers.Padding = new Padding(0, 10, 0, 0);
@@ -195,11 +195,11 @@
             // 
             // BntMenu
             // 
-            BntMenu.BackColor = Color.FromArgb(54, 21, 38);
+            BntMenu.BackColor = Color.FromArgb(9, 90, 162);
             BntMenu.FlatAppearance.BorderSize = 0;
             BntMenu.FlatStyle = FlatStyle.Flat;
             BntMenu.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            BntMenu.ForeColor = Color.White;
+            BntMenu.ForeColor = Color.FromArgb(242, 203, 17);
             BntMenu.Location = new Point(39, 69);
             BntMenu.Name = "BntMenu";
             BntMenu.Padding = new Padding(0, 10, 0, 0);
@@ -212,7 +212,7 @@
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.BackColor = Color.FromArgb(56, 6, 44);
+            flowLayoutPanel2.BackColor = Color.FromArgb(35, 106, 127);
             flowLayoutPanel2.Controls.Add(label1);
             flowLayoutPanel2.Dock = DockStyle.Right;
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
@@ -224,6 +224,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(35, 106, 127);
             label1.Font = new Font("Sigmar One", 30F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(8, 0);
@@ -235,6 +236,7 @@
             // 
             // FPnContenedor
             // 
+            FPnContenedor.BackColor = Color.White;
             FPnContenedor.Dock = DockStyle.Fill;
             FPnContenedor.Location = new Point(0, 136);
             FPnContenedor.Name = "FPnContenedor";

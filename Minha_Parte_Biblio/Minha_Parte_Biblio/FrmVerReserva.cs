@@ -15,6 +15,7 @@ namespace Minha_Parte_Biblio
         Model_Livro Model_Livro = new Model_Livro(); // responsavel por importar info dos livros
         ModeloReservas Model_Reservas = new ModeloReservas(); // resposavel por importar info das reservas
         ModeloHistorico Model_Hist = new ModeloHistorico();
+        ClUserModelo Model_User = new ClUserModelo();
 
         ControleLivro Controle_Livro = new ControleLivro();
         ControleReservas Controle_Reserv = new ControleReservas();
@@ -26,10 +27,11 @@ namespace Minha_Parte_Biblio
         string codi = "";
 
 
-        public FrmVerReserva(Model_Livro livro, ModeloReservas reservas)
+        public FrmVerReserva(Model_Livro livro, ModeloReservas reservas, ClUserModelo user)
         {
             codigo1 = reservas.CD_Reservas;
             codi = livro.CD_Livro;
+            Model_User = user;
             InitializeComponent();
         }
 
@@ -73,7 +75,7 @@ namespace Minha_Parte_Biblio
             {
                 MessageBox.Show("Reserva Excluída");
 
-                data = conexao.obterdados("SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro");
+                data = conexao.obterdados($"SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro where Table_Reservas.CFK_User = {Model_User.CD_User}");
                 dataGridView.DataSource = data;
             }
             else
@@ -87,7 +89,7 @@ namespace Minha_Parte_Biblio
             try
             {
                 // Obtendo os dados da consulta
-                data = conexao.obterdados("SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro");
+                data = conexao.obterdados($"SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro where Table_Reservas.CFK_User = {Model_User.CD_User}");
 
                 // Definindo a fonte de dados do DataGridView
                 dataGridView.DataSource = data;
@@ -156,7 +158,7 @@ namespace Minha_Parte_Biblio
             dataGridView.BorderStyle = BorderStyle.None;
             dataGridView.RowHeadersVisible = false;
             //dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(9, 90, 162);
-            //dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            //dataGridView.CellBorderSt yle = DataGridViewCellBorderStyle.SingleHorizontal;
             //dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 207, 0);
             dataGridView.ForeColor = Color.Black;
             //dataGridView.BackgroundColor = Color.FromArgb(122, 193, 255); 
@@ -210,7 +212,7 @@ namespace Minha_Parte_Biblio
             {
                 // messagebox que diz alongado periodo com sucesso
                 MessageBox.Show("Período de devolução reagendado para: " + dataFuturaFormatada + ".");
-                data = conexao.obterdados("SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro");
+                data = conexao.obterdados($"SELECT Table_Reservas.CD_Reservas, Table_Livro.Nome_Livro, Table_reservas.DT_reserva, Table_reservas.DT_previsao_devolucao FROM Table_reservas INNER JOIN Table_Livro ON Table_Reservas.CFK_Livro = Table_Livro.Order_Livro where Table_Reservas.CFK_User = {Model_User.CD_User}");
                 dataGridView.DataSource = data;
             } else
             {

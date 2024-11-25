@@ -132,3 +132,4 @@ D:\OneDrive\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_B
 D:\OneDrive\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmLivrosADM.resources
 D:\OneDrive\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmReservADM.resources
 D:\OneDrive\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmUserADM.resources
+D:\OneDrive\Documents\GitHub\Biblio_Minha_parte\Minha_Parte_Biblio\Minha_Parte_Biblio\obj\Debug\net8.0-windows\Minha_Parte_Biblio.FrmUserAnalitc.resources
